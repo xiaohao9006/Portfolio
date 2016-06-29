@@ -1,0 +1,52 @@
+<svg id="Header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 621.989 184.681">
+  <defs>
+    <style>
+      .language-1 {
+        fill: transparent;
+        stroke: #4e4e4e;
+        stroke-width: 20;
+      }
+
+      .language-2 {
+        fill: transparent;
+        stroke: #47a1da;
+        stroke-width: 20;
+        stroke-dasharray: 503;
+      }
+
+      .language-3 {
+        font-size: 29.314px;
+      }
+
+      .language-3, .language-4 {
+        fill: #fff;
+        font-family: Source Sans Pro;
+      }
+
+      .language-4 {
+        font-size: 19.054px;
+      }
+    </style>
+  </defs>
+  <title>language</title>
+  <circle class="language-1" transform="rotate(-90, 90, 90)" cx="90" cy="90" r="80"/>
+  <circle id="English" class="language-2" stroke-dashoffset="503" transform="rotate(-90, 90, 90)" cx="90" cy="90" r="80"/>
+  <circle class="language-1" transform="rotate(-90, 312, 90)" cx="312" cy="90" r="80"/>
+  <circle id="Chinese" class="language-2" stroke-dashoffset="503" transform="rotate(-90, 312, 90)" cx="312" cy="90" r="80"/>
+  <circle class="language-1" transform="rotate(-90, 531, 90)" cx="531" cy="90" r="80"/>
+  <circle id="Spanish" class="language-2" stroke-dashoffset="503" transform="rotate(-90, 531, 90)" cx="531" cy="90" r="80"/>
+
+
+  <g>
+    <text class="language-3" transform="translate(46.361 88.351)">English</text>
+    <text class="language-4" transform="translate(41.639 117.375)">P<tspan x="10.88" y="0">r</tspan><tspan x="17.301" y="0">o</tspan><tspan x="27.628" y="0">f</tspan><tspan x="33.002" y="0">essional</tspan></text>
+  </g>
+  <g transform="translate(2 0)">
+    <text class="language-3" transform="translate(261.425 88.351)">Chinese</text>
+    <text class="language-4" transform="translate(284.304 117.375)">Nati<tspan x="33.116" y="0">v</tspan><tspan x="41.938" y="0">e</tspan></text>
+  </g>
+  <g>
+    <text class="language-3" transform="translate(482.189 88.351)">S<tspan x="15.507" y="0">p</tspan><tspan x="31.366" y="0">anish</tspan></text>
+    <text class="language-4" transform="translate(504.21 117.374)">N<tspan x="12.233" y="0">o</tspan><tspan x="22.484" y="0">vi</tspan><tspan x="36.069" y="0">c</tspan><tspan x="44.358" y="0">e</tspan></text>
+  </g>
+</svg>

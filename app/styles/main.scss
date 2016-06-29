@@ -1,0 +1,262 @@
+// bower:scss
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*
+html {
+  font-size:50%;
+}
+*/
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+$blue           : #00A9FF;
+$darkGrey       : #383740;
+$lessDarkGrey   : #403F49;
+$lightGrey      : #706F7F;
+$black          : #2d2c33;
+$white          : rgba(255,255,255,.9);
+$primaryColor   : $blue;
+$secondaryColor : $darkGrey;
+$lineHeight     : 1.4285rem;
+
+#menuHeader {
+  padding-left:5rem;
+  padding-right:5rem;
+  //padding-top:1rem;
+  background: none;
+}
+
+
+#entryPage {
+  width: 100vw; /* Could also use width: 100%; */
+  height: 100vh;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logoText {
+  position:relative;
+  top:0.5rem;
+  font-size:2.5714rem;
+}
+
+#headerVideo, #alternative {
+  width: 100vw; /* Could also use width: 100%; */
+  height: 100vh;
+  object-fit: cover;
+  position: absolute; /* Change position to absolute if you don't want it to take up the whole page */
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  opacity:0.1;
+  overflow:hidden;
+}
+
+#headerTextContainer {
+
+  margin-top: 7vh;
+  //width:52rem;
+
+  #headerText {
+    font-size:4rem;
+    margin:3vh 0 0 0;
+    //font-weight:400;
+  }
+
+  button {
+    display:block;
+    margin:auto;
+  }
+
+  p {
+    color:$white;
+    font-size:1.4285rem;
+    font-weight:400;
+    text-align:center;
+    //margin:0.5rem 0 0 0;
+  }
+
+
+  i {
+    display:block;
+    margin: auto;
+    margin-top: 1rem;
+    animation-duration: 2000ms;
+  }
+}
+
+.sectionContainer {
+  //margin-top: 4rem;
+  padding: 6vh 0 8vh 0 !important;
+  h1 {
+    font-size: 2*$lineHeight !important;
+    color: $blue !important;
+    font-weight:400 !important;
+  }
+  hr {
+    height: 0.15rem;
+    background-color: $white;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color:$white;
+    font-size:0.9*$lineHeight;
+    font-weight:400;
+  }
+}
+
+.evenContainer {
+  //background:#4b4b4e !important;
+  background:$lessDarkGrey;
+}
+
+.oddContainer {
+  //background:#4b4b4e !important;
+  p {
+    font-weight:300;
+  }
+}
+
+#timelineSVGContainer {
+  //padding-left:5rem;
+  //padding-right:5rem;
+  width:90%;
+}
+
+.leftColumnContanier {
+  padding-right:3rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.rightColumnContanier {
+  padding-left:3rem !important;
+  box-shadow: none !important;
+}
+
+.pageFooter {
+  padding-top: $lineHeight;
+  padding-bottom:$lineHeight;
+  background-color:$black;
+  text-align:center;
+  h1 {
+    color:$blue !important;
+    font-weight:400 !important;
+    margin-bottom: 0.5rem !important;
+    //font-size: 1*$lineHeight !important;
+  }
+
+  .contactInfo {
+    color:$white;
+    display:inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .contactInfoItem {
+    margin-left: 1rem;
+    display:inline-block;
+    a {
+      color:$white;
+    }
+  }
+
+  .copyRight {
+    text-align:center;
+    color:$lightGrey !important;
+    margin-bottom:0.5rem;
+    display:inline-block;
+    margin-left:0.5rem;
+    font-weight: 400 !important;
+    border: none !important;
+  }
+}
