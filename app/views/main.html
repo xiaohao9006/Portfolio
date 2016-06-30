@@ -1,15 +1,46 @@
-<div id="entryPage" style="overflow:hidden">
+<div class="transparentMenu ui stackable borderless large inverted top fixed menu" id="menuHeader">
+  <div class="item">
+    <h1 class="ui header inverted" id="logoText">
+      &nbsp;YUNHAO'S <span style="color:#00A9FF">PORTFOLIO</span>
+    </h1>
+  </div>
+  <!--
+  <a class="right active item" style="align-items:flex-end;">
+    <i class="bookmark icon"></i>
+    &nbsp;HOME
+  </a>
+  -->
+  <a class="right item active" style="align-items:flex-end;" href="#">
+    <i class="spy icon"></i>
+    &nbsp;ABOUT ME
+  </a>
+  <a class="item" style="align-items:flex-end;" href="#/projects">
+    <i class="desktop icon"></i>
+    &nbsp;WORK PROJECTS
+  </a>
+  <a class="item" style="align-items:flex-end;" href="#/photos">
+    <i class="photo icon"></i>
+    &nbsp;PHOTOS
+  </a>
+  <a class="item" style="align-items:flex-end;" href="#/videos">
+    <i class="film icon"></i>
+    &nbsp;VIDEOS
+  </a>
+
+</div>
+
+<div class="customJumbotron" style="overflow:hidden">
 
   <!-- Background Video -->
 
-  <video loop muted autoplay id="headerVideo" data-autoplay>
+  <video loop muted autoplay class="customJumbotronBGContent" data-autoplay>
     <source src="video/headerBanner.mp4" type="video/mp4">
-    <img id="alternative" src="images/headerBanner.jpg" />
+    <img src="images/headerBanner.jpg" />
   </video>
 
-  <div ng-controller="HeaderTextController" class="ui container" id="headerTextContainer">
+  <div ng-controller="HeaderTextController" class="ui container customJumbotronContent" >
     <img class="ui centered medium circular image" src="images/profilePic.jpg" style="opacity:0.8; width:35vh"/>
-    <p id="headerText">{{greeting}}, I'm Yunhao Shen</p>
+    <p class="customJumbotronMainText">{{greeting}}, I'm Yunhao Shen</p>
     <p>There are three responses to a piece of design – yes, no, and WOW!
       Wow is always the one I aim for.</p>
     <button class="ui huge button blue inverted" id="learnMore">Learn More About Me</button>

@@ -112,48 +112,49 @@ $lineHeight     : 1.4285rem;
   background: none;
 }
 
-
-#entryPage {
-  width: 100vw; /* Could also use width: 100%; */
-  height: 100vh;
-  position:relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 #logoText {
   position:relative;
   top:0.5rem;
   font-size:2.5714rem;
 }
 
-#headerVideo, #alternative {
-  width: 100vw; /* Could also use width: 100%; */
-  height: 100vh;
-  object-fit: cover;
-  position: absolute; /* Change position to absolute if you don't want it to take up the whole page */
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-  opacity:0.1;
-  overflow:hidden;
+.customJumbotron {
+  width: 100vw !important; /* Could also use width: 100%; */
+  height: 100vh !important;
+  position:relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
 }
 
-#headerTextContainer {
+
+
+.customJumbotronBGContent {
+  width: 100vw !important; /* Could also use width: 100%; */
+  height: 100vh !important;
+  object-fit: cover !important;
+  position: absolute !important; /* Change position to absolute if you don't want it to take up the whole page */
+  left: 0px !important;
+  top: 0px !important;
+  z-index: -1 !important;
+  opacity:0.1 !important;
+  overflow:hidden !important;
+}
+
+.customJumbotronContent {
 
   margin-top: 7vh;
   //width:52rem;
 
-  #headerText {
+  .customJumbotronMainText {
     font-size:4rem;
     margin:3vh 0 0 0;
     //font-weight:400;
   }
 
   button {
-    display:block;
-    margin:auto;
+    display:block !important;
+    margin:auto !important;
   }
 
   p {
@@ -166,10 +167,10 @@ $lineHeight     : 1.4285rem;
 
 
   i {
-    display:block;
-    margin: auto;
-    margin-top: 1rem;
-    animation-duration: 2000ms;
+    display:block !important;
+    margin: auto !important;
+    margin-top: 1rem !important;
+    animation-duration: 2000ms !important;
   }
 }
 
