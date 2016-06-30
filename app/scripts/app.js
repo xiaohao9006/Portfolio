@@ -35,15 +35,15 @@ angular.module('projectApp',['ngRoute'])
     $routeProvider
       .when('/photos', {
         templateUrl:'views/photos.html',
-        controller: 'photosController'
+        //controller: 'photosController'
       })
       .when('/projects', {
         templateUrl:'views/projects.html',
-        controller: 'ProjectsController'
+        //controller: 'ProjectsController'
       })
       .when('/videos', {
         templateUrl:'views/videos.html',
-        controller: 'VideosController'
+        //controller: 'VideosController'
       })
       .otherwise({
         templateUrl:'views/main.html',
