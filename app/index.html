@@ -27,6 +27,13 @@
     <!-- Add your site or application content here -->
 
     <!-- Header Menu -->
+    <div class="customVideoBG">
+      <video loop muted autoplay class="customJumbotronBGContent" data-autoplay>
+        <source src="video/headerBanner.mp4" type="video/mp4">
+        <img src="images/headerBanner.jpg" />
+      </video>
+    </div>
+
     <ng-view onload="onViewLoad()"></ng-view>
 
     <div ng-include="'views/footer.html'"></div>

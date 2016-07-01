@@ -5,9 +5,18 @@ $lessDarkGrey   : #403F49;
 $lightGrey      : #706F7F;
 $black          : #2d2c33;
 $white          : rgba(255,255,255,.9);
+$lessWhite      : rgba(255,255,255,.7);
 $primaryColor   : $blue;
 $secondaryColor : $darkGrey;
 $lineHeight     : 1.4285rem;
+
+.ui.grid {
+  margin:0 !important;
+}
+
+.ui.disabled.dimmer {
+  display: none !important;
+}
 
 #menuHeader {
   padding-left:5rem;
@@ -29,9 +38,16 @@ $lineHeight     : 1.4285rem;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
+  overflow:hidden;
 }
 
-
+.customVideoBG {
+  width: 100vw !important; /* Could also use width: 100%; */
+  height: 100vh !important;
+  position:absolute !important;
+  //object-fit: cover !important;
+  overflow:hidden;
+}
 
 .customJumbotronBGContent {
   width: 100vw !important; /* Could also use width: 100%; */
@@ -189,3 +205,27 @@ $lineHeight     : 1.4285rem;
     //font-size: $lineHeight;
   }
 }
+
+.projectCard {
+  width: 100% !important;
+  .header {
+    display:inline !important;
+  }
+  .projectLogo {
+    width:20% !important;
+    display:inline !important;
+    float:right !important;
+  }
+}
+
+.closeIcon {
+  color: $lessWhite;
+  display: none !important;
+  cursor: pointer;
+
+}
+
+.closeIcon:hover {
+  color:$white;
+}
+

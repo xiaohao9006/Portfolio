@@ -128,6 +128,38 @@ angular.module('projectApp')
 
 
     //console.log("!!!");
-  }]);
+  }])
+
+  .controller('ProjectsController', ['$scope', function($scope){
+    $('.special.card .image').dimmer({
+      on: 'hover'
+    });
+    $('#executiveDashboardLearnMore').click(function(){
+      $('.special.card .image').dimmer('hide');
+      $('.special.card .image').dimmer({
+      });
+      $('.oddContainer').css("display", "none");
+      $('.evenContainer').css('background-color', "#383740");
+      $('.closeIcon').attr('style', 'display: block !important');
+
+    });
+
+    $('.closeIcon').click(function(){
+      $('.special.card .image').dimmer({
+        on: 'hover'
+      });
+      $('.oddContainer').css("display", "block");
+      $('.evenContainer').css('background-color', "#403F49");
+      $('.closeIcon').attr('style', 'display: none !important');
+    })
+
+
+    $('#myAgencyReportsLearnMore').click(function(){
+      $('.special.card .image').dimmer('hide');
+      $('.special.card .image').dimmer({
+
+      });
+    })
+  }])
 
 
