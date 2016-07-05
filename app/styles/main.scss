@@ -10,6 +10,10 @@ $primaryColor   : $blue;
 $secondaryColor : $darkGrey;
 $lineHeight     : 1.4285rem;
 
+/*p {
+  font-family: 'Open Sans', sans-serif !important;
+}*/
+
 .ui.grid {
   margin:0 !important;
 }
@@ -97,10 +101,16 @@ $lineHeight     : 1.4285rem;
 .sectionContainer {
   //margin-top: 4rem;
   padding: 6vh 0 8vh 0 !important;
+
   h1 {
     font-size: 2*$lineHeight !important;
     color: $blue !important;
     font-weight:400 !important;
+  }
+  h2 {
+    font-size:1.5*$lineHeight !important;
+    color: $blue !important;
+    font-weight: 400 !important;
   }
   hr {
     height: 0.15rem;
@@ -122,6 +132,7 @@ $lineHeight     : 1.4285rem;
 
 .oddContainer {
   //background:#4b4b4e !important;
+  background:$darkGrey;
   p {
     font-weight:300;
   }
@@ -191,6 +202,7 @@ $lineHeight     : 1.4285rem;
   .projectIntroHeader {
     color:$blue !important;
     font-size:2rem !important;
+    line-height: 1.5*$lineHeight;
   }
 
   .extra
@@ -229,3 +241,153 @@ $lineHeight     : 1.4285rem;
   color:$white;
 }
 
+.step {
+  font-size:0.85714286rem !important;
+  color: $white !important;
+}
+
+.stepContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: $lineHeight;
+}
+
+.ui.steps .step:after {
+  border-color: $blue !important;
+}
+
+.ui.steps .step.active:after {
+   //border-color: $lessDarkGrey !important;
+ }
+
+.ui.steps .step:hover::after {
+  //border-color: $lessDarkGrey !important;
+  //background-color: $lessDarkGrey;
+}
+
+.ui.steps .step.active {
+  //border-right: 1px solid $lessDarkGrey !important;
+  //border-left: 1px solid $lessDarkGrey !important;
+}
+
+.ui.steps a.step:hover {
+  //border-right: 1px solid $lessDarkGrey !important;
+  //background-color: black !important;
+}
+
+.stepIntro {
+  margin-top: $lineHeight !important;
+  font-weight: 300 !important;
+  text-align: center;
+}
+
+.toDoDetail {
+  .column {
+    text-align: center !important;
+  }
+  p {
+    font-weight: 300 !important;
+    //font-size: 0.8*$lineHeight !important;
+  }
+  i {
+    color: $white;
+    margin-bottom: $lineHeight !important;
+    font-size: 2*$lineHeight !important;
+  }
+}
+
+.designProcessDetailContainer {
+  //background-color:$darkGrey !important;
+  p {
+    font-weight: 300 !important;
+    font-size: 0.8*$lineHeight !important;
+  }
+
+  .item {
+    color: $white !important;
+    font-weight: 300 !important;
+    font-size: 0.8*$lineHeight !important;
+  }
+
+  .card {
+    background-color:#403F49 !important;
+    box-shadow: 0 1px 3px 0 $blue,0 0 0 1px $blue !important;
+  }
+
+  .photoCardHeader {
+    font-weight: 400 !important;
+    color: $white !important;
+    font-size: 0.75*$lineHeight !important;
+  }
+
+  .photoImage {
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+  }
+
+  .photoContent {
+    font-size: 0.7*$lineHeight !important;
+  }
+
+}
+
+
+.ui.piled.segment:before {
+  background-color:$darkGrey !important;
+}
+
+.ui.piled.segment:after {
+  background-color:$darkGrey !important;
+}
+
+.processDetailHeader {
+  text-align:center;
+  color: $blue;
+  font-size:1.4*$lineHeight;
+  //margin: 0.5*$lineHeight 0 0.5*$lineHeight 0;
+}
+
+.processDetailContent {
+  text-align:center;
+  margin-top: $lineHeight;
+}
+
+.personaName {
+  color: $white !important;
+}
+
+.personaMeta {
+  color: $lessWhite !important;
+  margin-bottom:1*$lineHeight !important;
+  line-height: 1.2*$lineHeight !important;
+}
+
+
+
+.howMightWeContainer {
+  text-align: center;
+  .howMightWeContent {
+    //display: inline !important;
+  }
+  .howMightWeLabel {
+    font-weight: 400 !important;
+    margin-bottom: 0.5*$lineHeight !important;
+  }
+}
+
+.processDetailItem {
+  margin-top:0 !important;
+  .processDetailItemName {
+    font-weight: 400 !important;
+    color: $white !important;
+  }
+}
+
+.projectDetailContainer {
+  background-color:$lessDarkGrey;
+  //display: none;
+}
+
+.projectDetailTemplate {
+  display:none;
+}

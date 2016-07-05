@@ -1,0 +1,273 @@
+<div ng-controller="ProjectDetailController">
+  <div class="projectDetailContainer">
+    <div class="ui container sectionContainer">
+      <h2 class="ui header centered large inverted horizontal divider">WHAT WAS I ASKED TO DO</h2>
+
+
+      <div class="ui stackable grid toDoDetail">
+        <div class="three wide computer one wide tablet column"></div>
+        <div class="four wide computer six wide tablet column">
+          <i class="ui line chart huge icon"></i>
+          <p>Design a KPI dashboard to provide Agency Executives the capability to quickly assess the current health of their business performance.</p>
+        </div>
+
+        <div class="computer tablet only two wide column"></div>
+
+        <div class="four wide computer six wide tablet column">
+          <i class="ui bar chart huge icon"></i>
+          <p>Enable them to view positive and negative deviations, obtain clarification on those deviations, allowing them to react accordingly</p>
+        </div>
+        <div class="three wide computer one wide tablet column"></div>
+      </div>
+
+      <h2 class="ui header centered large inverted horizontal divider">DESIGN PROCESS</h2>
+      <div class="stepContainer">
+        <div class="ui stackable steps">
+          <a class="active step" data-tab="empathize">
+            <i class="heartbeat icon"></i>
+            <div class="content">
+              <div class="title">EMPATHIZE</div>
+            </div>
+          </a>
+          <a class="step" data-tab="define">
+            <i class="puzzle icon"></i>
+            <div class="content">
+              <div class="title">DEFINE</div>
+            </div>
+          </a>
+          <a class="step" data-tab="ideate">
+            <i class="idea icon"></i>
+            <div class="content">
+              <div class="title">IDEATE</div>
+
+            </div>
+          </a>
+          <a class="step" data-tab="prototype">
+            <i class="newspaper icon"></i>
+            <div class="content">
+              <div class="title">PROTOTYPE</div>
+
+            </div>
+          </a>
+          <a class="step" data-tab="test">
+            <i class="thumbs outline up icon"></i>
+            <div class="content">
+              <div class="title">TEST</div>
+
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Empathize Content -->
+      <div class="ui active tab" data-tab="empathize" style="z-index: -2">
+        <p class="stepIntro">Develop a deep customer empathy. Understand the customer's needs and desires.</p>
+        <div class="ui raised segment designProcessDetailContainer">
+
+          <div class="ui stackable grid container">
+            <div class="sixteen wide column processDetailHeader">"Design Partnership" Program</div>
+            <div class="ten wide column">
+              <p>During the empathize phase, I, together with PM and developer lead, just
+                jumped on the “Design Partner” call, and asked those Agency Executives about their data analytics
+                practices and requirements:</p>
+              <div class="ui bulleted list">
+                <div class="item">What data do you think is important to you?</div>
+                <div class="item">What insights do you want to get from the data?</div>
+                <div class="item">How do you want to analyze and compare the data?</div>
+                <div class="item">What are your current data analytics practices? Any pain points?</div>
+              </div>
+            </div>
+
+            <div class="six wide column">
+              <div class="ui card" style="width:100%">
+                <div class="content">
+                  <div class="header photoCardHeader">"Design Partnership" Program
+                    <i class="right floated user group icon"></i>
+                  </div>
+                </div>
+                <div class="image photoImage">
+                  <img src="/images/dpPhoto.jpg" />
+                </div>
+                <div class="content">
+                  <div class="description">
+                    <p class="photoContent">A target group of users are invited to a weekly “focus group”
+                      session so that we can talk with them and validate our product
+                      concepts, vision and roadmaps, and also do usability testing and gather feedback.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <!-- Define Content -->
+      <div class="ui tab" data-tab="define">
+        <p class="stepIntro">Provides focus and frames the problem. Fuels brainstorming "how might we statements".</p>
+        <div class="ui raised segment designProcessDetailContainer">
+          <div class="ui stackable grid container">
+
+            <div class="sixteen wide column processDetailHeader">Persona</div>
+
+            <div class="ui items sixteen wide column processDetailItem">
+              <div class="item">
+                <div class="ui medium rounded image">
+                  <div class="ui left corner blue label" style="background-color:#00a9ff">
+                    <i class="user icon"></i>
+                  </div>
+                  <img src="/images/execPersona.jpg">
+                </div>
+                <div class="content">
+                  <div class="header personaName">WALTER</div>
+                  <div class="meta personaMeta">
+                    <span class="price">Age: 46</span>
+                    <span class="stay">Agency Size: A1</span>
+                    <span class="stay">Line of Business: P&C, Benefits Mix</span>
+                  </div>
+                  <div class="description">
+                    <p>Based on the findings from previous phase, we defined target persona as "WALTER".
+                      He is an executive member and responsible for the agency as a whole and he has access to view all financial information for the agency.
+                    </p>
+                    <p>All he wants is to "Identify Deviation" - to look for "illnesses" and where they are occurring through the data,
+                      so that he/she can take quick actions. But the current data analytics practices are heavily "hard copy report based",
+                      which is not real-time and is hard to gain insights.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sixteen wide column processDetailHeader">How Might We Statements</div>
+            <div class="two wide computer tablet only column"></div>
+            <div class="three wide column howMightWeContainer">
+              <div class="ui blue big label howMightWeLabel">Create ...</div>
+              <p class="howMightWeContent">A fully engaging and easy to understand business performance dashboard</p>
+            </div>
+            <div class="three wide column howMightWeContainer">
+              <div class="ui blue big label howMightWeLabel">For ...</div>
+              <p class="howMightWeContent">Agency executives</p>
+            </div>
+            <div class="three wide column howMightWeContainer">
+              <div class="ui blue big label howMightWeLabel">To ...</div>
+              <p class="howMightWeContent">Help them easily "identify deviation" and take quick actions in real time</p>
+            </div>
+            <div class="three wide column howMightWeContainer">
+              <div class="ui blue big label howMightWeLabel">And improve ...</div>
+              <p class="howMightWeContent">Their overall in house data analytics process and practices</p>
+            </div>
+            <div class="two wide computer tablet only column"></div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Ideate Content -->
+      <div class="ui tab" data-tab="ideate">
+        <p class="stepIntro">Explore as many ideas as possible that serve those customer needs.</p>
+        <div class="ui raised segment designProcessDetailContainer">
+          <div class="ui stackable grid container">
+            <div class="sixteen wide column processDetailHeader">
+              <div>Whiteboard Brainstorming</div>
+              <p class="processDetailContent">Team of 3 (PM, dev lead and I) constantly got together and brainstormed ideas. White board was our powerful tool.</p>
+            </div>
+            <div class="eight wide column">
+              <div class="ui rounded bordered image">
+                <img src="/images/execWhiteboard1.jpg" />
+              </div>
+            </div>
+            <div class="eight wide column">
+              <div class="ui rounded bordered image">
+                <img src="/images/execWhiteboard2.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prototype Content -->
+      <div class="ui tab" data-tab="prototype">
+        <p class="stepIntro">Create & show a physical form to your solution prototype - anything: paper, interactive.</p>
+        <div class="ui raised segment designProcessDetailContainer">
+          <div class="ui stackable grid container">
+            <div class="sixteen wide column processDetailHeader">
+              <div>Wireframe Examples</div>
+              <p class="processDetailContent">I brought back brainstorming ideas and white board sketches to create detail wireframes and prototypes.</p>
+            </div>
+            <div class="eight wide column">
+              <div class="ui rounded bordered image">
+                <img src="/images/Executive-Dashboard-Level-1.png" />
+              </div>
+            </div>
+            <div class="eight wide column">
+              <div class="ui rounded bordered image">
+                <img src="/images/Executive-Dashboard-Level-2-Break-Down.png" />
+              </div>
+            </div>
+            <div class="eight wide column">
+              <div class="ui rounded bordered image">
+                <img src="/images/Executive-Dashboard-Ad-Hoc-Filtering.png" />
+              </div>
+            </div>
+            <div class="eight wide column">
+              <div class="ui rounded bordered image">
+                <img src="/images/Executive-Dashboard-Ad-Hoc-Filtering-II.png" />
+              </div>
+            </div>
+
+            <div class="sixteen wide column processDetailHeader">
+              <div>Live Code Demo</div>
+              <p class="processDetailContent">And in order to rapidly test out data visualization ideas,
+                I also used jsfiddle sandbox to customize Highchart JS and tried out different design solutions.</p>
+            </div>
+
+            <div class="ui items sixteen wide column processDetailItem">
+              <div class="item">
+                <div class="ui medium rounded big image">
+                  <img src="/images/execCodeDemo.png">
+                </div>
+                <div class="content">
+                  <div class="header processDetailItemName">Customize Highcharts JS</div>
+                  <div class="description">
+                    <p>The final design solution we went for required lots of highcharts customization.
+                      The sandbox environment not only empowered us to explore different design ideas,
+                      but also gave our development team clue on how to implement the complex customization.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Test Content -->
+      <div class="ui tab" data-tab="test">
+        <p class="stepIntro">Test + collect feedback through use of rapid interaction cycles. Refine the solution. Measure & repeat.</p>
+        <div class="ui raised segment designProcessDetailContainer">
+          <div class="ui stackable grid container">
+            <div class="sixteen wide column processDetailHeader">
+              <div>Test with Design Partners</div>
+              <p class="processDetailContent">And again, every week PM, dev lead and I jumped on the "Design Partner" call and validated the
+                design solutions with our customers. Based on the feedback, we continued to refine the solutions and do rapid iteration cycles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+

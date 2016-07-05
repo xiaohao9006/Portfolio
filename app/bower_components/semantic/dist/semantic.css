@@ -8,7 +8,7 @@
  * http://opensource.org/licenses/MIT
  *
  */
-/*@import url('https://fonts.googleapis.com/css?family=Source Sans Pro:400,700,400italic,700italic&subset=latin');*/
+@import url('https://fonts.googleapis.com/css?family=Source Sans Pro:400,700,400italic,700italic&subset=latin');
 /*!
  * # Semantic UI 2.1.8 - Reset
  * http://github.com/semantic-org/semantic-ui/
@@ -14400,7 +14400,7 @@ ol.ui.horizontal.list li:before,
 
 .ui.segment {
   position: relative;
-  background: rgba(255, 255, 255, 0.9);
+  background: #383740;
   box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
   margin: 1rem 0em;
   padding: 1em 1em;
@@ -14482,7 +14482,7 @@ ol.ui.horizontal.list li:before,
 /* Table */
 
 .ui.basic.table.segment {
-  background: rgba(255, 255, 255, 0.9);
+  background: #383740;
   border: 1px solid rgba(34, 36, 38, 0.15);
   box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
 }
@@ -14756,7 +14756,7 @@ ol.ui.horizontal.list li:before,
   background-color: transparent;
   border-radius: 0px;
   padding: 0em;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #383740;
   box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
   margin: 1rem 0em;
   border-radius: 0.28571429rem;
@@ -15127,7 +15127,7 @@ ol.ui.horizontal.list li:before,
 /* Secondary */
 
 .ui.secondary.segment {
-  background: #F3F4F5;
+  background: #383740;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -15235,10 +15235,10 @@ ol.ui.horizontal.list li:before,
   align-items: stretch;
   margin: 1em 0em;
   background: '';
-  box-shadow: none;
+  box-shadow: 0 0 0 2px #00A9FF;
   line-height: 1.14285714em;
   border-radius: 0.28571429rem;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border: '';
 }
 
 /* First Steps */
@@ -15280,12 +15280,12 @@ ol.ui.horizontal.list li:before,
   justify-content: center;
   margin: 0em 0em;
   padding: 1.14285714em 2em;
-  background: rgba(255, 255, 255, 0.9);
+  background: '';
   color: rgba(0, 0, 0, 0.87);
-  box-shadow: none;
+  box-shadow: '';
   border-radius: 0em;
-  border: none;
-  border-right: 1px solid rgba(34, 36, 38, 0.15);
+  border: '';
+  border-right: 1px solid #00A9FF;
   -webkit-transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
   transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
 }
@@ -15300,7 +15300,7 @@ ol.ui.horizontal.list li:before,
   top: 50%;
   right: 0%;
   border: medium none;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #403F49;
   width: 1.14285714em;
   height: 1.14285714em;
   border-style: solid;
@@ -15357,7 +15357,7 @@ ol.ui.horizontal.list li:before,
 .ui.steps .step .description {
   font-weight: normal;
   font-size: 0.92857143em;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .ui.steps .step > .description {
@@ -15459,7 +15459,7 @@ ol.ui.horizontal.list li:before,
   border-radius: 0em;
   padding: 1.14285714em 2em;
   border-right: none;
-  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  border-bottom: 1px solid #00A9FF;
 }
 
 .ui.vertical.steps .step:first-child {
@@ -15571,8 +15571,8 @@ ol.ui.horizontal.list li:before,
 .ui.steps .link.step:hover,
 .ui.steps a.step:hover::after,
 .ui.steps a.step:hover {
-  background: #F9FAFB;
-  color: rgba(0, 0, 0, 0.8);
+  background: #383740;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Link Down */
@@ -15581,28 +15581,28 @@ ol.ui.horizontal.list li:before,
 .ui.steps .link.step:active,
 .ui.steps a.step:active::after,
 .ui.steps a.step:active {
-  background: #F3F4F5;
-  color: rgba(0, 0, 0, 0.9);
+  background: #00A9FF;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Active */
 
 .ui.steps .step.active {
   cursor: auto;
-  background: #F3F4F5;
+  background: #00A9FF;
 }
 
 .ui.steps .step.active:after {
-  background: #F3F4F5;
+  background: #00A9FF;
 }
 
 .ui.steps .step.active .title {
-  color: #4183C4;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .ui.ordered.steps .step.active:before,
 .ui.steps .active.step .icon {
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Active Arrow */
@@ -15630,8 +15630,8 @@ ol.ui.horizontal.list li:before,
 .ui.steps a.active.step:hover::after,
 .ui.steps a.active.step:hover {
   cursor: pointer;
-  background: #706F7F;
-  color: rgba(0, 0, 0, 0.87);
+  background: #00A9FF;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Completed */
@@ -15645,7 +15645,7 @@ ol.ui.horizontal.list li:before,
 
 .ui.steps .disabled.step {
   cursor: auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: '';
   pointer-events: none;
 }
 
@@ -15656,7 +15656,7 @@ ol.ui.horizontal.list li:before,
 }
 
 .ui.steps .disabled.step:after {
-  background: rgba(255, 255, 255, 0.9);
+  background: '';
 }
 
 /*******************************

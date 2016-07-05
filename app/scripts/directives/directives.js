@@ -2,6 +2,17 @@
  * Created by yunhaoshen on 6/21/16.
  */
 'use strict';
+
+angular.module('projectApp').directive('emitLastRepeaterElement', function() {
+  return function(scope) {
+    if (scope.$last){
+      scope.$emit('LastRepeaterElement');
+    }
+  };
+});
+
+
+
 //console.log("!!!")
 //var myApp = angular.module('projectApp', []);
 /*

@@ -87,18 +87,6 @@ angular.module('projectApp')
 
       });
 
-      $("#learnMore").click(function(){
-        srollMagicController.scrollTo(function(learnMoreScrollToAnchor){
-          $('html, body').animate({scrollTop : learnMoreScrollToAnchor},800);
-        });
-        srollMagicController.scrollTo("#learnMoreScrollToAnchor");
-
-      })
-
-
-
-
-
     };
   }])
 
@@ -126,12 +114,89 @@ angular.module('projectApp')
       $scope.greeting = "Good Day";
     }
 
+    var srollMagicController = new ScrollMagic.Controller();
+    $("#learnMore").click(function(){
+      srollMagicController.scrollTo(function(learnMoreScrollToAnchor){
+        $('html, body').animate({scrollTop : learnMoreScrollToAnchor},800);
+      });
+      srollMagicController.scrollTo("#learnMoreScrollToAnchor");
+
+    });
+
 
     //console.log("!!!");
   }])
 
-  .controller('ProjectsController', ['$scope', function($scope){
-    $('.special.card .image').dimmer({
+  .controller('ProjectsController', ['$scope', 'workProjectIntroFactory', function($scope, workProjectIntroFactory){
+    var projects = workProjectIntroFactory.getProjects();
+
+    $scope.projects = projects;
+    $scope.projectDetailTemplate = '';
+
+    //console.log( $('.special.card .image').dimmer({}));
+    //console.log($scope.$last)
+    $scope.$on('LastRepeaterElement', function(){
+      //console.log('good to go');
+      $('.special.card .image').dimmer({
+        on: 'hover'
+      });
+    });
+
+
+
+    $scope.learnMoreProject = function (index){
+      $('.special.card .image').dimmer('hide');
+      $('.special.card .image').dimmer({
+      });
+      $('.closeIcon').attr('style', 'display: block !important');
+      for (var i=0; i < projects.length; i++) {
+        //console.log(index);
+        if (i != index) {
+          $('.' + projects[i].evenOrOddClass).css("display", "none");
+          //console.log('.' + projects[i].evenOrOddClass)
+          //console.log(projects[i])
+        }
+      }
+      if (index%2 != 0)
+      {
+        //console.log(index);
+        $('.' + projects[index].evenOrOddClass).css("background-color", "#383740");
+      }
+
+      $scope.projectDetailTemplate = projects[index].detailTemplate;
+      $('.projectDetailTemplate').css('display', 'block');
+
+    };
+
+    $scope.clostProjectDetail = function (index){
+      $('.special.card .image').dimmer({
+        on: 'hover'
+      });
+      $('.closeIcon').attr('style', 'display: none !important');
+      for (var i=0; i < projects.length; i++) {
+        //console.log(index);
+
+        $('.' + projects[i].evenOrOddClass).css("display", "block");
+        //console.log('.' + projects[i].evenOrOddClass)
+        //console.log(projects[i])
+
+      }
+
+      if (index%2 != 0)
+      {
+        $('.' + projects[index].evenOrOddClass).css("background-color", "#403F49");
+      }
+
+      $('.projectDetailTemplate').css('display', 'none');
+    };
+
+
+
+
+
+
+
+    /*$('.special.card .image').dimmer({
       on: 'hover'
     });
     $('#executiveDashboardLearnMore').click(function(){
@@ -159,7 +224,18 @@ angular.module('projectApp')
       $('.special.card .image').dimmer({
 
       });
-    })
+    })*/
   }])
+
+  .controller('ProjectDetailController', ['$scope', function($scope){
+    $('.step').click(function(){
+      $('.step').removeClass('active');
+      $(this).addClass('active');
+
+    });
+    $('.step').tab();
+
+}]);
+
 
 

@@ -16,7 +16,7 @@
 
 .ui.segment {
   position: relative;
-  background: rgba(255, 255, 255, 0.9);
+  background: #383740;
   box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
   margin: 1rem 0em;
   padding: 1em 1em;
@@ -87,7 +87,7 @@
 
 /* Table */
 .ui.basic.table.segment {
-  background: rgba(255, 255, 255, 0.9);
+  background: #383740;
   border: 1px solid rgba(34, 36, 38, 0.15);
   box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
 }
@@ -338,7 +338,7 @@
   background-color: transparent;
   border-radius: 0px;
   padding: 0em;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #383740;
   box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
   margin: 1rem 0em;
   border-radius: 0.28571429rem;
@@ -672,7 +672,7 @@
 
 /* Secondary */
 .ui.secondary.segment {
-  background: #F3F4F5;
+  background: #383740;
   color: rgba(0, 0, 0, 0.6);
 }
 .ui.secondary.inverted.segment {

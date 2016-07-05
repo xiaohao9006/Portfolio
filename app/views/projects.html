@@ -45,7 +45,74 @@
 
   </div>
 
-  <!-- Executive Dashboard Intro -->
+  <!-- Project Intro -->
+  <div ng-repeat="project in projects" emit-last-repeater-element>
+    <div ng-class="project.evenOrOddClass">
+      <div class="ui stackable grid container sectionContainer">
+        <div class="one wide column">
+          <i class="ui remove big icon closeIcon" ng-click="clostProjectDetail($index)"></i>
+        </div>
+        <div class="eight wide column">
+
+          <div class="ui special inverted blue card projectCard">
+            <div class="dimmable image">
+              <div class="ui dimmer disableDimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui large blue button" ng-click="learnMoreProject($index)">LEARN MORE</div>
+                  </div>
+                </div>
+              </div>
+              <img ng-src={{project.image}}>
+            </div>
+
+            <div class="content">
+              <div class="header">{{project.name}}</div>
+              <img class="projectLogo" ng-src={{project.companyLogo}}>
+            </div>
+            <div class="extra content">
+          <span class="right floated">
+            <i class="calendar icon"></i>
+            {{project.date}}
+          </span>
+          <span>
+            <i class="icon" ng-class="project.roleIconClass"></i>
+            {{project.role}}
+          </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="six wide column projectIntro">
+          <div class="ui items">
+            <div class="item">
+              <div class="content">
+                <div class="header projectIntroHeader">{{project.name}}</div>
+                <div class="description">
+                  <p>{{project.intro1}}</p>
+                  <p>{{project.intro2}}</p>
+                </div>
+                <div class="extra">
+                  <div class="ui black large label" ng-repeat="tool in project.tools">{{tool}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="one wide column"></div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="projectDetailTemplate" ng-include="projectDetailTemplate">
+</div>
+
+
+<!--
   <div class="evenContainer">
     <div class="ui stackable grid container sectionContainer">
       <div class="one wide column">
@@ -110,32 +177,12 @@
     </div>
   </div>
 
-  <!--My Agency Reports -->
+
   <div class="oddContainer">
     <div class="ui stackable grid container sectionContainer">
 
       <div class="one wide column">
         <i class="ui remove big icon closeIcon"></i>
-      </div>
-      <div class="five wide column projectIntro">
-        <div class="ui items">
-          <div class="item">
-            <div class="content">
-              <div class="header projectIntroHeader">My Agency Reports</div>
-              <div class="description">
-                <p>Vertafore’s My Agency Reports is the new reporting platform, replacing
-                  legacy Vertafore Reporting. With My Agency Reports insurance agency is connected
-                  to its critical data and has added flexibility to give them more control over the data.</p>
-              </div>
-              <div class="extra">
-                <div class="ui black large label">Adobe Illustrator</div>
-                <div class="ui black large label">Adobe Photoshop</div>
-                <div class="ui black large label">FramerJS</div>
-                <div class="ui black large label">Angular UI Grid</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="nine wide column">
         <div class="ui special inverted blue card projectCard">
@@ -169,9 +216,31 @@
           </div>
         </div>
       </div>
+      <div class="five wide column projectIntro">
+        <div class="ui items">
+          <div class="item">
+            <div class="content">
+              <div class="header projectIntroHeader">My Agency Reports</div>
+              <div class="description">
+                <p>Vertafore’s My Agency Reports is the new reporting platform, replacing
+                  legacy Vertafore Reporting. With My Agency Reports insurance agency is connected
+                  to its critical data and has added flexibility to give them more control over the data.</p>
+              </div>
+              <div class="extra">
+                <div class="ui black large label">Adobe Illustrator</div>
+                <div class="ui black large label">Adobe Photoshop</div>
+                <div class="ui black large label">FramerJS</div>
+                <div class="ui black large label">Angular UI Grid</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="one wide column"></div>
 
     </div>
   </div>
 </div>
 
+-->

@@ -210,13 +210,18 @@ gulp.task('copy:videos', function () {
     .pipe(gulp.dest(yeoman.dist + '/videos'));
 });
 
+gulp.task('copy:pdfs', function () {
+  return gulp.src(yeoman.app + '/pdfs/**/*')
+    .pipe(gulp.dest(yeoman.dist + '/pdfs'));
+});
+
 gulp.task('copy:svgs', function () {
   return gulp.src(yeoman.app + '/svgs/**/*')
     .pipe(gulp.dest(yeoman.dist + '/svgs'));
 });
 
 gulp.task('build', ['clean:dist'], function () {
-  runSequence(['images', 'copy:extras', 'copy:fonts', 'copy:videos', 'copy:svgs', 'client:build']);
+  runSequence(['images', 'copy:extras', 'copy:fonts', 'copy:videos', 'copy:svgs', 'copy:pdfs','client:build']);
 });
 
 gulp.task('default', ['build']);
