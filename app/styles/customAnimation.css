@@ -98,7 +98,7 @@
   animation-name: bounceIn;
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeInCustom {
   0% {
     opacity: 0;
   }
@@ -108,7 +108,7 @@
   }
 }
 
-@-moz-keyframes fadeIn {
+@-moz-keyframes fadeInCustom {
   0% {
     opacity: 0;
   }
@@ -118,7 +118,7 @@
   }
 }
 
-@-o-keyframes fadeIn {
+@-o-keyframes fadeInCustom {
   0% {
     opacity: 0;
   }
@@ -128,7 +128,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInCustom {
   0% {
     opacity: 0;
   }
@@ -166,14 +166,14 @@
   animation-delay: 2s;
 }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
+.fadeInCustom {
+  -webkit-animation-name: fadeInCustom;
+  -moz-animation-name: fadeInCustom;
+  -o-animation-name: fadeInCustom;
+  animation-name: fadeInCustom;
 }
 
-@-webkit-keyframes fadeInUp {
+@-webkit-keyframes fadeInCustomUp {
   0% {
     opacity: 0;
     -webkit-transform: translateY(20px);
@@ -185,7 +185,7 @@
   }
 }
 
-@-moz-keyframes fadeInUp {
+@-moz-keyframes fadeInCustomUp {
   0% {
     opacity: 0;
     -moz-transform: translateY(20px);
@@ -197,7 +197,7 @@
   }
 }
 
-@-o-keyframes fadeInUp {
+@-o-keyframes fadeInCustomUp {
   0% {
     opacity: 0;
     -o-transform: translateY(20px);
@@ -209,7 +209,7 @@
   }
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInCustomUp {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -221,14 +221,14 @@
   }
 }
 
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  -moz-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+.fadeInCustomUp {
+  -webkit-animation-name: fadeInCustomUp;
+  -moz-animation-name: fadeInCustomUp;
+  -o-animation-name: fadeInCustomUp;
+  animation-name: fadeInCustomUp;
 }
 
-@-webkit-keyframes fadeInDown {
+@-webkit-keyframes fadeInCustomDown {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
@@ -240,7 +240,7 @@
   }
 }
 
-@-moz-keyframes fadeInDown {
+@-moz-keyframes fadeInCustomDown {
   0% {
     opacity: 0;
     -moz-transform: translateY(-20px);
@@ -252,7 +252,7 @@
   }
 }
 
-@-o-keyframes fadeInDown {
+@-o-keyframes fadeInCustomDown {
   0% {
     opacity: 0;
     -o-transform: translateY(-20px);
@@ -264,7 +264,7 @@
   }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInCustomDown {
   0% {
     opacity: 0;
     transform: translateY(-20px);
@@ -276,14 +276,14 @@
   }
 }
 
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+.fadeInCustomDown {
+  -webkit-animation-name: fadeInCustomDown;
+  -moz-animation-name: fadeInCustomDown;
+  -o-animation-name: fadeInCustomDown;
+  animation-name: fadeInCustomDown;
 }
 
-@-webkit-keyframes fadeInLeft {
+@-webkit-keyframes fadeInCustomLeft {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-20px);
@@ -295,7 +295,7 @@
   }
 }
 
-@-moz-keyframes fadeInLeft {
+@-moz-keyframes fadeInCustomLeft {
   0% {
     opacity: 0;
     -moz-transform: translateX(-20px);
@@ -307,7 +307,7 @@
   }
 }
 
-@-o-keyframes fadeInLeft {
+@-o-keyframes fadeInCustomLeft {
   0% {
     opacity: 0;
     -o-transform: translateX(-20px);
@@ -319,7 +319,7 @@
   }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeInCustomLeft {
   0% {
     opacity: 0;
     transform: translateX(-20px);
@@ -331,21 +331,21 @@
   }
 }
 
-.fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  -moz-animation-name: fadeInLeft;
-  -o-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
+.fadeInCustomLeft {
+  -webkit-animation-name: fadeInCustomLeft;
+  -moz-animation-name: fadeInCustomLeft;
+  -o-animation-name: fadeInCustomLeft;
+  animation-name: fadeInCustomLeft;
 }
 
-.fadeOutDown {
-  -webkit-animation-name: fadeOutDown;
-  -moz-animation-name: fadeOutDown;
-  -o-animation-name: fadeOutDown;
-  animation-name: fadeOutDown;
+.fadeOutCustomDown {
+  -webkit-animation-name: fadeOutCustomDown;
+  -moz-animation-name: fadeOutCustomDown;
+  -o-animation-name: fadeOutCustomDown;
+  animation-name: fadeOutCustomDown;
 }
 
-@-webkit-keyframes fadeOutLeft {
+@-webkit-keyframes fadeOutCustomLeft {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -357,7 +357,7 @@
   }
 }
 
-@-moz-keyframes fadeOutLeft {
+@-moz-keyframes fadeOutCustomLeft {
   0% {
     opacity: 1;
     -moz-transform: translateX(0);
@@ -369,7 +369,7 @@
   }
 }
 
-@-o-keyframes fadeOutLeft {
+@-o-keyframes fadeOutCustomLeft {
   0% {
     opacity: 1;
     -o-transform: translateX(0);
@@ -381,7 +381,7 @@
   }
 }
 
-@keyframes fadeOutLeft {
+@keyframes fadeOutCustomLeft {
   0% {
     opacity: 1;
     transform: translateX(0);
@@ -393,7 +393,7 @@
   }
 }
 
-@-webkit-keyframes fadeOut {
+@-webkit-keyframes fadeOutCustom {
   0% {
     opacity: 1;
   }
@@ -403,7 +403,7 @@
   }
 }
 
-@-moz-keyframes fadeOut {
+@-moz-keyframes fadeOutCustom {
   0% {
     opacity: 1;
   }
@@ -413,7 +413,7 @@
   }
 }
 
-@-o-keyframes fadeOut {
+@-o-keyframes fadeOutCustom {
   0% {
     opacity: 1;
   }
@@ -423,7 +423,7 @@
   }
 }
 
-@keyframes fadeOut {
+@keyframes fadeOutCustom {
   0% {
     opacity: 1;
   }
@@ -433,23 +433,79 @@
   }
 }
 
-.animated.fadeOut {
-  -webkit-animation-name: fadeOut;
-  -moz-animation-name: fadeOut;
-  -o-animation-name: fadeOut;
-  animation-name: fadeOut;
+.animated.fadeOutCustom {
+  -webkit-animation-name: fadeOutCustom;
+  -moz-animation-name: fadeOutCustom;
+  -o-animation-name: fadeOutCustom;
+  animation-name: fadeOutCustom;
 }
 
-.animated.fadeOutLeft {
-  -webkit-animation-name: fadeOutLeft;
-  -moz-animation-name: fadeOutLeft;
-  -o-animation-name: fadeOutLeft;
-  animation-name: fadeOutLeft;
+.animated.fadeOutCustomLeft {
+  -webkit-animation-name: fadeOutCustomLeft;
+  -moz-animation-name: fadeOutCustomLeft;
+  -o-animation-name: fadeOutCustomLeft;
+  animation-name: fadeOutCustomLeft;
+}
+
+/*Custom fadeOutUp*/
+@-webkit-keyframes fadeOutCustomUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-60px);
+  }
+}
+
+@-moz-keyframes fadeOutCustomUp {
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(-60px);
+  }
+}
+
+@-o-keyframes fadeOutCustomUp {
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateY(-60px);
+  }
+}
+
+@keyframes fadeOutCustomUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+}
+
+.fadeOutCustomUp {
+  -webkit-animation-name: fadeOutCustomUp;
+  -moz-animation-name: fadeOutCustomUp;
+  -o-animation-name: fadeOutCustomUp;
+  animation-name: fadeOutCustomUp;
 }
 
 
-/*MenuHeaderAnimation FadeIn*/
-@-webkit-keyframes menuFadeIn {
+/*MenuHeaderAnimation fadeInCustom*/
+@-webkit-keyframes menufadeInCustom {
   0% {
     background-color:transparent;
   }
@@ -459,7 +515,7 @@
   }
 }
 
-@-moz-keyframes menuFadeIn {
+@-moz-keyframes menufadeInCustom {
   0% {
     background-color:transparent;
   }
@@ -469,7 +525,7 @@
   }
 }
 
-@-o-keyframes menuFadeIn {
+@-o-keyframes menufadeInCustom {
   0% {
     background-color:transparent;
   }
@@ -479,7 +535,7 @@
   }
 }
 
-@keyframes menuFadeIn {
+@keyframes menufadeInCustom {
   0% {
     background-color:transparent;
   }
@@ -489,15 +545,15 @@
   }
 }
 
-.menuFadeIn {
-  -webkit-animation-name: menuFadeIn;
-  -moz-animation-name: menuFadeIn;
-  -o-animation-name: menuFadeIn;
-  animation-name: menuFadeIn;
+.menufadeInCustom {
+  -webkit-animation-name: menufadeInCustom;
+  -moz-animation-name: menufadeInCustom;
+  -o-animation-name: menufadeInCustom;
+  animation-name: menufadeInCustom;
 }
 
-/*MenuHeaderAnimation FadeOut*/
-@-webkit-keyframes menuFadeOut {
+/*MenuHeaderAnimation fadeOutCustom*/
+@-webkit-keyframes menufadeOutCustom {
   0% {
     background-color:#2d2c33;
   }
@@ -507,7 +563,7 @@
   }
 }
 
-@-moz-keyframes menuFadeOut {
+@-moz-keyframes menufadeOutCustom {
   0% {
     background-color:#2d2c33;
   }
@@ -517,7 +573,7 @@
   }
 }
 
-@-o-keyframes menuFadeOut {
+@-o-keyframes menufadeOutCustom {
   0% {
     background-color:#2d2c33;
   }
@@ -527,7 +583,7 @@
   }
 }
 
-@keyframes menuFadeOut {
+@keyframes menufadeOutCustom {
   0% {
     background-color:#2d2c33;
   }
@@ -537,11 +593,11 @@
   }
 }
 
-.menuFadeOut {
-  -webkit-animation-name: menuFadeOut;
-  -moz-animation-name: menuFadeOut;
-  -o-animation-name: menuFadeOut;
-  animation-name: menuFadeOut;
+.menufadeOutCustom {
+  -webkit-animation-name: menufadeOutCustom;
+  -moz-animation-name: menufadeOutCustom;
+  -o-animation-name: menufadeOutCustom;
+  animation-name: menufadeOutCustom;
 }
 
 /*Skills SVG Bar Grow*/

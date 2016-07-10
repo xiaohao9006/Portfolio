@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic" type="text/css" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="./styles/main.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="./styles/customAnimation.css">
@@ -16,6 +15,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" type="text/css" href="./bower_components/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="./bower_components/animate.css/animate.min.css">
 
     <!-- endbower -->
     <!-- endbuild -->
@@ -35,7 +35,7 @@
       </video>
     </div>
 
-    <ng-view onload="onViewLoad()"></ng-view>
+    <ui-view onload="onViewLoad()" autoscroll="false"></ui-view>
 
     <div ng-include="'views/footer.html'"></div>
 
@@ -63,7 +63,8 @@
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script src="./bower_components/semantic/dist/semantic.min.js"></script>
     <script src="./bower_components/angular/angular.min.js"></script>
-    <script src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="./bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 
     <!-- endbower -->

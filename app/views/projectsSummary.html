@@ -1,0 +1,65 @@
+<!-- Project Intro -->
+<div ng-controller="ProjectsSummaryController">
+  <div id="projectAnchor" style="position:relative; top:-5rem"></div>
+  <div ng-repeat="project in projects" emit-last-repeater-element>
+    <div ng-class="project.evenOrOddClass">
+      <div class="ui stackable grid container sectionContainer">
+        <div class="one wide column">
+        </div>
+        <div class="eight wide column">
+
+          <div class="ui special inverted blue card projectCard">
+            <div class="dimmable image">
+              <div class="ui dimmer disableDimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui large blue button" ng-click="learnMoreProject($index)">LEARN MORE</div>
+                  </div>
+                </div>
+              </div>
+              <img ng-src={{project.image}}>
+            </div>
+
+            <div class="content">
+              <div class="header">{{project.name}}</div>
+              <img class="projectLogo" ng-src={{project.companyLogo}}>
+            </div>
+            <div class="extra content">
+          <span class="right floated">
+            <i class="calendar icon"></i>
+            {{project.date}}
+          </span>
+          <span>
+            <i class="icon" ng-class="project.roleIconClass"></i>
+            {{project.role}}
+          </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="six wide column projectIntro">
+          <div class="ui items">
+            <div class="item">
+              <div class="content">
+                <div class="header projectIntroHeader">{{project.name}}</div>
+                <div class="description">
+                  <p>{{project.intro1}}</p>
+                  <p>{{project.intro2}}</p>
+                </div>
+                <div class="extra">
+                  <div class="ui black large label" ng-repeat="tool in project.tools">{{tool}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="one wide column"></div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+

@@ -1,4 +1,4 @@
-<div ng-controller="ExecDashboardController">
+<div ng-controller="MyAgencyReportsController">
   <div id="projectAnchor" style="position:relative; top:-5rem"></div>
   <div class="oddContainer">
     <div class="ui stackable grid container sectionContainer">
@@ -62,20 +62,59 @@
 
 
       <div class="ui stackable grid toDoDetail">
-        <div class="three wide computer one wide tablet column"></div>
+        <div class="one wide computer one wide tablet column"></div>
         <div class="four wide computer six wide tablet column">
-          <i class="ui line chart huge icon"></i>
-          <p>Design a KPI dashboard to provide Agency Executives the capability to quickly assess the current health of their business performance</p>
+          <i class="ui dashboard huge icon"></i>
+          <p>Design a centralized, flexible and extensive reporting platform that can meet the needs of our customers across all Vertafore products</p>
         </div>
-
-        <div class="computer tablet only two wide column"></div>
+        <div class="one wide computer one wide tablet column"></div>
 
         <div class="four wide computer six wide tablet column">
-          <i class="ui bar chart huge icon"></i>
-          <p>Enable them to view positive and negative deviations, obtain clarification on those deviations, allowing them to react accordingly</p>
+          <i class="ui sitemap huge icon"></i>
+          <p>At its core it can allow agencies to own their own report templates and distribute to their staff</p>
         </div>
-        <div class="three wide computer one wide tablet column"></div>
+        <div class="one wide computer one wide tablet column"></div>
+
+        <div class="four wide computer six wide tablet column">
+          <i class="ui legal huge icon"></i>
+          <p>It has to cover major functions of legacy Vertafore Classic Reports and Vertafore Reporting, so we can sunset the two products</p>
+        </div>
+        <div class="one wide computer one wide tablet column"></div>
+
       </div>
+
+      <h2 class="ui header centered large inverted horizontal divider">WHAT DID I INHERIT?</h2>
+      <div class="ui stackable grid">
+        <div class="eight wide column">
+          <div class="ui grid">
+            <div class="sixteen wide column centeredContentDiv">
+              <div class="ui rounded bordered large image">
+                <img src="/images/Vertafore-Classic-Reports.png" />
+              </div>
+            </div>
+            <div class="sixteen wide column">
+              <div class="inheritIntroHeader">Vertafore Classic Reports – based on SAP Crystal Reports</div>
+              <p class="inheritIntroContent">A legacy Vertafore product with an extremely “old fashion” interface from last century, which is not very pretty.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="eight wide column">
+          <div class="ui grid">
+            <div class="sixteen wide column centeredContentDiv">
+              <div class="ui rounded bordered large image">
+                <img src="/images/Vertafore-Reporting.png" />
+              </div>
+            </div>
+            <div class="sixteen wide column">
+              <div class="inheritIntroHeader">Vertafore Reporting – based on Oracle Business Intelligence Enterprise Edition (OBIEE)</div>
+              <p class="inheritIntroContent">Vertafore Reporting was introduced with the intention of replacing all Classic reports, however it has not provided the level
+                of flexibility that we want to provide to our users. And due to the end of the contract with Oracle, we have to sunset this product soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <h2 class="ui header centered large inverted horizontal divider">DESIGN PROCESS</h2>
       <div class="stepContainer">
@@ -124,14 +163,13 @@
           <div class="ui stackable grid container">
             <div class="sixteen wide column processDetailHeader">"Design Partnership" Program</div>
             <div class="ten wide column">
-              <p>During the empathize phase, I, together with PM and developer lead, just
-                jumped on the “Design Partner” call, and asked those Agency Executives about their data analytics
-                practices and requirements:</p>
+              <p>During the empathize phase, I, together with PM and developer lead, just jumped on the “Design Partner”
+                call and asked them about their agency data analysis requirements, and pros and cons with current legacy Vertafore reporting products:</p>
               <div class="ui bulleted list">
-                <div class="item">What data do you think is important to you?</div>
-                <div class="item">What insights do you want to get from the data?</div>
-                <div class="item">How do you want to analyze and compare the data?</div>
-                <div class="item">What are your current data analytics practices? Any pain points?</div>
+                <div class="item">What reports do you use most frequently?</div>
+                <div class="item">What do you like about the current reporting tool?</div>
+                <div class="item">What don’t you like about the current reporting tool?</div>
+                <div class="item">Are there any data points/fields you wish were on the report that aren’t currently available?</div>
                 <div class="item">...</div>
               </div>
             </div>
@@ -177,23 +215,23 @@
                   <div class="ui left corner blue label" style="background-color:#00a9ff">
                     <i class="user icon"></i>
                   </div>
-                  <img src="/images/execPersona.jpg">
+                  <img src="/images/accountantPersona.jpg">
                 </div>
                 <div class="content">
-                  <div class="header personaName">WALTER</div>
+                  <div class="header personaName">MARY</div>
                   <div class="meta personaMeta">
-                    <div class="price">Age: 46</div>
-                    <div class="stay">Agency Size: A1</div>
-                    <div class="stay">Role: Executive Memeber</div>
-                    <div class="stay">Line of Business: P&C, Benefits Mix</div>
+                    <div class="stay">Age: 36</div>
+                    <div class="stay">Agency Size: A3</div>
+                    <div class="stay">Role: Accountant/Financial Analyst</div>
+                    <div class="stay">Line of Business: P&C</div>
                   </div>
                   <div class="description">
-                    <p>Based on the findings from previous phase, we defined target persona as "WALTER".
-                      He is an executive member and responsible for the agency as a whole and he has access to view all financial information for the agency.
+                    <p>Based on the findings from previous phase, we defined target persona as "MARY".</p>
+                    <p>Mary started her career as an accountant at her insurance agency. She spent most of her time documenting financial transactions
+                      by entering account information. And now she has worked her way up to overseeing the overall agency financial health as a specialized financial analyst.
                     </p>
-                    <p>All he wants is to "Identify Deviation" - to look for "illnesses" and where they are occurring through the data,
-                      so that he/she can take quick actions. But the current data analytics practices are heavily "hard copy report based",
-                      which is not real-time and is hard to gain insights.</p>
+                    <p>Now she spends a large portion of her time preparing financial reports. She wants a flexible reporting platform which allows she to
+                      create/tailor financial report templates to reuse, and even distribute/share out to other co-workers to ensure everyone is using the same reports.</p>
                   </div>
                 </div>
               </div>
@@ -203,19 +241,19 @@
             <div class="two wide computer tablet only column"></div>
             <div class="three wide column howMightWeContainer">
               <div class="ui blue big label howMightWeLabel">Create ...</div>
-              <p class="howMightWeContent">A fully engaging and easy to understand business performance dashboard</p>
+              <p class="howMightWeContent">A centralized, flexible and extensive reporting platform</p>
             </div>
             <div class="three wide column howMightWeContainer">
               <div class="ui blue big label howMightWeLabel">For ...</div>
-              <p class="howMightWeContent">Agency executives</p>
+              <p class="howMightWeContent">Agency accountant/financial analyst</p>
             </div>
             <div class="three wide column howMightWeContainer">
               <div class="ui blue big label howMightWeLabel">To ...</div>
-              <p class="howMightWeContent">Help them easily "identify deviation" and take quick actions in real time</p>
+              <p class="howMightWeContent">Meet their data analysis needs</p>
             </div>
             <div class="three wide column howMightWeContainer">
               <div class="ui blue big label howMightWeLabel">And improve ...</div>
-              <p class="howMightWeContent">Their overall in house data analytics process and practices</p>
+              <p class="howMightWeContent">The overall user experience of Vertafore reporting products</p>
             </div>
             <div class="two wide computer tablet only column"></div>
 
@@ -236,12 +274,12 @@
             </div>
             <div class="eight wide column">
               <div class="ui rounded bordered image">
-                <img src="/images/execWhiteboard1.jpg" />
+                <img src="/images/marWhiteboard1.jpg" />
               </div>
             </div>
             <div class="eight wide column">
               <div class="ui rounded bordered image">
-                <img src="/images/execWhiteboard2.jpg" />
+                <img src="/images/marWhiteboard2.jpg" />
               </div>
             </div>
           </div>
@@ -259,45 +297,22 @@
             </div>
             <div class="eight wide column">
               <div class="ui rounded bordered image">
-                <img src="/images/Executive-Dashboard-Level-1.png" />
+                <img src="/images/Download-Detail-Report-Input-Parameters.png" />
               </div>
             </div>
             <div class="eight wide column">
               <div class="ui rounded bordered image">
-                <img src="/images/Executive-Dashboard-Level-2-Break-Down.png" />
+                <img src="/images/Download-Detail-Report-Detail-View.png" />
               </div>
             </div>
             <div class="eight wide column">
               <div class="ui rounded bordered image">
-                <img src="/images/Executive-Dashboard-Ad-Hoc-Filtering.png" />
+                <img src="/images/Download-Detail-Report-Add-Summary-View.png" />
               </div>
             </div>
             <div class="eight wide column">
               <div class="ui rounded bordered image">
-                <img src="/images/Executive-Dashboard-Ad-Hoc-Filtering-II.png" />
-              </div>
-            </div>
-
-            <div class="sixteen wide column processDetailHeader">
-              <div>Rapid Prototyping in Jsfiddle</div>
-              <p class="processDetailContent">And in order to rapidly test out data visualization ideas,
-                I also used jsfiddle sandbox to customize Highchart JS and tried out different design solutions.</p>
-            </div>
-
-            <div class="ui items sixteen wide column processDetailItem">
-              <div class="item">
-                <div class="ui medium rounded big image">
-                  <img src="/images/execCodeDemo.png">
-                </div>
-                <div class="content">
-                  <a class="header processDetailItemName" target="_blank" href="http://jsfiddle.net/b2zrnc5t/17/">Customize Highcharts JS</a>
-                  <div class="description">
-                    <p>The final design solution we went for required lots of highcharts customization.
-                      The sandbox environment not only empowered us to explore different design ideas,
-                      but also gave our development team clue on how to implement the complex customization.
-                    </p>
-                  </div>
-                </div>
+                <img src="/images/Batch-Reports-through-Related-Reports.png" />
               </div>
             </div>
 
@@ -321,28 +336,13 @@
       </div>
 
       <!-- Youtube Video -->
-      <h2 class="ui header centered large inverted horizontal divider">FINAL PRODUCT</h2>
-      <div class="ui stackable grid">
 
-        <div class="two wide computer tablet only column"></div>
-        <div class="twelve wide column">
-          <p class="videoIntro">Executive Dashboard Product Demo Video for 2015 Network of Vertafore Users (NetVU) Conference.</p>
-          <div class="videoWrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LhpGJd2e4Wk" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="two wide computer tablet only column"></div>
-      </div>
-
-
-      <h2 class="ui header centered large inverted horizontal divider">CUSTOMER FEEDBACK</h2>
+      <h2 class="ui header centered large inverted horizontal divider">UP TO DATE PRODUCT</h2>
       <div class="ui stackable grid">
         <div class="two wide computer tablet only column"></div>
         <div class="twelve wide column">
-          <p class="videoIntro">Listen to what one of my design partners, Joseph Rukas
-            (the Vice President of Conner Strong & Buckelew) says about the product.</p>
           <div class="videoWrapper">
-            <iframe width="560" height="315" src="http://c.brightcove.com/services/viewer/federated_f9?&width=650&height=460&flashID=myExperience&identifierClassName=BrightcoveExperienceID_2926&bgcolor=%23FFFFFF&playerID=2509521884001&playerKey=AQ~~%2CAAACHVPEk_k~%2C2rNY2xgKHOUtEpycgazjqKAhz9uwzUik&isVid=true&isUI=true&dynamicStreaming=true&linkBaseURL=http%3A%2F%2Fwww.vertafore.com%2FWebVideosFrame&autoStart=false&debuggerID=&videoID=4132179254001&%40videoPlayer=4132179254001&startTime=1465796541647" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="http://c.brightcove.com/services/viewer/federated_f9?&width=650&height=460&flashID=myExperience&identifierClassName=BrightcoveExperienceID_1423&bgcolor=%23FFFFFF&playerID=2509521884001&playerKey=AQ~~%2CAAACHVPEk_k~%2C2rNY2xgKHOUtEpycgazjqKAhz9uwzUik&isVid=true&isUI=true&dynamicStreaming=true&linkBaseURL=http%3A%2F%2Fwww.vertafore.com%2FWebVideosFrame&autoStart=false&debuggerID=&videoID=4749116737001&%40videoPlayer=4749116737001&startTime=1465695612354" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
         <div class="two wide computer tablet only column"></div>

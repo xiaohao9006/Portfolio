@@ -30,24 +30,39 @@
   });
 */
 
-angular.module('projectApp',['ngRoute'])
-  .config(function($routeProvider){
-    $routeProvider
-      .when('/photos', {
-        templateUrl:'views/photos.html',
-        //controller: 'photosController'
+angular.module('projectApp',['ui.router','ngAnimate'])
+  .config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise("/aboutme");
+
+    $stateProvider
+      .state('aboutme', {
+        url: "/aboutme",
+        templateUrl:"views/aboutme.html"
       })
-      .when('/projects', {
-        templateUrl:'views/projects.html',
-        //controller: 'ProjectsController'
+      .state('projects', {
+        url: '/projects',
+        templateUrl:"views/projects.html"
       })
-      .when('/videos', {
-        templateUrl:'views/videos.html',
-        //controller: 'VideosController'
+      .state('photos', {
+        url: '/photos',
+        templateUrl:"views/photos.html"
       })
-      .otherwise({
-        templateUrl:'views/main.html',
-        controller: 'HeaderTextController'
+      .state('videos', {
+        url: '/videos',
+        templateUrl:"views/videos.html"
+      })
+      .state('projects.summary', {
+        url: '/projectssummary',
+        templateUrl:"views/projectsSummary.html",
+      })
+
+      .state('projects.execdashboard', {
+        url:'/execdashboard',
+        templateUrl:"views/executiveDashboardDetail.html"
+      })
+      .state('projects.myagencyreports',{
+        url:'/myagencyreports',
+        templateUrl:"views/myAgencyReportsDetail.html"
       });
   })
 ;

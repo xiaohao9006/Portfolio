@@ -49,11 +49,11 @@ angular.module('projectApp')
       experienceScene.on("enter", function()
       {
         //console.log("!!!!!!");
-        $("#flightToUSA").addClass("animated fadeInUp");
-        $("#graduation").addClass("animated fadeInDown");
-        $("#executiveDashboard").addClass("animated fadeInDown");
-        $("#adobeReports").addClass("animated fadeInUp");
-        $("#myAgencyReports").addClass("animated fadeInDown");
+        $("#flightToUSA").addClass("animated fadeInCustomUp");
+        $("#graduation").addClass("animated fadeInCustomDown");
+        $("#executiveDashboard").addClass("animated fadeInCustomDown");
+        $("#adobeReports").addClass("animated fadeInCustomUp");
+        $("#myAgencyReports").addClass("animated fadeInCustomDown");
 
 
       });
@@ -66,20 +66,20 @@ angular.module('projectApp')
 
       skillsScene.on("enter", function(){
         $("#skillsBar-1").addClass("animated growBar");
-        $("#skillsText-1").addClass("animated fadeIn");
-        $("#skillsIcon-1").addClass("animated fadeIn");
+        $("#skillsText-1").addClass("animated fadeInCustom");
+        $("#skillsIcon-1").addClass("animated fadeInCustom");
         $("#skillsBar-2").addClass("animated growBar ");
-        $("#skillsText-2").addClass("animated fadeIn ");
-        $("#skillsIcon-2").addClass("animated fadeIn ");
+        $("#skillsText-2").addClass("animated fadeInCustom ");
+        $("#skillsIcon-2").addClass("animated fadeInCustom ");
         $("#skillsBar-3").addClass("animated growBar ");
-        $("#skillsText-3").addClass("animated fadeIn ");
-        $("#skillsIcon-3").addClass("animated fadeIn ");
+        $("#skillsText-3").addClass("animated fadeInCustom ");
+        $("#skillsIcon-3").addClass("animated fadeInCustom ");
         $("#skillsBar-4").addClass("animated growBar ");
-        $("#skillsText-4").addClass("animated fadeIn ");
-        $("#skillsIcon-4").addClass("animated fadeIn ");
+        $("#skillsText-4").addClass("animated fadeInCustom ");
+        $("#skillsIcon-4").addClass("animated fadeInCustom ");
         $("#skillsBar-5").addClass("animated growBar ");
-        $("#skillsText-5").addClass("animated fadeIn ");
-        $("#skillsIcon-5").addClass("animated fadeIn ");
+        $("#skillsText-5").addClass("animated fadeInCustom ");
+        $("#skillsIcon-5").addClass("animated fadeInCustom ");
 
         $("#English").addClass("animated show75");
         $("#Chinese").addClass("animated show100");
@@ -88,10 +88,42 @@ angular.module('projectApp')
       });
 
     };
+    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+      //console.log(toState)
+      if (toState.name === 'aboutme' || toState.name === 'projects' || toState.name === 'photos' || toState.name === 'videos')
+      {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        console.log('root')
+      }
+
+    });
+    $scope.scrollToProject_Animation = function()
+    {
+      var scrollMagicController = new ScrollMagic.Controller();
+
+      scrollMagicController.scrollTo(function(Anchor){
+        $('html, body').animate(
+          {scrollTop : Anchor},
+          800
+        );
+
+      });
+      scrollMagicController.scrollTo("#projectAnchor");
+
+    };
+
+    $scope.scrollToProject = function()
+    {
+      var scrollMagicController = new ScrollMagic.Controller();
+      scrollMagicController.scrollTo("#projectAnchor");
+
+    };
+
+
   }])
 
   .controller('HeaderTextController', ['$scope', function($scope){
-    console.log("!!!");
+    //console.log("!!!");
     var myDate = new Date();
     /* hour is before noon */
     if ( myDate.getHours() < 12 )
@@ -114,12 +146,12 @@ angular.module('projectApp')
       $scope.greeting = "Good Day";
     }
 
-    var srollMagicController = new ScrollMagic.Controller();
+    var scrollMagicController = new ScrollMagic.Controller();
     $("#learnMore").click(function(){
-      srollMagicController.scrollTo(function(learnMoreScrollToAnchor){
+      scrollMagicController.scrollTo(function(learnMoreScrollToAnchor){
         $('html, body').animate({scrollTop : learnMoreScrollToAnchor},800);
       });
-      srollMagicController.scrollTo("#learnMoreScrollToAnchor");
+      scrollMagicController.scrollTo("#learnMoreScrollToAnchor");
 
     });
 
@@ -127,14 +159,21 @@ angular.module('projectApp')
     //console.log("!!!");
   }])
 
-  .controller('ProjectsController', ['$scope', 'workProjectIntroFactory', function($scope, workProjectIntroFactory){
+  .controller('ProjectsController', ['$scope','$state', function($scope, $state){
+    $state.go('projects.summary');
+    $("#learnMoreWork").click(function(){
+      $scope.scrollToProject_Animation();
+    });
+    //console.log("!!!")
+  }])
+
+  .controller('ProjectsSummaryController', ['$scope', '$animate', '$state', 'workProjectIntroFactory', function($scope, $animate, $state, workProjectIntroFactory){
+    //console.log("!!!")
     var projects = workProjectIntroFactory.getProjects();
 
-    $scope.projects = projects;
-    $scope.projectDetailTemplate = '';
 
-    //console.log( $('.special.card .image').dimmer({}));
-    //console.log($scope.$last)
+    $scope.projects = projects;
+
     $scope.$on('LastRepeaterElement', function(){
       //console.log('good to go');
       $('.special.card .image').dimmer({
@@ -145,89 +184,36 @@ angular.module('projectApp')
 
 
     $scope.learnMoreProject = function (index){
+
+      //scrollToProject(index);
+
       $('.special.card .image').dimmer('hide');
       $('.special.card .image').dimmer({
       });
-      $('.closeIcon').attr('style', 'display: block !important');
-      for (var i=0; i < projects.length; i++) {
-        //console.log(index);
-        if (i != index) {
-          $('.' + projects[i].evenOrOddClass).css("display", "none");
-          //console.log('.' + projects[i].evenOrOddClass)
-          //console.log(projects[i])
-        }
-      }
-      if (index%2 != 0)
-      {
-        //console.log(index);
-        $('.' + projects[index].evenOrOddClass).css("background-color", "#383740");
-      }
-
-      $scope.projectDetailTemplate = projects[index].detailTemplate;
-      $('.projectDetailTemplate').css('display', 'block');
-
-    };
-
-    $scope.clostProjectDetail = function (index){
-      $('.special.card .image').dimmer({
-        on: 'hover'
-      });
-      $('.closeIcon').attr('style', 'display: none !important');
-      for (var i=0; i < projects.length; i++) {
-        //console.log(index);
-
-        $('.' + projects[i].evenOrOddClass).css("display", "block");
-        //console.log('.' + projects[i].evenOrOddClass)
-        //console.log(projects[i])
-
-      }
 
       if (index%2 != 0)
       {
-        $('.' + projects[index].evenOrOddClass).css("background-color", "#403F49");
+        //console.log(index);
+        $('.' + $scope.projects[index].evenOrOddClass).css("background-color", "#383740");
       }
 
-      $('.projectDetailTemplate').css('display', 'none');
+      $state.go(projects[index].detailTemplate)
+      //$scope.projectDetailTemplate.template = projects[index].detailTemplate;
+
+
+      //scrollToProject(index);
+
     };
 
 
 
 
 
-
-
-    /*$('.special.card .image').dimmer({
-      on: 'hover'
-    });
-    $('#executiveDashboardLearnMore').click(function(){
-      $('.special.card .image').dimmer('hide');
-      $('.special.card .image').dimmer({
-      });
-      $('.oddContainer').css("display", "none");
-      $('.evenContainer').css('background-color', "#383740");
-      $('.closeIcon').attr('style', 'display: block !important');
-
-    });
-
-    $('.closeIcon').click(function(){
-      $('.special.card .image').dimmer({
-        on: 'hover'
-      });
-      $('.oddContainer').css("display", "block");
-      $('.evenContainer').css('background-color', "#403F49");
-      $('.closeIcon').attr('style', 'display: none !important');
-    })
-
-
-    $('#myAgencyReportsLearnMore').click(function(){
-      $('.special.card .image').dimmer('hide');
-      $('.special.card .image').dimmer({
-
-      });
-    })*/
   }])
 
-  .controller('ProjectDetailController', ['$scope', function($scope){
+  .controller('ExecDashboardController', ['$scope', 'workProjectIntroFactory','$state',function($scope, workProjectIntroFactory, $state){
+    var projects = workProjectIntroFactory.getProjects();
+    $scope.project = projects[0];
     $('.step').click(function(){
       $('.step').removeClass('active');
       $(this).addClass('active');
@@ -235,7 +221,92 @@ angular.module('projectApp')
     });
     $('.step').tab();
 
-}]);
+    $scope.closeProjectDetail = function (index){
+      $('.special.card .image').dimmer({
+        on: 'hover'
+      });
+      //$('.closeIcon').attr('style', 'display: none !important');
+
+      /*for (var i=0; i < projects.length; i++) {
+       //console.log(index);
+
+       if (i != index) {
+       $scope.projects[i].show = true;
+       //console.log('.' + projects[i].evenOrOddClass)
+       //console.log(index)
+       //console.log(projects[i])
+       }
+       //console.log('.' + projects[i].evenOrOddClass)
+       //console.log(projects[i])
+
+       }*/
+
+
+      //$scope.projectDetailTemplate.show = false;
+
+      $state.go('projects.summary');
+
+    };
+    $scope.$on('$stateChangeSuccess', function(event) {
+      console.log("asdasd");
+      $scope.scrollToProject();
+      //event.stopPropagation();
+    });
+
+}])
+
+  .controller('MyAgencyReportsController', ['$scope', 'workProjectIntroFactory','$state', function($scope,workProjectIntroFactory, $state){
+    var projects = workProjectIntroFactory.getProjects();
+    $scope.project = projects[1];
+    $('.step').click(function(){
+      $('.step').removeClass('active');
+      $(this).addClass('active');
+
+    });
+    $('.step').tab();
+
+    $scope.closeProjectDetail = function (index){
+      $('.special.card .image').dimmer({
+        on: 'hover'
+      });
+
+
+      $state.go('projects.summary');
+
+    };
+    $scope.$on('$stateChangeSuccess', function(event) {
+      $scope.scrollToProject();
+      console.log("234")
+      //event.stopPropagation();
+    });
+  }])
+
+  .controller('PhotoController', ['$scope', 'photoFactory', function($scope,photoFactory) {
+    var photos = photoFactory.getPhotos();
+    $scope.photos = photos;
+    var scrollMagicController = new ScrollMagic.Controller();
+    $("#SeeMorePhoto").click(function () {
+      scrollMagicController.scrollTo(function (learnMoreScrollToAnchor) {
+        $('html, body').animate({scrollTop: learnMoreScrollToAnchor}, 800);
+      });
+      scrollMagicController.scrollTo("#photoAnchor");
+
+    });
+  }])
+
+  .controller('VideoController', ['$scope', '$sce', 'videoFactory', function($scope, $sce, videoFactory){
+    var videos = videoFactory.getVideos();
+    $scope.videos = videos;
+
+    var scrollMagicController = new ScrollMagic.Controller();
+    $("#SeeMoreVideo").click(function(){
+      scrollMagicController.scrollTo(function(learnMoreScrollToAnchor){
+        $('html, body').animate({scrollTop : learnMoreScrollToAnchor},800);
+      });
+      scrollMagicController.scrollTo("#videoAnchor");
+
+    });
+  }]);
 
 
 

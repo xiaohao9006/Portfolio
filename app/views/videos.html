@@ -10,21 +10,76 @@
     &nbsp;HOME
   </a>
   -->
-  <a class="right item" style="align-items:flex-end;" href="#">
+  <a class="right item" style="align-items:flex-end;" ui-sref="aboutme">
     <i class="spy icon"></i>
     &nbsp;ABOUT ME
   </a>
-  <a class="item" style="align-items:flex-end;" href="#/projects">
+  <a class="item" style="align-items:flex-end;" ui-sref="projects">
     <i class="desktop icon"></i>
     &nbsp;WORK PROJECTS
   </a>
-  <a class="item" style="align-items:flex-end;" href="#/photos">
+  <a class="item" style="align-items:flex-end;" ui-sref="photos">
     <i class="photo icon"></i>
     &nbsp;PHOTOS
   </a>
-  <a class="item active" style="align-items:flex-end;" href="#/videos">
+  <a class="item active" style="align-items:flex-end;" ui-sref="videos">
     <i class="film icon"></i>
     &nbsp;VIDEOS
   </a>
 
+</div>
+
+<div ng-controller="VideoController">
+  <div class="customJumbotron">
+
+    <!-- Background Video -->
+
+    <div class="ui container customJumbotronContent" >
+      <img class="ui centered medium circular image" src="images/videoCover.jpg" style="opacity:0.9; width:35vh"/>
+      <p class="customJumbotronMainText">“This whole world is wild at heart.”</p>
+      <p>I'm trying to document every adventure I've taken.</p>
+
+      <button class="ui huge button blue inverted" id="SeeMoreVideo">See My Great Videos</button>
+      <i class="icon angle double down huge inverted looping animating transition bounce"></i>
+    </div>
+  </div>
+
+  <div ng-repeat="video in videos">
+    <div id="videoAnchor" style="position:relative; top:-5rem"></div>
+    <div ng-class="video.evenOrOddClass">
+      <div class="ui stackable grid container sectionContainer">
+        <div class="one wide computer tablet only column">
+        </div>
+        <div class="ten wide column">
+          <div class="videoWrapper">
+            <iframe width="560" height="315" src={{video.source}} frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="four wide column projectIntro">
+          <div class="ui items">
+            <div class="item">
+              <div class="content">
+                <div class="header projectIntroHeader">{{video.name}}</div>
+                <div class="meta videoMeta">
+                  <div><i class="ui calendar icon"></i>&nbsp;&nbsp;&nbsp;{{video.date}}</div>
+                </div>
+                <div class="description">
+                  <p>{{video.intro}}</p>
+                </div>
+                <div class="extra">
+                  <div class="ui black large label" ng-repeat="tool in video.tools">{{tool}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="one wide computer tablet only column"></div>
+
+      </div>
+    </div>
+
+
+  </div>
 </div>

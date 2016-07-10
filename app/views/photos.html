@@ -10,22 +10,66 @@
     &nbsp;HOME
   </a>
   -->
-  <a class="right item" style="align-items:flex-end;" href="#">
+  <a class="right item" style="align-items:flex-end;" ui-sref="aboutme">
     <i class="spy icon"></i>
     &nbsp;ABOUT ME
   </a>
-  <a class="item" style="align-items:flex-end;" href="#/projects">
+  <a class="item" style="align-items:flex-end;" ui-sref="projects">
     <i class="desktop icon"></i>
     &nbsp;WORK PROJECTS
   </a>
-  <a class="item active" style="align-items:flex-end;" href="#/photos">
+  <a class="item active" style="align-items:flex-end;" ui-sref="photos">
     <i class="photo icon"></i>
     &nbsp;PHOTOS
   </a>
-  <a class="item" style="align-items:flex-end;" href="#/videos">
+  <a class="item" style="align-items:flex-end;" ui-sref="videos">
     <i class="film icon"></i>
     &nbsp;VIDEOS
   </a>
 
 </div>
+
+<div ng-controller="PhotoController">
+  <div class="customJumbotron">
+
+    <!-- Background Video -->
+
+    <div class="ui container customJumbotronContent" >
+      <img class="ui centered medium circular image" src="images/photoCover.png" style="opacity:0.8; width:35vh"/>
+      <p class="customJumbotronMainText">“I don’t take a photograph, I make it”</p>
+      <p>Through making photographs I understand what my life means to me.</p>
+
+      <button class="ui huge button blue inverted" id="SeeMorePhoto">See My Great Photos</button>
+      <i class="icon angle double down huge inverted looping animating transition bounce"></i>
+    </div>
+  </div>
+
+  <div class="oddContainer">
+    <div id="photoAnchor" style="position:relative; top:-5rem"></div>
+    <div class="ui stackable grid container sectionContainer">
+      <div ng-repeat="photo in photos" class="eight wide column">
+        <div class="ui special inverted blue card projectCard">
+            <div class="image">
+              <img ng-src={{photo.image}}>
+            </div>
+
+            <div class="extra content">
+            <span class="right floated">
+              <i class="calendar icon"></i>
+              {{photo.date}}
+            </span>
+            <span>
+              <i class="map icon"></i>
+              {{photo.location}}
+            </span>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 
