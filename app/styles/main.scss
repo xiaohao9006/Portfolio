@@ -14,6 +14,7 @@ $lineHeight     : 1.4285rem;
   font-family: 'Open Sans', sans-serif !important;
 }*/
 
+
 .ui.grid {
   margin:0 !important;
 }
@@ -22,21 +23,50 @@ $lineHeight     : 1.4285rem;
   display: none !important;
 }
 
-#menuHeader {
-  padding-left:5rem;
-  padding-right:5rem;
-  //padding-top:1rem;
-  background: none;
+html, body {
+  //position:absolute !important;
+  //overflow:hidden !important;
+  width: 100%;
 }
 
-#logoText {
-  position:relative;
-  top:0.5rem;
-  font-size:2.5714rem;
+.pushable {
+  position: absolute !important;
 }
+
+.transparentMenu {
+  background: none !important;
+}
+
+.fullScreenHeader {
+  //display: none !important;
+  padding-left:5rem !important;
+  padding-right:5rem !important;
+}
+
+.logoText {
+  position:relative !important;
+  top:0.5rem !important;
+  font-size:2.5714rem !important;
+}
+
+.responsiveHeader {
+  display: none !important;
+  margin: 0 !important;
+  background-color: $black !important;
+  .logoTextContainer {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .logoText {
+    position:relative !important;
+    top:0.2rem !important;
+  }
+}
+
 
 .customJumbotron {
-  width: 100vw !important; /* Could also use width: 100%; */
+  width: 100% !important; /* Could also use width: 100%; */
   height: 100vh !important;
   position:relative !important;
   display: flex !important;
@@ -46,7 +76,7 @@ $lineHeight     : 1.4285rem;
 }
 
 .customVideoBG {
-  width: 100vw !important; /* Could also use width: 100%; */
+  width: 100% !important; /* Could also use width: 100%; */
   height: 100vh !important;
   position:absolute !important;
   //object-fit: cover !important;
@@ -54,7 +84,7 @@ $lineHeight     : 1.4285rem;
 }
 
 .customJumbotronBGContent {
-  width: 100vw !important; /* Could also use width: 100%; */
+  width: 100% !important; /* Could also use width: 100%; */
   height: 100vh !important;
   object-fit: cover !important;
   position: absolute !important; /* Change position to absolute if you don't want it to take up the whole page */
@@ -65,6 +95,10 @@ $lineHeight     : 1.4285rem;
   overflow:hidden !important;
 }
 
+.customJumbotronBGContent img {
+  display: none !important;
+}
+
 .customJumbotronContent {
 
   margin-top: 7vh;
@@ -73,6 +107,8 @@ $lineHeight     : 1.4285rem;
   .customJumbotronMainText {
     font-size:4rem;
     margin:3vh 0 0 0;
+    line-height: 3*$lineHeight !important;
+    margin-bottom: 0.5*$lineHeight;
     //font-weight:400;
   }
 
@@ -100,7 +136,7 @@ $lineHeight     : 1.4285rem;
 
 .sectionContainer {
   //margin-top: 4rem;
-  padding: 6vh 0 8vh 0 !important;
+  padding: 3rem 0 5rem 0 !important;
 
   h1 {
     font-size: 2*$lineHeight !important;
@@ -145,16 +181,18 @@ $lineHeight     : 1.4285rem;
 }
 
 .leftColumnContanier {
-  padding-right:3rem !important;
+  //padding-right:3rem !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
 }
 
 .rightColumnContanier {
-  padding-left:3rem !important;
-  box-shadow: none !important;
+  //width: 50% !important;
+  //padding-left:3rem !important;
+  //box-shadow: none !important;
 }
+
 
 .pageFooter {
   padding-top: $lineHeight;
@@ -224,7 +262,8 @@ $lineHeight     : 1.4285rem;
     display:inline !important;
   }
   .projectLogo {
-    width:20% !important;
+    padding-top: 0.2rem;
+    width:6rem !important;
     display:inline !important;
     float:right !important;
   }
@@ -452,4 +491,72 @@ $lineHeight     : 1.4285rem;
   font-weight: 300 !important;
   font-size: 0.8*$lineHeight !important;
   text-align: center;
+}
+
+.videoNotDisplayText {
+  display: none;
+}
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  html {
+    font-size:80% !important;
+  }
+  .flashVideo {
+    display: none
+  }
+  .videoNotDisplayText {
+    display: block;
+  }
+  .pageFooter {
+    font-size:80% !important;
+  }
+  .responsiveHeader {
+    display: flex !important;
+  }
+  .fullScreenHeader {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size:70% !important;
+  }
+  .flashVideo {
+    display: none
+  }
+  .videoNotDisplayText {
+    display: block;
+  }
+  .pageFooter {
+    font-size:70% !important;
+  }
+  .responsiveHeader {
+    display: flex !important;
+  }
+  .fullScreenHeader {
+    display: none !important;
+  }
+  #skillsSVG {
+    width: 70%;
+    display:block;
+    margin:auto
+  }
+  #Header {
+    width: 70%;
+    display:block;
+    margin:auto
+  }
+  #Content {
+    width: 70%;
+    display:block;
+    margin:auto
+  }
+  .customJumbotronBGContent video {
+    display: none !important;
+  }
+  .customJumbotronBGContent img {
+    display: block !important;
+  }
 }

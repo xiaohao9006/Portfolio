@@ -1,45 +1,45 @@
-<div class="transparentMenu ui stackable borderless large inverted top fixed menu" id="menuHeader">
-  <div class="item">
-    <h1 class="ui header inverted" id="logoText">
-      &nbsp;YUNHAO'S <span style="color:#00A9FF">PORTFOLIO</span>
-    </h1>
-  </div>
-  <!--
-  <a class="right active item" style="align-items:flex-end;">
-    <i class="bookmark icon"></i>
-    &nbsp;HOME
-  </a>
-  -->
-  <a class="right item" style="align-items:flex-end;" ui-sref="aboutme">
-    <i class="spy icon"></i>
-    &nbsp;ABOUT ME
-  </a>
-  <a class="item" style="align-items:flex-end;" ui-sref="projects">
-    <i class="desktop icon"></i>
-    &nbsp;WORK PROJECTS
-  </a>
-  <a class="item" style="align-items:flex-end;" ui-sref="photos">
-    <i class="photo icon"></i>
-    &nbsp;PHOTOS
-  </a>
-  <a class="item active" style="align-items:flex-end;" ui-sref="videos">
-    <i class="film icon"></i>
-    &nbsp;VIDEOS
-  </a>
-
-</div>
-
 <div ng-controller="VideoController">
+  <div class="fullScreenHeader transparentMenu ui stackable borderless large inverted top fixed menu">
+    <div class="item">
+      <h1 class="ui header inverted logoText">
+        &nbsp;YUNHAO'S <span style="color:#00A9FF">PORTFOLIO</span>
+      </h1>
+    </div>
+    <!--
+    <a class="right active item" style="align-items:flex-end;">
+      <i class="bookmark icon"></i>
+      &nbsp;HOME
+    </a>
+    -->
+    <a class="right item" style="align-items:flex-end;" ui-sref="aboutme">
+      <i class="spy icon"></i>
+      &nbsp;ABOUT ME
+    </a>
+    <a class="item" style="align-items:flex-end;" ui-sref="projects">
+      <i class="desktop icon"></i>
+      &nbsp;WORK PROJECTS
+    </a>
+    <a class="item" style="align-items:flex-end;" ui-sref="photos">
+      <i class="photo icon"></i>
+      &nbsp;PHOTOS
+    </a>
+    <a class="item active" style="align-items:flex-end;" ui-sref="videos">
+      <i class="film icon"></i>
+      &nbsp;VIDEOS
+    </a>
+
+  </div>
+
   <div class="customJumbotron">
 
     <!-- Background Video -->
 
     <div class="ui container customJumbotronContent" >
-      <img class="ui centered medium circular image" src="images/videoCover.jpg" style="opacity:0.9; width:35vh"/>
-      <p class="customJumbotronMainText">“This whole world is wild at heart.”</p>
+      <img class="ui centered medium circular image" src="images/videoCover.jpg" style="opacity:0.9; width:20rem"/>
+      <p class="customJumbotronMainText">“This whole world is wild at heart”</p>
       <p>I'm trying to document every adventure I've taken.</p>
 
-      <button class="ui huge button blue inverted" id="SeeMoreVideo">See My Great Videos</button>
+      <button class="ui huge button blue inverted" id="SeeMoreVideo">Watch My Great Videos</button>
       <i class="icon angle double down huge inverted looping animating transition bounce"></i>
     </div>
   </div>
@@ -50,13 +50,13 @@
       <div class="ui stackable grid container sectionContainer">
         <div class="one wide computer tablet only column">
         </div>
-        <div class="ten wide column">
+        <div class="ten wide computer eight wide tablet column">
           <div class="videoWrapper">
-            <iframe width="560" height="315" src={{video.source}} frameborder="0" allowfullscreen></iframe>
+            <iframe style="visibility:hidden;" onload="this.style.visibility = 'visible';" width="560" height="315" src={{video.source}} frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
 
-        <div class="four wide column projectIntro">
+        <div class="four wide computer six wide tablet column projectIntro">
           <div class="ui items">
             <div class="item">
               <div class="content">

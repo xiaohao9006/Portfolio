@@ -1,41 +1,41 @@
-<div class="transparentMenu ui stackable borderless large inverted top fixed menu" id="menuHeader">
-  <div class="item">
-    <h1 class="ui header inverted" id="logoText">
-      &nbsp;YUNHAO'S <span style="color:#00A9FF">PORTFOLIO</span>
-    </h1>
-  </div>
-  <!--
-  <a class="right active item" style="align-items:flex-end;">
-    <i class="bookmark icon"></i>
-    &nbsp;HOME
-  </a>
-  -->
-  <a class="right item" style="align-items:flex-end;" ui-sref="aboutme">
-    <i class="spy icon"></i>
-    &nbsp;ABOUT ME
-  </a>
-  <a class="item" style="align-items:flex-end;" ui-sref="projects">
-    <i class="desktop icon"></i>
-    &nbsp;WORK PROJECTS
-  </a>
-  <a class="item active" style="align-items:flex-end;" ui-sref="photos">
-    <i class="photo icon"></i>
-    &nbsp;PHOTOS
-  </a>
-  <a class="item" style="align-items:flex-end;" ui-sref="videos">
-    <i class="film icon"></i>
-    &nbsp;VIDEOS
-  </a>
-
-</div>
-
 <div ng-controller="PhotoController">
+  <div class="fullScreenHeader transparentMenu ui stackable borderless large inverted top fixed menu">
+    <div class="item">
+      <h1 class="ui header inverted logoText">
+        &nbsp;YUNHAO'S <span style="color:#00A9FF">PORTFOLIO</span>
+      </h1>
+    </div>
+    <!--
+    <a class="right active item" style="align-items:flex-end;">
+      <i class="bookmark icon"></i>
+      &nbsp;HOME
+    </a>
+    -->
+    <a class="right item" style="align-items:flex-end;" ui-sref="aboutme">
+      <i class="spy icon"></i>
+      &nbsp;ABOUT ME
+    </a>
+    <a class="item" style="align-items:flex-end;" ui-sref="projects">
+      <i class="desktop icon"></i>
+      &nbsp;WORK PROJECTS
+    </a>
+    <a class="item active" style="align-items:flex-end;" ui-sref="photos">
+      <i class="photo icon"></i>
+      &nbsp;PHOTOS
+    </a>
+    <a class="item" style="align-items:flex-end;" ui-sref="videos">
+      <i class="film icon"></i>
+      &nbsp;VIDEOS
+    </a>
+
+  </div>
+
   <div class="customJumbotron">
 
     <!-- Background Video -->
 
     <div class="ui container customJumbotronContent" >
-      <img class="ui centered medium circular image" src="images/photoCover.png" style="opacity:0.8; width:35vh"/>
+      <img class="ui centered medium circular image" src="images/photoCover.png" style="opacity:0.8; width:20rem"/>
       <p class="customJumbotronMainText">“I don’t take a photograph, I make it”</p>
       <p>Through making photographs I understand what my life means to me.</p>
 
@@ -59,8 +59,8 @@
               {{photo.date}}
             </span>
             <span>
-              <i class="map icon"></i>
-              {{photo.location}}
+              <a href="{{photo.googleMap}}" target="_blank"><i class="map icon"></i>
+              {{photo.location}}</a>
             </span>
             </div>
           </div>

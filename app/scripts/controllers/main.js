@@ -17,7 +17,7 @@ angular.module('projectApp')
     ];
   })*/
 
-  .controller('AppController',['$scope', function($scope){
+  .controller('AppController',['$scope', '$state', function($scope, $state){
     $scope.onViewLoad = function(){
       //console.log('view changed');
 
@@ -31,12 +31,12 @@ angular.module('projectApp')
       entryScene.on("enter", function()
       {
         //console.log("asdasd");
-        $("#menuHeader").css("background", "#2d2c33");
+        $(".fullScreenHeader").removeClass("transparentMenu");
 
       });
       entryScene.on("leave", function()
       {
-        $("#menuHeader").css("background", "none");
+        $(".fullScreenHeader").addClass("transparentMenu");
 
       });
 
@@ -50,10 +50,10 @@ angular.module('projectApp')
       {
         //console.log("!!!!!!");
         $("#flightToUSA").addClass("animated fadeInCustomUp");
-        $("#graduation").addClass("animated fadeInCustomDown");
-        $("#executiveDashboard").addClass("animated fadeInCustomDown");
-        $("#adobeReports").addClass("animated fadeInCustomUp");
-        $("#myAgencyReports").addClass("animated fadeInCustomDown");
+        $("#graduation").addClass("animated fadeInCustomDown delay");
+        $("#executiveDashboard").addClass("animated fadeInCustomDown delay-one");
+        $("#adobeReports").addClass("animated fadeInCustomUp delay-two");
+        $("#myAgencyReports").addClass("animated fadeInCustomDown delay-three");
 
 
       });
@@ -96,7 +96,12 @@ angular.module('projectApp')
         console.log('root')
       }
 
+      if (toState.name === 'projects') {
+        $state.go('projects.summary')
+      }
     });
+
+
     $scope.scrollToProject_Animation = function()
     {
       var scrollMagicController = new ScrollMagic.Controller();
@@ -119,14 +124,43 @@ angular.module('projectApp')
 
     };
 
+    $('.launchIcon').click(function(){
+      //console.log("show!")
+      $('body').attr('style', 'position: relative !important; overflow: hidden !important');
+      $('html').attr('style', 'position: relative !important; overflow: hidden !important');
+
+      $('.ui.labeled.icon.sidebar')
+        .sidebar('toggle')
+      ;
+
+    });
+
+    $('.ui.labeled.icon.sidebar')
+      .sidebar({
+        transition: 'uncover',
+        scrollLock: true,
+        onHidden: function() {
+          $('body').attr('style', '');
+          $('html').attr('style', '');
+        }
+      })
+
+    $scope.clickSideBarMenuItem = function (event) {
+      //console.log($(event.currentTarget));
+      $('.ui.labeled.icon.sidebar')
+        .sidebar('toggle')
+      ;
+      $('.sidebar a.item').removeClass('active');
+      $(event.currentTarget).addClass('active');
+    }
 
   }])
 
-  .controller('HeaderTextController', ['$scope', function($scope){
+  .controller('AboutMeController', ['$scope', function($scope){
     //console.log("!!!");
     var myDate = new Date();
     /* hour is before noon */
-    if ( myDate.getHours() < 12 )
+    if ( myDate.getHours() < 12 && myDate.getHours() > 3 )
     {
 
       $scope.greeting = "Good Morning";
@@ -137,7 +171,7 @@ angular.module('projectApp')
       $scope.greeting = "Good Afternoon";
     }
     else  /* the hour is after 5pm, so it is between 6pm and midnight */
-    if ( myDate.getHours() > 17 && myDate.getHours() <= 24 )
+    if ( myDate.getHours() > 17 || myDate.getHours() <= 3 )
     {
       $scope.greeting = "Good Evening";
     }
@@ -160,7 +194,9 @@ angular.module('projectApp')
   }])
 
   .controller('ProjectsController', ['$scope','$state', function($scope, $state){
+
     $state.go('projects.summary');
+
     $("#learnMoreWork").click(function(){
       $scope.scrollToProject_Animation();
     });
@@ -209,6 +245,7 @@ angular.module('projectApp')
 
 
 
+
   }])
 
   .controller('ExecDashboardController', ['$scope', 'workProjectIntroFactory','$state',function($scope, workProjectIntroFactory, $state){
@@ -248,10 +285,12 @@ angular.module('projectApp')
 
     };
     $scope.$on('$stateChangeSuccess', function(event) {
-      console.log("asdasd");
+      //console.log("asdasd");
       $scope.scrollToProject();
       //event.stopPropagation();
     });
+
+
 
 }])
 
@@ -276,7 +315,7 @@ angular.module('projectApp')
     };
     $scope.$on('$stateChangeSuccess', function(event) {
       $scope.scrollToProject();
-      console.log("234")
+      //console.log("234")
       //event.stopPropagation();
     });
   }])

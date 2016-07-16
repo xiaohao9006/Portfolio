@@ -40,6 +40,7 @@ angular.module('projectApp',['ui.router','ngAnimate'])
         templateUrl:"views/aboutme.html"
       })
       .state('projects', {
+        //abstract: true,
         url: '/projects',
         templateUrl:"views/projects.html"
       })
@@ -52,7 +53,7 @@ angular.module('projectApp',['ui.router','ngAnimate'])
         templateUrl:"views/videos.html"
       })
       .state('projects.summary', {
-        url: '/projectssummary',
+        url: '',
         templateUrl:"views/projectsSummary.html",
       })
 
