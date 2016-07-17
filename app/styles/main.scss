@@ -9,11 +9,49 @@ $lessWhite      : rgba(255,255,255,.7);
 $primaryColor   : $blue;
 $secondaryColor : $darkGrey;
 $lineHeight     : 1.4285rem;
+$oneQuarterLineHeight: 1.785625rem;
+$oneHalfLineHeight  : 2.14285715rem;
+
+$type-scale: (
+  -1: 1rem,  // small text
+  0: 1.15rem,      // body text
+  1: 1.333rem,  // large text
+  1.5: 1.8rem,
+  2: 2rem,
+  3: 2.8rem,// main heading
+  4: 3.16rem
+);
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+$scale-line-heights: (
+  -1: $lineHeight,
+  0: $lineHeight * 1.5,
+  1: $lineHeight * 2,
+  2: $lineHeight * 2,
+  3: $lineHeight * 2,
+  4: $lineHeight * 3
+);
+
+@function line-height($level) {
+  @return map-get($scale-line-heights, $level);
+}
+
+@mixin type-setting($level: 0) {
+  font-size: type-scale($level) !important;
+  line-height: line-height($level) !important;
+}
 
 /*p {
   font-family: 'Open Sans', sans-serif !important;
 }*/
 
+.ui.grid>.column:not(.row) {
+  padding-top: 0.5*$lineHeight !important;
+  padding-bottom: 0.5*$lineHeight !important;
+}
 
 .ui.grid {
   margin:0 !important;
@@ -101,7 +139,7 @@ html, body {
 
 .customJumbotronContent {
 
-  margin-top: 7vh;
+  //margin-top: 7vh;
   //width:52rem;
 
   .customJumbotronMainText {
@@ -132,32 +170,53 @@ html, body {
     margin-top: 1rem !important;
     animation-duration: 2000ms !important;
   }
+
+  img {
+    opacity:0.8;
+    width:13*$lineHeight !important;
+  }
 }
 
 .sectionContainer {
   //margin-top: 4rem;
-  padding: 3rem 0 5rem 0 !important;
+  padding: 2*$lineHeight 0 3*$lineHeight 0 !important;
 
   h1 {
-    font-size: 2*$lineHeight !important;
+    @include type-setting(3);
     color: $blue !important;
     font-weight:400 !important;
+    text-align:center;
+    margin-bottom: $lineHeight !important;
   }
   h2 {
-    font-size:1.5*$lineHeight !important;
+    @include type-setting(2);
     color: $blue !important;
     font-weight: 400 !important;
+    margin: 0 !important;
   }
   hr {
     height: 0.15rem;
     background-color: $white;
-    margin-bottom: 2rem;
+    @include type-setting(0);
+    margin-bottom: 0.8*$lineHeight;
   }
 
   p {
     color:$white;
-    font-size:0.9*$lineHeight;
+    font-size: type-scale(1) !important;;
+    line-height: $oneHalfLineHeight !important;
     font-weight:400;
+    //height:4*$lineHeight;
+    margin-bottom: 0.5*$lineHeight !important;
+    margin-top: 0.5*$lineHeight !important;
+  }
+
+  .downloadButton {
+    margin-top: -0.5*$lineHeight !important;
+    height: 2*$lineHeight !important;
+    display:flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
   }
 }
 
@@ -202,8 +261,20 @@ html, body {
   h1 {
     color:$blue !important;
     font-weight:400 !important;
-    margin-bottom: 0.5rem !important;
+    //margin-bottom: $lineHeight !important;
+    @include type-setting(2);
+
     //font-size: 1*$lineHeight !important;
+  }
+  .footerHeader {
+    margin-bottom: 0 !important;
+  }
+  .footerContent {
+    height: 1.5*$lineHeight !important;
+    padding-top: 0.25*$lineHeight !important;
+    //display: flex !important;
+    //flex-direction: column !important;
+    //justify-content: center !important;
   }
 
   .contactInfo {
@@ -239,14 +310,33 @@ html, body {
 
   .projectIntroHeader {
     color:$blue !important;
-    font-size:2rem !important;
-    line-height: 1.5*$lineHeight;
+    @include type-setting(2);
+    margin-top: -0.5*$lineHeight !important;
+  }
+
+  .description {
+    margin-top: 0.5*$lineHeight !important;
+    p {
+      font-size: type-scale(1) !important;;
+      line-height: $oneHalfLineHeight !important;
+      margin-bottom: 0.5*$lineHeight !important;
+    }
   }
 
   .extra
   {
+    margin-top: 0*$lineHeight !important;
     div {
       font-weight:200 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0.5*$lineHeight !important;
+      font-size: type-scale(0);
+      line-height: line-height(-1);
+      padding-top: 0.415rem !important;
+      padding-bottom: 0.415rem !important;
+      //height: 1.5*$lineHeight !important;
+
+
     }
   }
 
@@ -315,7 +405,7 @@ html, body {
 }
 
 .stepIntro {
-  margin-top: $lineHeight !important;
+  padding-top: 0.5*$lineHeight !important;
   font-weight: 300 !important;
   text-align: center;
 }
@@ -326,6 +416,7 @@ html, body {
   }
   p {
     font-weight: 300 !important;
+    margin-top: 0 !important;
     //font-size: 0.8*$lineHeight !important;
   }
   i {
@@ -337,27 +428,37 @@ html, body {
 
 .designProcessDetailContainer {
   //background-color:$darkGrey !important;
-  margin-bottom: 2*$lineHeight !important;
+  margin-bottom: 1*$lineHeight !important;
+  padding-top: 0.5*$lineHeight !important;
+  //padding-bottom: 0 !important;
+  //min-height: 19*$lineHeight !important;
   p {
     font-weight: 300 !important;
-    font-size: 0.8*$lineHeight !important;
+    margin-top: 0 !important;
+    @include type-setting(0);
   }
 
   .item {
     color: $white !important;
     font-weight: 300 !important;
-    font-size: 0.8*$lineHeight !important;
+    @include type-setting(0);
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
   }
 
   .card {
     background-color:#403F49 !important;
     box-shadow: 0 1px 3px 0 $blue,0 0 0 1px $blue !important;
+    .content {
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
   }
 
   .photoCardHeader {
     font-weight: 400 !important;
     color: $white !important;
-    font-size: 0.75*$lineHeight !important;
+    @include type-setting(0);
   }
 
   .photoImage {
@@ -366,7 +467,7 @@ html, body {
   }
 
   .photoContent {
-    font-size: 0.7*$lineHeight !important;
+    @include type-setting(-1);
   }
 
 }
@@ -383,7 +484,7 @@ html, body {
 .processDetailHeader {
   text-align:center;
   color: $blue;
-  font-size:1.4*$lineHeight;
+  @include type-setting(1.5);
   //margin: 0.5*$lineHeight 0 0.5*$lineHeight 0;
 }
 
@@ -456,6 +557,7 @@ html, body {
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
+  margin-bottom: $lineHeight !important;
   padding-top: 0px;
   height: 0;
 }
@@ -498,7 +600,17 @@ html, body {
 }
 
 
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1199px) and (min-width: 1025px) {
+  html {
+    font-size:80% !important;
+  }
+
+  .pageFooter {
+    font-size:80% !important;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 992px) {
   html {
     font-size:80% !important;
   }
@@ -510,6 +622,27 @@ html, body {
   }
   .pageFooter {
     font-size:80% !important;
+  }
+  .responsiveHeader {
+    display: flex !important;
+  }
+  .fullScreenHeader {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  html {
+    font-size:70% !important;
+  }
+  .flashVideo {
+    display: none
+  }
+  .videoNotDisplayText {
+    display: block;
+  }
+  .pageFooter {
+    font-size:70% !important;
   }
   .responsiveHeader {
     display: flex !important;
