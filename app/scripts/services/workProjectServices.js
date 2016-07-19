@@ -22,6 +22,7 @@ angular.module('projectApp')
         "time, agencies are allowed to take action more quickly on their business direction.",
         intro2: "I, as the only Experience Designer in the cross functional team, designed Executive " +
         "Dashboard to bring the key business performance KPIs to the fingertips of the Agency Executives.",
+        intro3:"",
         tools: ["Adobe Illustrator","Adobe Photoshop","FramerJS","Highcharts"],
         detailTemplate: "projects.execdashboard"
         //show: true
@@ -41,8 +42,30 @@ angular.module('projectApp')
         intro2: "I, as the only Experience Designer in the cross functional team, designed My Agency Reports with a simplified navigation and added report filtering options. " +
         "Reports are simple to use and allow users to adapt and tailor reports to meet the needs of their insurance agency. Users can quickly build custom reports and slice data " +
         "into a view that makes sense for their business.",
+        intro3:"",
         tools: ["Adobe Illustrator","Adobe Photoshop","FramerJS","Angular UI Grid"],
         detailTemplate: "projects.myagencyreports"
+        //show: true
+      },
+      {
+        _id: 2,
+        evenOrOddClass: 'oddContainer',
+        name: "Personal Portfolio",
+        companyLogo: '',
+        image: '/images/portfolioProject.jpg',
+        roleIconClass: 'user',
+        role: 'Designer / Developer',
+        date: '2016.06 - 2016.07',
+        intro1: 'My personal portfolio was completely rebuilt in June 2016, when I just ' +
+        'finished my online Coursera specialization “Full Stack Web Development” and I thought it ' +
+        'would be a good practice to put everything together - all the way from design to a well-built website.',
+        intro2: 'I believe some of the most interesting and useful players in ' +
+        'creating the modern Internet are hybrids between designers and developers — people ' +
+        'who can translate between the disparate languages of the visual and the technical. And ' +
+        'this personal project gave me so much experience of dancing on both ends.',
+        intro3: 'The moment you enter this website, you are looking at my final work. Enjoy!',
+        tools: ["Adobe Illustrator","Adobe Photoshop","Semantic UI","AngularJS","Yeoman","Gulp"],
+        detailTemplate: "projects.personalportfolio"
         //show: true
       }
     ];

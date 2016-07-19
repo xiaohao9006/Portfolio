@@ -560,3 +560,116 @@ html, body {
     display: block !important;
   }
 }
+
+.gridTable {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  //margin-left: 1rem !important;
+  //margin-right: 1rem !important;
+}
+
+.tableRowTitle {
+  font-weight: 700 !important;
+}
+
+.ui.table[class*="single line"] {
+  white-space: inherit !important;
+}
+
+.gridExample {
+  min-height: 3*$lineHeight;
+  position:relative !important;
+  z-index:11;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  //background-color: $white !important;
+  //box-sizing: content-box !important;
+  //padding: 0 !important;
+  //margin: 0.5rem !important;
+}
+.gridExample:after {
+  content: "";
+  display:block;
+  min-height: 3*$lineHeight;
+  background-color: $white !important;
+  box-sizing: inherit;
+  //box-sizing: content-box !important;
+  //padding: 0 !important;
+  //margin: 0.5rem !important;
+}
+
+.gridExampleContainer {
+  position:relative !important;
+}
+
+.gridExampleContainer:before {
+  position: absolute;
+  //top: 1rem;
+  left: 1rem;
+  //border: 1px solid $blue;
+  //background-color: #FAFAFA;
+  content: '';
+  width: calc(100% - 2rem);
+  height: 100%;
+  box-shadow: 0px 0px 0px 1px #DDDDDD inset;
+}
+
+.fontList {
+  .item {
+    .header {
+      font-weight: 400 !important;
+      color: $lightGrey !important;
+      font-size: 1rem !important;
+
+    }
+    .Extra-Light {
+      font-weight: 200 !important;
+    }
+    .Light {
+      font-weight: 300 !important;
+    }
+    .Normal {
+      font-weight: 400 !important;
+    }
+    .Semi-Bold {
+      font-weight: 600 !important;
+    }
+    .Bold {
+      font-weight: 700 !important;
+    }
+    .Ultra-Bold {
+      font-weight: 900 !important;
+    }
+    font-size: 0.9*$lineHeight !important;
+    //text-align: center !important;
+    .Italic {
+      font-style: italic !important;
+    }
+  }
+}
+
+.colorSchemeContainer {
+  //display:flex;
+  .colorScheme {
+    float: left;
+    width: 20%;
+    border: 1px $white solid;
+    height: 3*$lineHeight;
+  }
+  .colorSchemeOne {
+    background-color: $blue;
+  }
+  .colorSchemeTwo {
+    background-color: $white;
+  }
+  .colorSchemeThree {
+    background-color: $lightGrey;
+  }
+  .colorSchemeFour {
+    background-color: $darkGrey;
+  }
+  .colorSchemeFive {
+    background-color: $black;
+  }
+}
+

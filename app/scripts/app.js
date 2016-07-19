@@ -64,6 +64,10 @@ angular.module('projectApp',['ui.router','ngAnimate'])
       .state('projects.myagencyreports',{
         url:'/myagencyreports',
         templateUrl:"views/myAgencyReportsDetail.html"
+      })
+      .state('projects.personalportfolio',{
+        url:'/personalportfolio',
+        templateUrl:"views/personalPortfolioDetail.html"
       });
   })
 ;
