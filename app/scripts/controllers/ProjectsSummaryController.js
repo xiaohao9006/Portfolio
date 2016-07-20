@@ -17,7 +17,7 @@ angular.module('projectApp')
     ];
   })*/
 
-  .controller('ProjectsSummaryController', ['$scope', '$animate', '$state', 'workProjectIntroFactory', function($scope, $animate, $state, workProjectIntroFactory){
+  .controller('ProjectsSummaryController', ['$scope', '$animate', '$state', 'workProjectIntroFactory', '$analytics', function($scope, $animate, $state, workProjectIntroFactory, $analytics){
     //console.log("!!!")
     var projects = workProjectIntroFactory.getProjects();
 
@@ -36,6 +36,9 @@ angular.module('projectApp')
     $scope.learnMoreProject = function (index){
 
       //scrollToProject(index);
+      var learnMoreProjectTrackEvent = "learn-more-" + $scope.projects[index].name + ":button#click"
+      learnMoreProjectTrackEvent = learnMoreProjectTrackEvent.toLowerCase();
+      $analytics.eventTrack(learnMoreProjectTrackEvent)
 
       $('.special.card .image').dimmer('hide');
       $('.special.card .image').dimmer({

@@ -11,19 +11,19 @@
       &nbsp;HOME
     </a>
     -->
-    <a class="right item" style="align-items:flex-end;" ui-sref="aboutme">
+    <a class="right item" style="align-items:flex-end;" ui-sref="aboutme" ng-click="clickFullMenuItem($event)">
       <i class="spy icon"></i>
       &nbsp;ABOUT ME
     </a>
-    <a class="item active" style="align-items:flex-end;" ui-sref="projects">
+    <a class="item active" style="align-items:flex-end;" ui-sref="projects" ng-click="clickFullMenuItem($event)">
       <i class="desktop icon"></i>
       &nbsp;WORK PROJECTS
     </a>
-    <a class="item" style="align-items:flex-end;" ui-sref="photos">
+    <a class="item" style="align-items:flex-end;" ui-sref="photos" ng-click="clickFullMenuItem($event)">
       <i class="photo icon"></i>
       &nbsp;PHOTOS
     </a>
-    <a class="item" style="align-items:flex-end;" ui-sref="videos">
+    <a class="item" style="align-items:flex-end;" ui-sref="videos" ng-click="clickFullMenuItem($event)">
       <i class="film icon"></i>
       &nbsp;VIDEOS
     </a>
@@ -41,7 +41,7 @@
       <p class="customJumbotronMainText">"A man is known by the design he keeps"</p>
       <p>There are three responses to a piece of design – yes, no, and WOW!
         Wow is always the one I aim for.</p>
-      <button class="ui huge button blue inverted" id="learnMoreWork">Here are My Major Work</button>
+      <button class="ui huge button blue inverted" id="learnMoreWork" analytics-on="click" analytics-event="here-are-my-major-work:button#click">Here are My Major Work</button>
       <i class="icon angle double down huge inverted looping animating transition bounce"></i>
     </div>
 

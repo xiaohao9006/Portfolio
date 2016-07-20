@@ -11,19 +11,19 @@
       &nbsp;HOME
     </a>
     -->
-    <a class="right item active" style="align-items:flex-end;" ui-sref="#/">
+    <a class="right item active" style="align-items:flex-end;" ui-sref="#/" ng-click="clickFullMenuItem($event)">
       <i class="spy icon"></i>
       &nbsp;ABOUT ME
     </a>
-    <a class="item" style="align-items:flex-end;" ui-sref="projects">
+    <a class="item" style="align-items:flex-end;" ui-sref="projects" ng-click="clickFullMenuItem($event)">
       <i class="desktop icon"></i>
       &nbsp;WORK PROJECTS
     </a>
-    <a class="item" style="align-items:flex-end;" ui-sref="photos">
+    <a class="item" style="align-items:flex-end;" ui-sref="photos" ng-click="clickFullMenuItem($event)">
       <i class="photo icon"></i>
       &nbsp;PHOTOS
     </a>
-    <a class="item" style="align-items:flex-end;" ui-sref="videos">
+    <a class="item" style="align-items:flex-end;" ui-sref="videos" ng-click="clickFullMenuItem($event)">
       <i class="film icon"></i>
       &nbsp;VIDEOS
     </a>
@@ -48,7 +48,7 @@
       <p class="customJumbotronMainText">{{greeting}}, I'm Yunhao Shen</p>
       <p>I'm dedicated to design the best user experiences for both end users and enterprises.</p>
 
-      <button class="ui huge button blue inverted" id="learnMore">Learn More About Me</button>
+      <button class="ui huge button blue inverted" id="learnMore" analytics-on="click" analytics-event="learn-more-about-me:button#click">Learn More About Me</button>
       <i class="icon angle double down huge inverted looping animating transition bounce"></i>
     </div>
   </div>
@@ -99,7 +99,7 @@
 
         "if your life is plain, so is your design."
       </p>
-      <a class="ui animated button white inverted right floated" tabindex="0" href="pdfs/My-Infographic-Resume.pdf" download>
+      <a class="ui animated button white inverted right floated" tabindex="0" href="pdfs/My-Infographic-Resume.pdf" download analytics-on="click" analytics-event="download-resume:button#click">
         <div class="visible content">My Resume</div>
         <div class="hidden content">
           <i class="cloud download icon"></i>

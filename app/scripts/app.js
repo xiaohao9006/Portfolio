@@ -30,7 +30,11 @@
   });
 */
 
-angular.module('projectApp',['ui.router','ngAnimate'])
+angular.module('projectApp',['ui.router','ngAnimate', 'angulartics', 'angulartics.google.analytics'])
+  .config(function ($analyticsProvider) {
+    // turn off automatic tracking
+    $analyticsProvider.virtualPageviews(false);
+  })
   .config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise("/aboutme");
 

@@ -16,7 +16,8 @@
     "animate.css": "^3.5.2",
     "scrollmagic": "^2.0.5",
     "angular-scroll-magic": "^0.0.7",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "angulartics-google-analytics": "^0.2.0"
   },
   "appPath": "app",
   "moduleName": "projectApp"
