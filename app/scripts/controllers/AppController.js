@@ -97,8 +97,8 @@ angular.module('projectApp')
       }
 
       if (toState.name === 'projects') {
-        $state.go('projects.summary')
-        //$state.go('projects.personalportfolio')
+        //$state.go('projects.summary')
+        $state.go('projects.personalportfolio')
       }
     });
 
@@ -154,24 +154,32 @@ angular.module('projectApp')
       $('.sidebar a.item').removeClass('active');
       $(event.currentTarget).addClass('active');
       //console.log(event.currentTarget.getAttribute("href"))
-      var temp_url = event.currentTarget.getAttribute("href")
+      var temp_url = event.currentTarget.getAttribute("href");
       if (temp_url.indexOf("#") > -1)
       {
         temp_url = temp_url.replace("#","");
       }
       $analytics.pageTrack(temp_url);
-    }
+    };
 
     $scope.clickFullMenuItem = function (event) {
       //console.log(event.currentTarget.getAttribute("href"))
-      var temp_url = event.currentTarget.getAttribute("href")
+      var temp_url = event.currentTarget.getAttribute("href");
       //console.log(temp_url)
       if (temp_url.indexOf("#") > -1)
       {
         temp_url = temp_url.replace("#","");
       }
       $analytics.pageTrack(temp_url);
+    };
+
+    var temp_url = document.location.hash;
+    //console.log(temp_url)
+    if (temp_url.indexOf("#") > -1)
+    {
+      temp_url = temp_url.replace("#","");
     }
+    $analytics.pageTrack(temp_url);
 
   }]);
 

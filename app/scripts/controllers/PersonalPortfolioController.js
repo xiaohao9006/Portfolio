@@ -20,12 +20,26 @@ angular.module('projectApp')
   .controller('PersonalPortfolioController', ['$scope', 'workProjectIntroFactory','$state',function($scope, workProjectIntroFactory, $state){
     var projects = workProjectIntroFactory.getProjects();
     $scope.project = projects[2];
-    $('.step').click(function(){
-      $('.step').removeClass('active');
+    $('.portfolioDesignProcessContainer .step').click(function(){
+      $('.portfolioDesignProcessContainer .step').removeClass('active');
       $(this).addClass('active');
 
     });
-    $('.step').tab();
+    //$('.step').tab();
+    $('.portfolioDesignProcessContainer .step').tab({
+      context: $('.portfolioDesignProcessContainer')
+    });
+
+    $('.portfolioImplementationProcessContainer .step').click(function(){
+      $('.portfolioImplementationProcessContainer .step').removeClass('active');
+      $(this).addClass('active');
+
+    });
+    //$('.step').tab();
+    $('.portfolioImplementationProcessContainer .step').tab({
+      context: $('.portfolioImplementationProcessContainer')
+    });
+
 
     $scope.closeProjectDetail = function (index){
       $('.special.card .image').dimmer({

@@ -64,7 +64,7 @@ angular.module('projectApp')
         'who can translate between the disparate languages of the visual and the technical. And ' +
         'this personal project gave me so much experience of dancing on both ends.',
         intro3: 'The moment you enter this website, you are looking at my final work. Enjoy!',
-        tools: ["Adobe Illustrator","Adobe Photoshop","Semantic UI","AngularJS","Yeoman","Gulp"],
+        tools: ["Adobe Illustrator","Adobe Photoshop","Semantic UI","AngularJS","Yeoman","Gulp", "GitHub"],
         detailTemplate: "projects.personalportfolio"
         //show: true
       }

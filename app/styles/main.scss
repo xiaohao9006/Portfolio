@@ -318,6 +318,7 @@ html, body {
   margin-top: $lineHeight !important;
   font-weight: 300 !important;
   text-align: center;
+
 }
 
 .toDoDetail {
@@ -339,8 +340,8 @@ html, body {
   //background-color:$darkGrey !important;
   margin-bottom: 2*$lineHeight !important;
   p {
-    font-weight: 300 !important;
-    font-size: 0.8*$lineHeight !important;
+    font-weight: 200 !important;
+    font-size: 0.85*$lineHeight !important;
   }
 
   .item {
@@ -349,7 +350,7 @@ html, body {
     font-size: 0.8*$lineHeight !important;
   }
 
-  .card {
+  .dpCard {
     background-color:#403F49 !important;
     box-shadow: 0 1px 3px 0 $blue,0 0 0 1px $blue !important;
   }
@@ -368,9 +369,11 @@ html, body {
   .photoContent {
     font-size: 0.7*$lineHeight !important;
   }
+  a {
+    color: $blue !important;
+  }
 
 }
-
 
 .ui.piled.segment:before {
   background-color:$darkGrey !important;
@@ -400,8 +403,8 @@ html, body {
   color: $lessWhite !important;
   margin-bottom:1*$lineHeight !important;
   line-height: 1.2*$lineHeight !important;
-  font-size: 0.8*$lineHeight !important;
-  font-weight: 300 !important;
+  font-size: 0.85*$lineHeight !important;
+  font-weight: 200 !important;
 }
 
 .videoMeta {
@@ -425,6 +428,7 @@ html, body {
 
 .processDetailItem {
   margin-top:0 !important;
+  margin-bottom: $lineHeight !important;
   .processDetailItemName {
     font-weight: 400 !important;
     color: $white !important;
@@ -564,6 +568,7 @@ html, body {
 .gridTable {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  opacity: 0.85;
   //margin-left: 1rem !important;
   //margin-right: 1rem !important;
 }
@@ -582,6 +587,8 @@ html, body {
   z-index:11;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
   //background-color: $white !important;
   //box-sizing: content-box !important;
   //padding: 0 !important;
@@ -591,7 +598,7 @@ html, body {
   content: "";
   display:block;
   min-height: 3*$lineHeight;
-  background-color: $white !important;
+  background-color: #DDDDDD !important;
   box-sizing: inherit;
   //box-sizing: content-box !important;
   //padding: 0 !important;
@@ -599,10 +606,12 @@ html, body {
 }
 
 .gridExampleContainer {
+  opacity:0.9;
   position:relative !important;
 }
 
 .gridExampleContainer:before {
+  opacity:0.9;
   position: absolute;
   //top: 1rem;
   left: 1rem;
@@ -655,12 +664,28 @@ html, body {
     width: 20%;
     border: 1px $white solid;
     height: 3*$lineHeight;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    margin-bottom: $lineHeight;
+    p {
+      text-align: center;
+      margin: 0 !important;
+      font-size: 0.7*$lineHeight !important;
+      font-weight: 400 !important;
+    }
   }
   .colorSchemeOne {
     background-color: $blue;
+    p {
+      color: $white !important;
+    }
   }
   .colorSchemeTwo {
     background-color: $white;
+    p {
+      color: $black !important;
+    }
   }
   .colorSchemeThree {
     background-color: $lightGrey;
@@ -671,5 +696,47 @@ html, body {
   .colorSchemeFive {
     background-color: $black;
   }
+}
+
+.yoWorkFlow img{
+  //background-color:#2a333c;
+  //max-width: 5rem;
+  opacity: 0.85;
+}
+
+code {
+ font-family: "Source Code Pro" !important;
+}
+
+.codeBox {
+  background-color: $black;
+  color: $white;
+  padding: 1rem 1.5rem;
+  height: 100%;
+  font-size: 1rem;
+  .token.number {
+    color: #7BCCFF;
+  }
+  .token.comment {
+    color: #708090;
+  }
+  .token.property {
+    color: #FF99C6;
+  }
+  .token.keyword {
+    color: #66d9ef;
+  }
+  .token.function {
+    color: #FFF595;
+  }
+  .token.selector {
+    color:#BBFFB0;
+  }
+
+}
+
+.processDetailItemSpecialContent {
+  font-size: 0.85*$lineHeight !important;
+  font-weight: 200 !important;
 }
 
