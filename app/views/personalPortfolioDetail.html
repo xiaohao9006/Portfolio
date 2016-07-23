@@ -134,7 +134,7 @@
                 <p class="processDetailContent">A container is an element designed to contain page elements to a reasonable maximum width based on the size of a user's screen.</p>
               </div>
               <div class="sixteen wide column processDetailItem">
-                <table class="ui single line blue table gridTable">
+                <table class="ui single line unstackable blue table gridTable">
                   <thead>
                   <tr><th></th>
                     <th>Mobile</th>
@@ -157,7 +157,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="tableRowTitle">Responsive Visibility</td>
+                    <td class="tableRowTitle">Visibility</td>
                     <td><code>mobile only</code></td>
                     <td><code>tablet only</code></td>
                     <td><code>small monitor only</code></td>
@@ -420,28 +420,28 @@
                   when building my website: the scaffolding tool (yo), the build tool (Gulp, Grunt etc) and the package manager (like npm and Bower).
                 </p>
               </div>
-              <div class="two wide column"></div>
-              <div class="four wide computer fourteen wide tablet column">
+              <div class="two wide computer tablet only column"></div>
+              <div class="four wide column">
                 <div class="ui rounded image yoWorkFlow">
                   <img src="/images/Yo.png" />
                 </div>
                 <p class="processDetailContent">Yo <a href="https://github.com/yeoman/generator-angular" target="_blank">angular generator</a> was used to scaffolds out my website,
                   writing my Gulpfile build configuration and pulling in relevant build tasks as well as npm and bower package manager dependencies that I needed for my build.</p>
               </div>
-              <div class="four wide computer fourteen wide tablet column">
+              <div class="four wide column">
                 <div class="ui rounded image yoWorkFlow">
                   <img src="/images/Gulp.png" />
                 </div>
                 <p class="processDetailContent"><a href="http://gulpjs.com/" target="_blank">Gulp</a> was used to build and preview my website.</p>
               </div>
-              <div class="four wide computer fourteen wide tablet column">
+              <div class="four wide column">
                 <div class="ui rounded image yoWorkFlow">
                   <img src="/images/NPM.png" />
                 </div>
                 <p class="processDetailContent"><a href="https://www.npmjs.com/" target="_blank">npm</a> and <a href="https://bower.io/" target="_blank">bower</a> was used for dependency management.
                   npm focused on managing Node.js modules like Gulp and all the packages that used in Gulp build, while bower was mainly used for managing front-end libraries.</p>
               </div>
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
 
 
             </div>
@@ -472,7 +472,7 @@
                     </br><span class="token variable">$base-line-height</span><span class="token punctuation">:</span> <span class="token number">1.4285</span>rem<span class="token punctuation">;</span><span class="token comment" spellcheck="true"> //20px</span>
                     </br></br><span class="token comment" spellcheck="true">/*Vertical rhythm example*/</span>
                     </br><span class="token variable">button</span><span class="token punctuation"> {</span>
-                    </br><span class="token property">&nbsp;&nbsp;&nbsp;&nbsp;height</span><span class="token punctuation">:</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token variable">$base-line-height</span><span class="token punctuation">;</span>
+                    </br><span class="token property">&nbsp;&nbsp;height</span><span class="token punctuation">:</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token variable">$base-line-height</span><span class="token punctuation">;</span>
                     </br><span class="token punctuation">}</span>
                   </code>
                 </div>
@@ -487,7 +487,7 @@
                     </br><span class="token variable">$black</span><span class="token punctuation">:</span> <span class="token number">&nbsp;&nbsp;&nbsp;&nbsp;#2D2C33</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true"> //HSB 244,2,20</span>
                     </br></br><span class="token comment" spellcheck="true">/*Color scheme example*/</span>
                     </br><span class="token variable">button</span><span class="token punctuation"> {</span>
-                    </br><span class="token property">&nbsp;&nbsp;&nbsp;&nbsp;color</span><span class="token punctuation">:</span> <span class="token variable">$blue</span><span class="token punctuation">;</span>
+                    </br><span class="token property">&nbsp;&nbsp;color</span><span class="token punctuation">:</span> <span class="token variable">$blue</span><span class="token punctuation">;</span>
                     </br><span class="token punctuation">}</span>
                   </code>
                 </div>
@@ -527,7 +527,7 @@
                 <p class="processDetailContent">Angular UI-Router was used to update the browser's URL and manage the transition as the audience navigates through the app. It maps the URL to a specific
                 "state" within my website. Obviously, the website has four main states - "About Me", "Projects", "Photos" and "Videos", and "Projects" has its sub-state of each project details.</p>
               </div>
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
               <div class="twelve wide column processDetailItem">
                 <div class="codeBox">
                   <code  class="language-scss">
@@ -544,14 +544,14 @@
                   </code>
                 </div>
               </div>
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
 
 
               <div class="sixteen wide column processDetailHeader">
                 <div>Angular Services</div>
                 <p class="processDetailContent">Angular Services were used to store detail information of project, photo and video, which would be fetched by Angular Controller later to feed to web page.</p>
               </div>
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
               <div class="twelve wide column processDetailItem">
                 <div class="codeBox">
                   <code  class="language-scss">
@@ -576,13 +576,13 @@
                   </code>
                 </div>
               </div>
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
 
               <div class="sixteen wide column processDetailHeader">
                 <div>Angular Controller</div>
                 <p class="processDetailContent">Angular Controllers were used to fetch data from Angular Services and feed the web page.</p>
               </div>
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
               <div class="twelve wide column">
                 <div class="codeBox">
                   <code  class="language-scss">
@@ -598,9 +598,9 @@
                   </code>
                 </div>
               </div>
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
 
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
               <div class="twelve wide column">
                 <div class="codeBox">
                   <code  class="language-scss">
@@ -613,7 +613,7 @@
                   </code>
                 </div>
               </div>
-              <div class="two wide column"></div>
+              <div class="two wide computer tablet only column"></div>
 
             </div>
           </div>
@@ -621,109 +621,194 @@
 
         <!-- Analytics Content -->
         <div class="ui tab" data-tab="analytics">
-          <p class="stepIntro">The art of typography and color scheme.</p>
+          <p class="stepIntro">Google Analytics was used to track and report website traffic as well as detail interaction events.</p>
           <div class="ui raised segment designProcessDetailContainer">
-            <div class="ui grid container">
-              <div class="sixteen wide column processDetailHeader">
-                <div>Typography</div>
-                <p class="processDetailContent">Source Sans Pro, Adobe's first open source typeface family, is one of my favourite typography. It is both legible in short UI labels, as well as being comfortable to read
-                  in longer passages of text on screen. It also has a wide range of weights which could create appropriate visual hierarchy.</p>
-              </div>
-
-              <div class="two wide column"></div>
-              <div class="four wide column">
-                <div class="ui list fontList">
-                  <div class="item">
-                    <div class="header">Extra-Light 200</div>
-                    <span class="Extra-Light">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Extra-Light 200 Italic</div>
-                    <span class="Extra-Light Italic">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Light 300</div>
-                    <span class="Light">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Light 300 Italic</div>
-                    <span class="Light Italic">Source Sans Pro</span>
-                  </div>
-                </div>
-              </div>
-              <div class="four wide column">
-                <div class="ui list fontList">
-                  <div class="item">
-                    <div class="header">Normal 400</div>
-                    <span class="Normal">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Normal 400 Italic</div>
-                    <span class="Normal Italic">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Semi-Bold 600</div>
-                    <span class="Semi-Bold">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Semi-Bold 600 Italic</div>
-                    <span class="Semi-Bold Italic">Source Sans Pro</span>
-                  </div>
-                </div>
-              </div>
-              <div class="four wide column">
-                <div class="ui list fontList">
-                  <div class="item">
-                    <div class="header">Bold 700</div>
-                    <span class="Bold">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Bold 700 Italic</div>
-                    <span class="Bold Italic">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Ultra-Bold 900</div>
-                    <span class="Ultra-Bold">Source Sans Pro</span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Ultra-Bold 900 Italic</div>
-                    <span class="Ultra-Bold Italic">Source Sans Pro</span>
-                  </div>
-                </div>
-              </div>
-              <div class="two wide column"></div>
+            <div class="ui grid stackable container">
 
               <div class="sixteen wide column processDetailHeader">
-                <div>Monochromatic Color Schemes</div>
-                <p class="processDetailContent">I decided to apply a monochromatic color scheme to my website, which are made up of different tones, shades and tints within a specific grey hue (hue 244). It's
-                  great for base colors of text and supportive elements like borders, backgrounds, shadows, etc.</p>
+                <div>What Should be Tracked</div>
+                <p class="processDetailContent">In my company, I am the Admin of Adobe Analytics and the lead of overall web data analytics initiative - all the way from implementation to analysis. But before
+                anything happen, I always sit down with my team and talk about the business requirement first - what do we want to know from data? What questions do we want to answer? Here for my own website, I
+                did the exact same thing. It was pretty straight forward and below is a list of things I'd like to know.</p>
               </div>
-              <div class="four wide computer three wide tablet two wide mobile column"></div>
-              <div class="eight wide computer ten wide tablet twelve wide mobile column colorSchemeContainer">
-                <div class="colorScheme colorSchemeOne">
-                  <p>#00A9FF</p>
-                  <p>HSB 200,100,50</p>
-                </div>
-                <div class="colorScheme colorSchemeTwo">
-                  <p>#F5F5FA</p>
-                  <p>HSB 244,2,98</p>
-                </div>
-                <div class="colorScheme colorSchemeThree">
-                  <p>#706F7F</p>
-                  <p>HSB 244,2,50</p>
-                </div>
-                <div class="colorScheme colorSchemeFour">
-                  <p>#383740</p>
-                  <p>HSB 244,2,25</p>
-                </div>
-                <div class="colorScheme colorSchemeFive">
-                  <p>#2D2C33</p>
-                  <p>HSB 244,2,20</p>
+
+              <!-- Analytics Question 1 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 1:</strong> What page do my audiences most frequently visit? And how long do they spend on each page?</div>
+                  <div class="item"><strong>Tracking Dimension:</strong> Page</div>
+                  <div class="item"><strong>Tracking Metrics:</strong> Pageview, Average Time on Page</div>
+                  <div class="item"><strong>Tracking Variables:</strong></div>
+
                 </div>
               </div>
-              <div class="four wide computer three wide tablet two wide mobile column"></div>
+              <div class="one wide computer only column"></div>
+
+              <div class="one wide computer only column"></div>
+              <div class="ten wide computer twelve wide tablet sixteen wide mobile column">
+                <table class="ui unstackable compact blue table">
+                  <thead>
+                  <tr>
+                    <th>Variable Value</th>
+                    <th>Publish Date</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>/aboutme</td>
+                    <td>July 24, 2016</td>
+                  </tr>
+                  <tr>
+                    <td>/projects</td>
+                    <td>July 24, 2016</td>
+                  </tr>
+                  <tr>
+                    <td>/photos</td>
+                    <td>July 24, 2016</td>
+                  </tr>
+                  <tr>
+                    <td>/videos</td>
+                    <td>July 24, 2016</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="five wide computer four wide tablet only column"></div>
 
 
+              <!-- Analytics Question 2 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 2:</strong> What UI elements do my audiences frequently click? How often do they click on each UI element?</div>
+                  <div class="item"><strong>Tracking Dimension:</strong> Event</div>
+                  <div class="item"><strong>Tracking Metric:</strong> Hit</div>
+                  <div class="item"><strong>Tracking Variables:</strong></div>
+
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <table class="ui unstackable compact blue table">
+                  <thead>
+                  <tr>
+                    <th>Variable Value</th>
+                    <th>Publish Date</th>
+                    <th>Comment</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>learn-more-about-me:button#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when "Learn More About Me" button is clicked in "About Me" page.</td>
+                  </tr>
+                  <tr>
+                    <td>download-resume:button#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when "My Resume" button is clicked in "About Me" page.</td>
+                  </tr>
+                  <tr>
+                    <td>here-are-my-major-work:button#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when "Here are My Major Work" button is clicked in "Work Projects" page.</td>
+                  </tr>
+                  <tr>
+                    <td>learn-more-[project name]:button#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when "Learn More" button of one project is clicked in "Work Projects" page. It also tracks which project is visited.</td>
+                  </tr>
+                  <tr>
+                    <td>see-my-great-photos:button#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when "See My Great Photos" button is clicked in "Photos" page.</td>
+                  </tr>
+                  <tr>
+                    <td>go-to-googlemap:link#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when the location link of one photo is clicked in "Photos" page.</td>
+                  </tr>
+                  <tr>
+                    <td>watch-my-great-videos:button#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when "Watch My Great Videos" button is clicked in "Videos" page.</td>
+                  </tr>
+                  <tr>
+                    <td>facebook:icon#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when Facebook icon is clicked in page footer.</td>
+                  </tr>
+                  <tr>
+                    <td>linkedin:icon#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when LinkedIn icon is clicked in page footer.</td>
+                  </tr>
+                  <tr>
+                    <td>email:link#click</td>
+                    <td>July 24, 2016</td>
+                    <td>This event fires when my email link is clicked in page footer.</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="one wide computer only column"></div>
+
+              <!-- Analytics Question 3 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column processDetailItem">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 3:</strong> What is audience demographic information?</div>
+                  <div class="item"><strong>Tracking Dimensions:</strong> City, Country, Browser & OS, Network</div>
+                  <div class="item"><strong>Tracking Metric:</strong> Session</div>
+                  <div class="item"><strong>Tracking Variables:</strong> All variables are collected by Google Analytics by default.</div>
+
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+
+
+              <div class="sixteen wide column processDetailHeader">
+                <div>Using Angulartics to Track Single Page Application</div>
+                <p class="processDetailContent">According to <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/single-page-applications" target="_blank">
+                  Google Analytics Developers</a> guide, since my website is wrapped as a single page application, simply including <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/" target="_blank">analytics.js</a>
+                  snippet code into my website cannot work well, because the site loads new page content dynamically rather than as full page loads, and the analytics.js snippet code only runs once. This means subsequent (virtual) pageviews
+                  must be tracked manually as new content is loaded. Also event tracking has to be manually implemented as well. Therefore, <a href="http://angulartics.github.io" target="_blank">Angulartics</a>
+                  was used to achieve the level of sophistication of data collection.</p>
+              </div>
+
+              <div class="two wide computer tablet only column"></div>
+              <div class="twelve wide column">
+                <div class="codeBox">
+                  <code  class="language-scss">
+                    <span class="token comment" spellcheck="true">/*Inject Angulartics in application dependencies*/</span>
+                    </br><span class="token property">angular</span><span class="token punctuation">.</span><span class="token property">module</span><span class="token punctuation">(</span><span class="token number">'projectApp'</span><span class="token punctuation">,[</span><span class="token punctuation">'angulartics'</span><span class="token punctuation">,</span> <span class="token punctuation">'angulartics.google.analytics'</span><span class="token punctuation">])</span>
+                  </code>
+                </div>
+              </div>
+              <div class="two wide computer tablet only column"></div>
+
+              <div class="two wide computer tablet only column"></div>
+              <div class="twelve wide column processDetailItem">
+                <div class="codeBox">
+                  <code  class="language-scss">
+                    <span class="token comment" spellcheck="true">/*Inject $analytics and invoke either the pageTrack() or eventTrack() methods to track pageviews and events.*/</span>
+                    </br><span class="token property">angular</span><span class="token punctuation">.</span><span class="token property">module</span><span class="token punctuation">(</span><span class="token number">'projectApp'</span><span class="token punctuation">)</span>
+                    </br><span class="token punctuation">&nbsp;&nbsp;.</span><span class="token property">controller</span><span class="token punctuation">(</span><span class="token number">'SampleController'</span><span class="token punctuation">, [</span><span class="token number">'$analytics'</span><span class="token punctuation">,</span> <span class="token function">function</span><span class="token punctuation">(</span><span class="token variable">$analytics</span><span class="token punctuation">){</span>
+                    </br><span class="token variable">&nbsp;&nbsp;&nbsp;&nbsp;$analytics</span><span class="token punctuation">.</span><span class="token variable">pageTrack</span><span class="token punctuation">(</span><span class="token number">'url'</span><span class="token punctuation">);</span>
+                    </br><span class="token variable">&nbsp;&nbsp;&nbsp;&nbsp;$analytics</span><span class="token punctuation">.</span><span class="token variable">eventTrack</span><span class="token punctuation">(</span><span class="token number">'eventName'</span><span class="token punctuation">);</span>
+
+                    </br><span class="token comment" spellcheck="true">&nbsp;&nbsp;&nbsp;&nbsp;//...</span>
+                    </br><span class="token punctuation">&nbsp;&nbsp;}]);</span>
+
+
+                  </code>
+                </div>
+              </div>
+              <div class="two wide computer tablet only column"></div>
 
             </div>
           </div>
@@ -731,41 +816,61 @@
 
         <!-- Publish & Hosting Content -->
         <div class="ui tab" data-tab="publish">
-          <p class="stepIntro">Put everything together and got the final visual design.</p>
+          <p class="stepIntro">Minify the website and finally publish it online with personalized domain.</p>
           <div class="ui raised segment designProcessDetailContainer">
             <div class="ui stackable grid container">
               <div class="sixteen wide column processDetailHeader">
-                <div>Final Visual Design</div>
-                <p class="processDetailContent"></p>
+                <div>Using Gulp to Minify the Website Resources</div>
+                <p class="processDetailContent">One of the ways that my audience will evaluate my website,
+                  especially on their first visit, is my page load speed. If my pages take too long to load, it is likely that audience will move along.
+                Therefore, minification, removing unnecessary or redundant data without affecting how the resource is processed by the browser, is one important step before publishing.</p>
               </div>
-              <div class="eight wide column">
-                <div class="ui special inverted card projectCard">
-                  <div class="image">
-                    <img src="/images/Final-Visual-About-Me.jpg">
+
+              <div class="two wide computer tablet only column"></div>
+              <div class="twelve wide column">
+                <div class="ui items">
+                  <div class="item">
+                    <div class="ui small image">
+                      <img src="/images/Gulp.png">
+                    </div>
+                    <div class="middle aligned content processDetailItemSpecialContent">
+                      <p>When the environment was set up by Yeoman, minification was already included in Gulp build configuration file, which I directly leveraged to get this done.</p>
+
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="eight wide column">
-                <div class="ui special inverted card projectCard">
-                  <div class="image">
-                    <img src="/images/Final-Visual-Project.jpg">
+              <div class="two wide computer tablet only column"></div>
+
+              <div class="sixteen wide column processDetailHeader">
+                <div>Publishing Website on GitHub</div>
+                <p class="processDetailContent"><a href="https://github.com/" target="_blank">GitHub</a> is not only a great distributed version control tool, but also provides free <a href="https://pages.github.com/" target="_blank">hosting service</a> - one site per GitHub account.</p>
+              </div>
+              <div class="two wide computer tablet only column"></div>
+              <div class="twelve wide column">
+                <div class="ui items">
+                  <div class="item">
+                    <div class="ui small image">
+                      <img src="/images/GitHub.png">
+                    </div>
+                    <div class="middle aligned content processDetailItemSpecialContent">
+                      <div class="ui bulleted list">
+                        <div class="item">A repository named xiaohao9006.github.io was created on GitHub, where xiaohao9006 is my username on GitHub.</div>
+                        <div class="item">The website resources were published to this repository after minification.</div>
+                        <div class="item">Then my website is avaiable at <a href="http://xiaohao9006.github.io" target="_blank">http://xiaohao9006.github.io</a>.</div>
+
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="eight wide column">
-                <div class="ui special inverted card projectCard">
-                  <div class="image">
-                    <img src="/images/Final-Visual-Photo.jpg">
-                  </div>
-                </div>
+              <div class="two wide computer tablet only column"></div>
+
+              <div class="sixteen wide column processDetailHeader">
+                <div>Setting Up Personalized Domain</div>
+                <p class="processDetailContent">I purchased my personalized domain "www.yunhaoshen.com" on WIX long ago. The only thing I did here was to disconnect the domain with my dated portfolio website and reconnect it with GitHub.</p>
               </div>
-              <div class="eight wide column">
-                <div class="ui special inverted card projectCard">
-                  <div class="image">
-                    <img src="/images/Final-Visual-Video.jpg">
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

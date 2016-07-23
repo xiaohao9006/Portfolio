@@ -13,7 +13,13 @@ $lineHeight     : 1.4285rem;
 /*p {
   font-family: 'Open Sans', sans-serif !important;
 }*/
+strong {
+  font-weight:600 !important;
+}
 
+.ui.table {
+  font-size: 1rem !important;
+}
 
 .ui.grid {
   margin:0 !important;
@@ -563,6 +569,16 @@ html, body {
   .customJumbotronBGContent img {
     display: block !important;
   }
+  .yoWorkFlow {
+    display:block !important;
+    img {
+      margin: auto;
+      max-width: 300px !important;
+      width:100% !important;
+      height: auto !important;
+    }
+
+  }
 }
 
 .gridTable {
@@ -702,6 +718,7 @@ html, body {
   //background-color:#2a333c;
   //max-width: 5rem;
   opacity: 0.85;
+  //max-width: 300px !important;
 }
 
 code {
@@ -738,5 +755,10 @@ code {
 .processDetailItemSpecialContent {
   font-size: 0.85*$lineHeight !important;
   font-weight: 200 !important;
+  //line-height: $lineHeight !important;
+}
+
+table {
+  opacity: 0.9;
 }
 

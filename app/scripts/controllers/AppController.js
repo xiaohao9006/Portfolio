@@ -97,8 +97,8 @@ angular.module('projectApp')
       }
 
       if (toState.name === 'projects') {
-        //$state.go('projects.summary')
-        $state.go('projects.personalportfolio')
+        $state.go('projects.summary')
+        //$state.go('projects.personalportfolio')
       }
     });
 
