@@ -342,7 +342,8 @@
             (the Vice President of Conner Strong & Buckelew) says about the product.</p>
           <p class="videoIntro videoNotDisplayText">(This device doesn't support Flash Player. Please view this video on computer.)</p>
           <div class="videoWrapper flashVideo">
-            <iframe width="560" height="315" src="http://admin.brightcove.com/viewer/us20160520.1717/BrightcoveBootloader.swf?playerID=2509521884001&playerKey=AQ~~%2CAAACHVPEk_k~%2C2rNY2xgKHOUtEpycgazjqKAhz9uwzUik&purl=https%3A%2F%2Fxiaohao9006.github.io%2F&%40videoPlayer=4132179254001&autoStart=false&bgcolor=%23FFFFFF&debuggerID=&dynamicStreaming=true&flashID=myExperience&height=460&identifierClassName=BrightcoveExperienceID_2926&isUI=true&isVid=true&linkBaseURL=http%3A%2F%2Fwww.vertafore.com%2FWebVideosFrame&startTime=1465796541647&videoID=4132179254001&width=650" frameborder="0" allowfullscreen></iframe>
+            <iframe ng-if="hasFlashPlayer" width="560" height="315" src="http://admin.brightcove.com/viewer/us20160520.1717/BrightcoveBootloader.swf?playerID=2509521884001&playerKey=AQ~~%2CAAACHVPEk_k~%2C2rNY2xgKHOUtEpycgazjqKAhz9uwzUik&purl=https%3A%2F%2Fxiaohao9006.github.io%2F&%40videoPlayer=4132179254001&autoStart=false&bgcolor=%23FFFFFF&debuggerID=&dynamicStreaming=true&flashID=myExperience&height=460&identifierClassName=BrightcoveExperienceID_2926&isUI=true&isVid=true&linkBaseURL=http%3A%2F%2Fwww.vertafore.com%2FWebVideosFrame&startTime=1465796541647&videoID=4132179254001&width=650" frameborder="0" allowfullscreen></iframe>
+            <a ng-if="!hasFlashPlayer" href="http://www.adobe.com/go/getflash/" target="_blank"><img src="http://admin.brightcove.com/viewer/upgrade_flash_player2.gif" alt="Get Flash Player" width="314" height="200" border="0"></a>
           </div>
         </div>
         <div class="two wide computer tablet only column"></div>

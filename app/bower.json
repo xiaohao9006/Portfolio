@@ -17,7 +17,8 @@
     "scrollmagic": "^2.0.5",
     "angular-scroll-magic": "^0.0.7",
     "angular-ui-router": "^0.3.1",
-    "angulartics-google-analytics": "^0.2.0"
+    "angulartics-google-analytics": "^0.2.0",
+    "swfobject": "*"
   },
   "appPath": "app",
   "moduleName": "projectApp"

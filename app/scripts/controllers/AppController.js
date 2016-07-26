@@ -174,12 +174,18 @@ angular.module('projectApp')
     };
 
     var temp_url = document.location.hash;
+    if (temp_url === ""){
+      temp_url="/aboutme";
+    }
     //console.log(temp_url)
     if (temp_url.indexOf("#") > -1)
     {
       temp_url = temp_url.replace("#","");
     }
     $analytics.pageTrack(temp_url);
+
+
+    $scope.hasFlashPlayer = swfobject.hasFlashPlayerVersion("1");
 
   }]);
 

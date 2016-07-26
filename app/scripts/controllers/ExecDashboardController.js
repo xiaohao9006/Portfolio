@@ -59,7 +59,7 @@ angular.module('projectApp')
       //event.stopPropagation();
     });
 
-
+    console.log($scope.hasFlashPlayer);
 
 }]);
 
