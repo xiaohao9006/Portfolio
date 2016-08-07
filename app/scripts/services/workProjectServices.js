@@ -54,7 +54,7 @@ angular.module('projectApp')
         companyLogo: '',
         image: '/images/portfolioProject.jpg',
         roleIconClass: 'user',
-        role: 'Designer / Developer',
+        role: ' Experience Designer | Developer | Web Analyst',
         date: '2016.06 - 2016.07',
         intro1: 'My personal portfolio was completely rebuilt in June 2016, when I just ' +
         'finished my online Coursera specialization “Full Stack Web Development” and I thought it ' +
@@ -66,6 +66,26 @@ angular.module('projectApp')
         intro3: 'The moment you enter this website, you are looking at my final work. Enjoy!',
         tools: ["Adobe Illustrator","Adobe Photoshop","Semantic UI","AngularJS","Yeoman","Gulp", "GitHub"],
         detailTemplate: "projects.personalportfolio"
+        //show: true
+      },
+      {
+        _id: 3,
+        evenOrOddClass: 'evenContainer',
+        name: "Portfolio Web Analytics Dashboard",
+        companyLogo: '',
+        image: '/images/portfolioAnalytics.jpg',
+        roleIconClass: 'user',
+        role: 'Experience Designer | Developer | Web Analyst',
+        date: '2016.07 - 2016.08',
+        intro1: 'As my personal portfolio goes online, the live usage data comes in. But ' +
+        'when I checked the data in Google Analytics, I found the data presentation was overly complicated ' +
+        'and some of the reports, dimensions and metrics were not relevant to my website context.',
+        intro2: 'So I decided to analyze the usage data by myself, then design and implement a customized web ' +
+        'analytics dashboard to display the data in an easy to understand manner. Also it was a great practice to ' +
+        'even further expand my realm of web knowledge – Interaction Design, Web Analytics, Data Visualization, Front-end and Back-end Implementation.',
+        intro3: '',
+        tools: ["Google Analytics","Google Analytics Core Reporting API","HighCharts", "NodeJS", "Express", "Google Cloud Platform API","Amazon Web Services EC2"],
+        detailTemplate: "projects.portfoliowebanalytics"
         //show: true
       }
     ];

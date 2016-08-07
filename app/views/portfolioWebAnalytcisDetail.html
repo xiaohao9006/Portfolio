@@ -1,0 +1,359 @@
+<div ng-controller="PortfolioWebAnalyticsController">
+  <div id="projectAnchor" style="position:relative; top:-5rem"></div>
+  <div class="oddContainer">
+    <div class="ui stackable grid container sectionContainer">
+      <div class="one wide column">
+        <i class="ui remove big icon closeIcon" ng-click="closeProjectDetail()"></i>
+      </div>
+      <div class="eight wide column">
+
+        <div class="ui special inverted blue card projectCard">
+          <div class="dimmable image">
+            <div class="ui dimmer disableDimmer">
+              <div class="content">
+                <div class="center">
+                </div>
+              </div>
+            </div>
+            <img ng-src={{project.image}}>
+          </div>
+
+          <div class="content">
+            <div class="header">{{project.name}}</div>
+            <img class="projectLogo" ng-src={{project.companyLogo}}>
+          </div>
+          <div class="extra content">
+          <span class="right floated">
+            <i class="calendar icon"></i>
+            {{project.date}}
+          </span>
+          <span>
+            <i class="icon" ng-class="project.roleIconClass"></i>
+            {{project.role}}
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="six wide column projectIntro">
+        <div class="ui items">
+          <div class="item">
+            <div class="content">
+              <div class="header projectIntroHeader">{{project.name}}</div>
+              <div class="description">
+                <p>{{project.intro1}}</p>
+                <p>{{project.intro2}}</p>
+              </div>
+              <div class="extra">
+                <div class="ui black large label" ng-repeat="tool in project.tools">{{tool}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="one wide column"></div>
+
+    </div>
+  </div>
+  <div class="projectDetailContainer">
+    <div class="ui container sectionContainer">
+
+      <div class="portfolioDataDashboardContainer">
+        <h2 class="ui header centered large inverted horizontal divider">WEBSITE DATA</h2>
+        <div class="stepContainer">
+          <div class="ui stackable steps">
+            <a class="active step" data-tab="keyMetrics">
+              <i class="privacy icon"></i>
+              <div class="content">
+                <div class="title">KEY</br>METRICS</div>
+              </div>
+            </a>
+            <a class="step" data-tab="geoLocation">
+              <i class="marker icon"></i>
+              <div class="content">
+                <div class="title">GEO</br>LOCATION</div>
+              </div>
+            </a>
+            <a class="step" data-tab="technology">
+              <i class="laptop icon"></i>
+              <div class="content">
+                <div class="title">TECHNOLOGY</div>
+              </div>
+            </a>
+            <a class="step" data-tab="page">
+              <i class="file text icon"></i>
+              <div class="content">
+                <div class="title">PAGE</br>ANALYSIS</div>
+              </div>
+            </a>
+            <a class="step" data-tab="event">
+              <i class="pointing up icon"></i>
+              <div class="content">
+                <div class="title">EVENT</br>DETAIL</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Key Metrics Content -->
+        <div class="ui active tab" data-tab="keyMetrics" style="z-index: -2">
+          <p class="stepIntro">How many times did my users visit the website, and how much time did they spent during past 30 days?</p>
+          <div class="ui raised segment portfolioDataDashboardDetailContainer">
+
+            <div class="ui stackable grid container dataSectionContainer">
+              <div class="sixteen wide column processDetailHeader">Key Metrics Data</div>
+              <div class="two wide computer tablet only column"></div>
+              <div class="four wide column dataTileContainer">
+                <div class="ui inverted small statistic" id="keyMetricsVisits">
+                  <div class="value">
+                    {{totalVisits}}
+                  </div>
+                  <div class="ui text inverted loader"></div>
+                  <div class="label">
+                    Total Visits
+                  </div>
+                </div>
+              </div>
+              <div class="four wide column dataTileContainer">
+                <div class="ui inverted small statistic" id="keyMetricsPageViews">
+                  <div class="value">
+                    {{pagesPerVisit}}
+                  </div>
+                  <div class="ui text inverted loader"></div>
+                  <div class="label">
+                    Pageviews / Visits
+                  </div>
+                </div>
+              </div>
+              <div class="four wide column dataTileContainer" id="keyMetricsDuration">
+                <div class="ui inverted small statistic">
+                  <div class="value">
+                    {{aveDuration}}
+                  </div>
+                  <div class="ui text inverted loader"></div>
+                  <div class="label">
+                    Ave. Visit Duration
+                  </div>
+                </div>
+              </div>
+              <div class="two wide computer tablet only column"></div>
+
+              <div class="one wide computer tablet only column"></div>
+              <div class="fourteen wide column">
+
+                <div class="chartPanelLarge" id="visitsChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+              <div class="one wide computer tablet only column"></div>
+
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <!-- Geo Location Content -->
+        <div class="ui tab" data-tab="geoLocation">
+          <p class="stepIntro">Where did the visits come from during past 30 days?</p>
+          <div class="ui raised segment portfolioDataDashboardDetailContainer">
+
+            <div class="ui stackable grid container dataSectionContainer">
+              <div class="sixteen wide column processDetailHeader">Visits Geo Location Distribution</div>
+              <div class="six wide computer tablet only column"></div>
+              <div class="four wide column dataTileContainer">
+                <div class="ui inverted small statistic" id="keyMetricsVisits">
+                  <div class="value">
+                    {{totalVisits}}
+                  </div>
+                  <div class="ui text inverted loader"></div>
+                  <div class="label">
+                    Total Visits
+                  </div>
+                </div>
+              </div>
+              <div class="six wide computer tablet only column"></div>
+
+              <div class="one wide computer tablet only column"></div>
+              <div class="seven wide column">
+                <div class="chartPanelLarge" id="cityChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+              <div class="seven wide column">
+                <div class="chartPanelLarge" id="countryChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+              <div class="one wide computer tablet only column"></div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Technology Content -->
+        <div class="ui tab" data-tab="technology">
+          <p class="stepIntro">What OS, browser, device, etc did my users most frequently use during past 30 days?</p>
+          <div class="ui raised segment portfolioDataDashboardDetailContainer">
+
+            <div class="ui stackable grid container dataSectionContainer">
+              <div class="sixteen wide column processDetailHeader">Visits Technology Distribution</div>
+
+              <div class="six wide computer tablet only column"></div>
+              <div class="four wide column dataTileContainer">
+                <div class="ui inverted small statistic" id="desktopVisits">
+                  <div class="value">
+                    {{desktopVisits}}
+                  </div>
+                  <div class="ui text inverted loader"></div>
+                  <div class="label">
+                    Desktop Visits
+                  </div>
+                </div>
+              </div>
+              <div class="six wide computer tablet only column"></div>
+
+              <div class="one wide computer tablet only column"></div>
+              <div class="seven wide column">
+                <div class="chartPanelLarge" id="desktopBrowserChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+              <div class="seven wide column">
+                <div class="chartPanelLarge" id="desktopResolutionChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+              <div class="one wide computer tablet only column"></div>
+
+
+              <div class="six wide computer tablet only column"></div>
+              <div class="four wide column dataTileContainer">
+                <div class="ui inverted small statistic" id="mobileVisits">
+                  <div class="value">
+                    {{mobileVisits}}
+                  </div>
+                  <div class="ui text inverted loader"></div>
+                  <div class="label">
+                    Tablet/Mobile Visits
+                  </div>
+                </div>
+              </div>
+              <div class="six wide computer tablet only column"></div>
+
+              <div class="one wide computer tablet only column"></div>
+              <div class="seven wide column">
+                <div class="chartPanelLarge" id="mobileOSChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+              <div class="seven wide column">
+                <div class="chartPanelLarge" id="mobileDeviceChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+              <div class="one wide computer tablet only column"></div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Page Analysis Content -->
+        <div class="ui tab" data-tab="page">
+          <p class="stepIntro">What pages did my users visit during past 30 days?</p>
+          <div class="ui raised segment portfolioDataDashboardDetailContainer">
+
+            <div class="ui stackable grid container dataSectionContainer">
+              <div class="sixteen wide column processDetailHeader">Page Analysis</div>
+
+              <div class="one wide computer tablet only column"></div>
+              <div class="fourteen wide column">
+                <div class="chartPanelLarge" id="pageViewAnalysisChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+
+              <div class="one wide computer tablet only column"></div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Event Detail Content -->
+        <div class="ui tab" data-tab="event">
+          <p class="stepIntro">What detail interactions did my users most frequently do during past 30 days?</p>
+          <div class="ui raised segment portfolioDataDashboardDetailContainer">
+
+            <div class="ui stackable grid container dataSectionContainer">
+              <div class="sixteen wide column processDetailHeader">Event Analysis</div>
+
+              <div class="one wide computer tablet only column"></div>
+              <div class="fourteen wide column">
+                <div class="chartPanelLarge" id="EventAnalysisChart">
+                  <div class="ui text inverted loader">Getting Data From Google</div>
+                  <div class="errorMessage">Sever error. Please refresh the browser and try again.</div>
+                  <div class="chartCanvas"></div>
+                </div>
+
+              </div>
+
+              <div class="one wide computer tablet only column"></div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+

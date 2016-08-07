@@ -345,7 +345,7 @@ html, body {
   }
 }
 
-.designProcessDetailContainer {
+.designProcessDetailContainer, .portfolioDataDashboardDetailContainer {
   //background-color:$darkGrey !important;
   margin-bottom: 2*$lineHeight !important;
   p {
@@ -775,3 +775,45 @@ table {
   opacity: 0.9;
 }
 
+.portfolioDataDashboardContainer .ui.steps .active.step:after, .portfolioDataDashboardContainer .ui.steps .step:after{
+
+  display: none;
+}
+
+.portfolioDataDashboardContainer .segment {
+  min-height: 100px !important;
+}
+
+.dataSectionContainer {
+  //display: none !important;
+}
+
+.dataTileContainer {
+  display:flex !important;
+  justify-content: center;
+
+  .value {
+    opacity: 0;
+  }
+}
+
+.chartPanelLarge {
+  background-color:$black;
+  padding-left:2rem;
+  padding-right:2rem;
+  height: 20*$lineHeight;
+}
+
+.chartCanvas {
+  display: none;
+  height: 19*$lineHeight;
+}
+.errorMessage {
+  text-align: center;
+  position: relative;
+  top:45%;
+  display:none;
+
+  color:$lightGrey;
+  font-size: $lineHeight;
+}

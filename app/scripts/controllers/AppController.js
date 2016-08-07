@@ -99,6 +99,7 @@ angular.module('projectApp')
       if (toState.name === 'projects') {
         $state.go('projects.summary')
         //$state.go('projects.personalportfolio')
+        //$state.go('projects.portfoliowebanalytics')
       }
     });
 
@@ -176,6 +177,9 @@ angular.module('projectApp')
     var temp_url = document.location.hash;
     if (temp_url === ""){
       temp_url="/aboutme";
+    }
+    else if (temp_url.indexOf('projects') != -1) {
+      temp_url="/projects";
     }
     //console.log(temp_url)
     if (temp_url.indexOf("#") > -1)

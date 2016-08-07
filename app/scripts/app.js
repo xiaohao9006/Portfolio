@@ -72,6 +72,10 @@ angular.module('projectApp',['ui.router','ngAnimate', 'angulartics', 'angulartic
       .state('projects.personalportfolio',{
         url:'/personalportfolio',
         templateUrl:"views/personalPortfolioDetail.html"
+      })
+      .state('projects.portfoliowebanalytics',{
+        url:'/portfoliowebanalytics',
+        templateUrl:"views/portfolioWebAnalytcisDetail.html"
       });
   })
 ;

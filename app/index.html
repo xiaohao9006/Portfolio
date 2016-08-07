@@ -124,6 +124,7 @@
     <script src="./bower_components/angulartics/dist/angulartics.min.js"></script>
     <script src="./bower_components/angulartics-google-analytics/dist/angulartics-ga.min.js"></script>
     <script src="./bower_components/swfobject/swfobject/swfobject.js"></script>
+    <script src="./bower_components/highcharts/highcharts.js"></script>
 
     <!-- endbower -->
     <!-- endbuild -->
@@ -140,29 +141,24 @@
         <script src="./scripts/controllers/ExecDashboardController.js"></script>
         <script src="./scripts/controllers/MyAgencyReportsController.js"></script>
         <script src="./scripts/controllers/PersonalPortfolioController.js"></script>
+        <script src="./scripts/services/lineChartServices.js"></script>
+        <script src="./scripts/services/pieChartServices.js"></script>
+        <script src="./scripts/services/barChartServices.js"></script>
+        <script src="./scripts/services/columnChartServices.js"></script>
+        <script src="./scripts/controllers/PortfolioWebAnalyticsController.js"></script>
         <script src="./scripts/controllers/PhotoController.js"></script>
         <script src="./scripts/controllers/VideoController.js"></script>
         <script src="./scripts/directives/directives.js"></script>
         <!-- endbuild -->
 
-    <script>
-      //Is this a version of Safari?
-      var ua = navigator.userAgent;
-      if (ua.lastIndexOf('Safari/') > 0) {
-        var version = ua.substr(ua.lastIndexOf('Safari/') + 7, 2);
-        //alert("Safari " + version);
-      }
 
-    </script>
-
-    <script>
-      /*$(document).ready(function(){
-        $('#headerTextContainer > i')
-          .transition('set looping')
-          .transition('bounce', '2000ms')
-      })*/
+  <script>
+    var b = document.documentElement;
+    b.setAttribute('data-useragent',  navigator.userAgent);
+    b.setAttribute('data-platform', navigator.platform );
+    b.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
+  </script>
 
 
-    </script>
   </body>
 </html>
