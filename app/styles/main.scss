@@ -357,6 +357,7 @@ html, body {
     color: $white !important;
     font-weight: 300 !important;
     font-size: 0.8*$lineHeight !important;
+    line-height: 1.1*$lineHeight !important;
   }
 
   .dpCard {
@@ -381,6 +382,8 @@ html, body {
   a {
     color: $blue !important;
   }
+
+
 
 }
 
@@ -817,3 +820,5 @@ table {
   color:$lightGrey;
   font-size: $lineHeight;
 }
+
+

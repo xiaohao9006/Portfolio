@@ -522,6 +522,16 @@ angular.module('projectApp')
       },
     });
 
+    $('.portfolioDataAnalysisContainer .step').click(function(){
+      $('.portfolioDataAnalysisContainer .step').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('.portfolioDataAnalysisContainer .step').tab({
+      context: $('.portfolioDataAnalysisContainer'),
+
+    });
+
     $scope.closeProjectDetail = function (index){
       $('.special.card .image').dimmer({
         on: 'hover'

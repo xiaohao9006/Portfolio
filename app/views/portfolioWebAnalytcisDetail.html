@@ -60,7 +60,7 @@
     <div class="ui container sectionContainer">
 
       <div class="portfolioDataDashboardContainer">
-        <h2 class="ui header centered large inverted horizontal divider">WEBSITE DATA</h2>
+        <h2 class="ui header centered large inverted horizontal divider">WEB ANALYTICS DASHBOARD</h2>
         <div class="stepContainer">
           <div class="ui stackable steps">
             <a class="active step" data-tab="keyMetrics">
@@ -345,14 +345,271 @@
         </div>
       </div>
 
+      <div class="portfolioDataAnalysisContainer">
+        <h2 class="ui header centered large inverted horizontal divider">ANALYSIS AND IMPLEMENTATION PROCESS</h2>
+        <div class="stepContainer">
+          <div class="ui stackable steps">
+            <a class="active step" data-tab="questions">
+              <i class="help circle icon"></i>
+              <div class="content">
+                <div class="title">ASKING RIGHT</br>QUESTIONS</div>
+              </div>
+            </a>
+            <a class="step" data-tab="analysis">
+              <i class="idea icon"></i>
+              <div class="content">
+                <div class="title">DATA ANALYSIS AND</br>VISUALIZATION</div>
+              </div>
+            </a>
+            <a class="step" data-tab="infrastructure">
+              <i class="server icon"></i>
+              <div class="content">
+                <div class="title">SYSTEM</br>INFRASTRUCTURE</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Asking Right Questions Content -->
+        <div class="ui active tab" data-tab="questions" style="z-index: -2">
+          <p class="stepIntro">What data did I track on my website? What questions do I want to answer?</p>
+          <div class="ui raised segment portfolioDataDashboardDetailContainer">
+
+            <div class="ui stackable grid container dataSectionContainer">
+              <div class="sixteen wide column processDetailHeader">
+                <div>Five Analytics Questions</div>
+                <p class="processDetailContent">When analyzing the web data, the very first questions to ask ourselves will always be "What data did we track?" and "what insights do we want to know?"
+              When embedding Google Analytics tracking code into my portfolio, I already thought about this and here are five things I would like to know.</p>
+              </div>
+
+              <!-- Analytics Question 1 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 1:</strong> How frequently my portfolio is visited? And how long do my audience stay on my portfolio?</div>
+                  <div class="item"><strong>Tracking Dimension:</strong> Date</div>
+                  <div class="item"><strong>Tracking Metrics:</strong> Session Count, Average Session Duration</div>
+
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+              <!-- Analytics Question 2 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 2:</strong> Where do the visits come from?</div>
+                  <div class="item"><strong>Tracking Dimension:</strong> City, Country</div>
+                  <div class="item"><strong>Tracking Metrics:</strong> Session Count</div>
+
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+              <!-- Analytics Question 3 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 3:</strong> What operating system, browser and mobile device do my audience most frequently use?</div>
+                  <div class="item"><strong>Tracking Dimension:</strong> Operating System, Browser, Screen Resolution, Mobile Device Model</div>
+                  <div class="item"><strong>Tracking Metrics:</strong> Session Count</div>
+
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+              <!-- Analytics Question 4 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 4:</strong> What page do my audience most frequently visit?</div>
+                  <div class="item"><strong>Tracking Dimension:</strong> Page</div>
+                  <div class="item"><strong>Tracking Metrics:</strong> Pageviews</div>
+
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+              <!-- Analytics Question 5 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 5:</strong> What UI elements do my audience frequently click? How often do they click on each UI element?</div>
+                  <div class="item"><strong>Tracking Dimension:</strong> Event Action</div>
+                  <div class="item"><strong>Tracking Metrics:</strong> Total Events</div>
+
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+            </div>
+
+          </div>
 
 
+        </div>
+
+        <!-- Data Analysis Content -->
+        <div class="ui tab" data-tab="analysis">
+          <p class="stepIntro">How to analyze the data then visualize it in an easy to understand manner?</p>
+          <div class="ui raised segment portfolioDataDashboardDetailContainer">
+
+            <div class="ui stackable grid container dataSectionContainer">
+              <div class="sixteen wide column processDetailHeader">
+                <div>Web Data Analysis is all about Building a Table</div>
+              </div>
+
+              <div class="sixteen wide column">
+                <p>I'm the domain expert of web analytics in my company and once did several web analytics lunch & learns to the entire product
+                  and dev team. When answering daily web analytics questions, I always get the feeling that my colleague think of web analytics as an extremely complicated topic and
+                  they easily get lost in the massive data and reports. So I keep telling them, <strong>"just relax, web data analysis is all about building a table, which is nice and easy".</strong>
+                  Here is how.</p>
+              </div>
+
+              <div class="sixteen wide column">
+                <p>From the previous step, we already know what web analytics questions we want to answer. Then to answer each question, we need to identify and list out what data
+                  "Dimension" and "Metric(s)" can depict the question. Here's an example: to answer the following question, we have to know the number of visits and visits duration of each day.
+                  So dimension should be "Date" and metrics should be "Session Count" and "Average Session Duration".</p>
+              </div>
+              <!-- Analytics Question 1 -->
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item"><strong>Question 1:</strong> How frequently my portfolio is visited? And how long do my audience stay on my portfolio?</div>
+                  <div class="item"><strong>Tracking Dimension:</strong> Date</div>
+                  <div class="item"><strong>Tracking Metrics:</strong> Session Count, Average Session Duration</div>
+
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+              <div class="sixteen wide column">
+                <p>All we need to do next is to sketch a table, with dimension value as row header and metrics as column header, then fetch data from Google Analytics to fill
+                 in the table cells. With the data table, the question can be pretty much answered.</p>
+              </div>
+
+              <div class="two wide computer one wide tablet only column"></div>
+              <div class="twelve wide computer fourteen wide tablet column processDetailItem">
+                <table class="ui single line unstackable blue table gridTable">
+                  <thead>
+                  <tr><th></th>
+                    <th>Session Count</th>
+                    <th>Average Session Duration</th>
+                  </tr></thead>
+                  <tbody>
+                  <tr>
+                    <td class="tableRowTitle">2016/07/01</td>
+                    <td>25</td>
+                    <td>
+                      00:01:23
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tableRowTitle">2016/07/02</td>
+                    <td>23</td>
+                    <td>00:01:45</td>
+                  </tr>
+                  <tr>
+                    <td class="tableRowTitle">2016/07/03</td>
+                    <td>11</td>
+                    <td>00:00:57</td>
+                  </tr>
+                  <tr>
+                    <td class="tableRowTitle">...</td>
+                    <td>...</td>
+                    <td>...</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="two wide computer one wide tablet only column"></div>
+
+              <div class="sixteen wide column processDetailHeader">
+                <div>Visualize the Data</div>
+              </div>
+
+              <div class="sixteen wide column">
+                <p>The table above can already answer the analytics question, but it's not intuitive and we cannot quickly get insights at first peek. Then data visualization comes to the rescue.
+                 To visualize the data, we have to draw charts - to encode the data and translate the data attribute into visual attribute. Different chart types have different visual attributes, hence telling
+                different stories. For example, line chart is the best choice to show the trend, and the height of each point (visual attribute) is mapped with data value (data attribute).</p>
+                <p>Based on everything above, my portfolio analytics dashboard is defined and designed. Then HighCharts is used on Front-end to build the visualization.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- System Infrastructure Content -->
+        <div class="ui tab" data-tab="infrastructure">
+          <p class="stepIntro">How to send request and fetch data from Google Analytics?</p>
+          <div class="ui raised segment portfolioDataDashboardDetailContainer">
+
+            <div class="ui stackable grid container dataSectionContainer">
+              <div class="sixteen wide column processDetailHeader">
+                <div>Normal Procedure</div>
+              </div>
 
 
+              <div class="two wide computer one wide tablet only column"></div>
+              <div class="twelve wide computer fourteen wide tablet column">
+                <div ng-include src="'svgs/normalServer.svg'"></div>
+              </div>
+              <div class="two wide computer one wide tablet only column"></div>
 
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column processDetailItem">
+                <div class="ui bulleted list">
+                  <div class="item">Node JS server (express) is deployed on Amazon Web Services EC2 instance.</div>
+                  <div class="item">The server has three main components - Authentication, Scheduled Data Request and Connection Error Handling.</div>
+                  <div class="item">When the server is up running, a Google API authentication request is initiated to Google API Auth Server. If authentication is successful,
+                  Google server will return an auth token.</div>
+                  <div class="item">Every day at 1am, Node server sends a data request to Google Analytics, with authentication token got from last step. If the request is successful, all data will be
+                   stored in server data cache.</div>
+                  <div class="item">"Exponential Backoff" strategy is used with data request to reduce the impact of temporary error response.</div>
+                  <div class="item">When a data request is initiated at client side, server will immediately send data back from cache, without further request to Google Analytics. Performance is optimized.</div>
+                  <div class="item">Once data is successfully sent back to client, it's visualized by HighCharts and displayed in dashboard.</div>
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+
+              <div class="sixteen wide column processDetailHeader">
+                <div>Error Handling</div>
+              </div>
+
+
+              <div class="two wide computer one wide tablet only column"></div>
+              <div class="twelve wide computer fourteen wide tablet column">
+                <div ng-include src="'svgs/errorHandling.svg'"></div>
+              </div>
+              <div class="two wide computer one wide tablet only column"></div>
+
+              <div class="one wide computer only column"></div>
+              <div class="fourteen wide computer sixteen wide tablet column">
+                <div class="ui bulleted list">
+                  <div class="item">There is the possibility that daily data request to Google Analytics may fail due to many reasons.
+                    Then error response will be sent back to server and stored in data cache.</div>
+                  <div class="item">In this case, when a data request is initiated at client side, if it encounters error, instead of data, in server cache, a new data request will be immediately sent to Google Analytics.</div>
+                  <div class="item">If the request is successful, data will be sent back to client and the server cache will be updated with the successful data.</div>
+                  <div class="item">If the request is still not successful, error will be sent back to client and "try again later" message will be displayed in client browser.</div>
+                </div>
+              </div>
+              <div class="one wide computer only column"></div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
 
 
     </div>
+
   </div>
 </div>
 
