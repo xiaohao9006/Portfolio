@@ -16,7 +16,7 @@ angular.module('projectApp')
     var projects = workProjectIntroFactory.getProjects();
     $scope.project = projects[3];
 
-    var host = "localhost:3000";
+    var host = "35.162.160.22:3000";
     //var host = "192.168.1.4:3000";
 
     $('.portfolioDataDashboardContainer .step').click(function(){
