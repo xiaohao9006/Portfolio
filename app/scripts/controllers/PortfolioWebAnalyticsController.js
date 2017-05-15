@@ -16,7 +16,7 @@ angular.module('projectApp')
     var projects = workProjectIntroFactory.getProjects();
     $scope.project = projects[3];
 
-    var host = "35.162.160.22:3000";
+    var host = "api.yunhaoshen.com:3000";
     //var host = "192.168.1.4:3000";
 
     $('.portfolioDataDashboardContainer .step').click(function(){
@@ -43,7 +43,7 @@ angular.module('projectApp')
           //City Distribution
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/geo-location/city',
+            url: 'https://' + host + '/google-analytics-api/geo-location/city',
           }).then(function successCallback(response) {
             console.log("CITY Success!!");
             console.log(response);
@@ -88,7 +88,7 @@ angular.module('projectApp')
           //Country Distribution
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/geo-location/country',
+            url: 'https://' + host + '/google-analytics-api/geo-location/country',
           }).then(function successCallback(response) {
             console.log("COUNTRY Success!!");
             console.log(response);
@@ -158,7 +158,7 @@ angular.module('projectApp')
           //Device Category Distribution
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/technology/device-category',
+            url: 'https://' + host + '/google-analytics-api/technology/device-category',
           }).then(function successCallback(response) {
             console.log("DEVICE CATEGORY Success!!");
             console.log(response);
@@ -204,7 +204,7 @@ angular.module('projectApp')
           //Desktop Browser Distribution
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/technology/desktop-browser',
+            url: 'https://' + host + '/google-analytics-api/technology/desktop-browser',
           }).then(function successCallback(response) {
             console.log("DESKTOP BROWSER Success!!");
             console.log(response);
@@ -262,7 +262,7 @@ angular.module('projectApp')
           //Desktop Resolution Distribution
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/technology/desktop-resolution',
+            url: 'https://' + host + '/google-analytics-api/technology/desktop-resolution',
           }).then(function successCallback(response) {
             console.log("DESKTOP RESOLUTION Success!!");
             console.log(response);
@@ -318,7 +318,7 @@ angular.module('projectApp')
           //Mobile OS Distribution
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/technology/mobile-os',
+            url: 'https://' + host + '/google-analytics-api/technology/mobile-os',
           }).then(function successCallback(response) {
             console.log("MOBILE OS Success!!");
             console.log(response);
@@ -358,7 +358,7 @@ angular.module('projectApp')
           //Mobile Device
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/technology/mobile-device',
+            url: 'https://' + host + '/google-analytics-api/technology/mobile-device',
           }).then(function successCallback(response) {
             console.log("MOBILE DEVICE Success!!");
             console.log(response);
@@ -413,7 +413,7 @@ angular.module('projectApp')
           //PageView Analysis
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/page-analysis/',
+            url: 'https://' + host + '/google-analytics-api/page-analysis/',
           }).then(function successCallback(response) {
             console.log("PageViewAnalysis Success!!");
             console.log(response);
@@ -473,7 +473,7 @@ angular.module('projectApp')
           //PageView Analysis
           $http({
             method: 'GET',
-            url: 'http://' + host + '/google-analytics-api/event-analysis/',
+            url: 'https://' + host + '/google-analytics-api/event-analysis/',
           }).then(function successCallback(response) {
             console.log("EVENT ANALYSIS Success!!");
             console.log(response);
@@ -570,7 +570,7 @@ angular.module('projectApp')
     //Visit Trend Chart
     $http({
       method: 'GET',
-      url: 'http://' + host + '/google-analytics-api/key-metrics/trend',
+      url: 'https://' + host + '/google-analytics-api/key-metrics/trend',
     }).then(function successCallback(response) {
       console.log("TREND Success!!");
       console.log(response);
@@ -608,7 +608,7 @@ angular.module('projectApp')
     $http({
       method: 'GET',
       //url: 'http://52.41.122.13:80/key-metrics/total-visits',
-      url: 'http://' + host + '/google-analytics-api/key-metrics/total-visits',
+      url: 'https://' + host + '/google-analytics-api/key-metrics/total-visits',
     }).then(function successCallback(response) {
       console.log("TOTALVISITS Success!!");
       console.log(response);
@@ -635,7 +635,7 @@ angular.module('projectApp')
     $http({
       method: 'GET',
       //url: 'http://52.41.122.13:80/key-metrics/pages-per-visit',
-      url: 'http://' + host + '/google-analytics-api/key-metrics/pages-per-visit',
+      url: 'https://' + host + '/google-analytics-api/key-metrics/pages-per-visit',
     }).then(function successCallback(response) {
       console.log("PAGEVIEWS Success!!");
       console.log(response);
@@ -677,7 +677,7 @@ angular.module('projectApp')
     $http({
       method: 'GET',
       //url: 'http://52.41.122.13:80/key-metrics/ave-duration',
-      url: 'http://' + host + '/google-analytics-api/key-metrics/ave-duration',
+      url: 'https://' + host + '/google-analytics-api/key-metrics/ave-duration',
     }).then(function successCallback(response) {
       console.log("DURATION Success!!");
       console.log(response);
