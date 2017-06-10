@@ -1,6 +1,7 @@
 /node_modules
 /dist
 /.tmp
+/certs
 /.sass-cache
 /bower_components
 

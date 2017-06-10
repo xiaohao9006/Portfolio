@@ -49,12 +49,11 @@ angular.module('projectApp')
       experienceScene.on("enter", function()
       {
         //console.log("!!!!!!");
-        $("#flightToUSA").addClass("animated fadeInCustomUp");
-        $("#graduation").addClass("animated fadeInCustomDown delay");
-        $("#executiveDashboard").addClass("animated fadeInCustomDown delay-one");
-        $("#adobeReports").addClass("animated fadeInCustomUp delay-two");
-        $("#myAgencyReports").addClass("animated fadeInCustomDown delay-three");
-
+        //$("#flightToUSA").addClass("animated fadeInCustomUp");
+        $("#graduation").addClass("animated fadeInCustomDown ");
+        $("#executive-dashboard").addClass("animated fadeInCustomDown delay");
+        $("#my-agency-reports").addClass("animated fadeInCustomUp delay-one");
+        $("#wscrc-website").addClass("animated fadeInCustomUp delay-two");
 
       });
 
