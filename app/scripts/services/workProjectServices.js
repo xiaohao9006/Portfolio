@@ -9,6 +9,46 @@ angular.module('projectApp')
       {
         _id: 0,
         evenOrOddClass: 'oddContainer',
+        name: "WSCRC Website",
+        companyLogo: '/images/isoftstone.png',
+        image: '/images/wscrc.png',
+        roleIconClass: 'user',
+        role: 'Experience Designer | Developer',
+        date: '2016.11 - 2017.03',
+        intro1: "The WSCRC site was outdated and didn't offer the " +
+        "functionality and user experience expected of similar membership organizations. " +
+        "After five months closely working with clients, I redesigned, " +
+        "developed and deployed the entire newly website.",
+        intro2: "Now in general, the redesigned website encourages more interaction with visitors, " +
+        "clearly tells the story of what WSCRC does, why membership is beneficial and is more lively overall.",
+        intro3: "",
+        projectLink: "https://wscrc.org",
+        tools: ["Adobe Illustrator","Adobe Experience Design","Amazon Web Services"],
+        detailTemplate: "projects.wscrc"
+      },
+      {
+        _id: 1,
+        evenOrOddClass: 'evenContainer',
+        name: "My Agency Reports",
+        companyLogo: '/svgs/vertaforeLogo.svg',
+        image: '/images/MyAgencyReports.png',
+        roleIconClass: 'user',
+        role: 'Experience Designer',
+        date: '2016.01 - 2016.09',
+        intro1: "Vertafore’s My Agency Reports is the new reporting platform, replacing " +
+        "legacy Vertafore Reporting. With My Agency Reports insurance agency is connected" +
+        " to its critical data and has added flexibility to give them more control over the data.",
+        intro2: "I, as the only Experience Designer in the cross functional team, designed My Agency Reports with a simplified navigation and added report filtering options. " +
+        "Reports are simple to use and allow users to adapt and tailor reports to meet the needs of their insurance agency. Users can quickly build custom reports and slice data " +
+        "into a view that makes sense for their business.",
+        intro3:"",
+        tools: ["Adobe Illustrator","Adobe Photoshop","FramerJS","Angular UI Grid"],
+        detailTemplate: "projects.myagencyreports"
+        //show: true
+      },
+      {
+        _id: 2,
+        evenOrOddClass: 'oddContainer',
         name: "Executive Dashboard",
         companyLogo: '/svgs/vertaforeLogo.svg',
         image: '/images/ExecutiveDashboard.png',
@@ -28,27 +68,27 @@ angular.module('projectApp')
         //show: true
       },
       {
-        _id: 1,
-        evenOrOddClass: 'evenContainer',
-        name: "My Agency Reports",
-        companyLogo: '/svgs/vertaforeLogo.svg',
-        image: '/images/MyAgencyReports.png',
+        _id: 3,
+        evenOrOddClass: 'oddContainer',
+        name: "My Connected Car",
+        companyLogo: '',
+        image: '/images/smart-car.png',
         roleIconClass: 'user',
-        role: 'Experience Designer',
-        date: '2016.01 - Present',
-        intro1: "Vertafore’s My Agency Reports is the new reporting platform, replacing " +
-        "legacy Vertafore Reporting. With My Agency Reports insurance agency is connected" +
-        " to its critical data and has added flexibility to give them more control over the data.",
-        intro2: "I, as the only Experience Designer in the cross functional team, designed My Agency Reports with a simplified navigation and added report filtering options. " +
-        "Reports are simple to use and allow users to adapt and tailor reports to meet the needs of their insurance agency. Users can quickly build custom reports and slice data " +
-        "into a view that makes sense for their business.",
+        role: 'Experience Designer | Developer',
+        date: '2017.03 - 2017.06',
+        intro1: "Vertafore's Executive Dashboard is a new feature initially targeted " +
+        "the executive users of agencies. It delivers easy to understand key data " +
+        "points to executive from which they can make informed decisions. By bringing " +
+        "these key metrics together into a single, easily digestible format for the first " +
+        "time, agencies are allowed to take action more quickly on their business direction.",
+        intro2: "I, as the only Experience Designer in the cross functional team, designed Executive " +
+        "Dashboard to bring the key business performance KPIs to the fingertips of the Agency Executives.",
         intro3:"",
-        tools: ["Adobe Illustrator","Adobe Photoshop","FramerJS","Angular UI Grid"],
-        detailTemplate: "projects.myagencyreports"
-        //show: true
+        tools: ["Adobe Illustrator","Adobe Photoshop","FramerJS","Highcharts"],
+        detailTemplate: "projects.execdashboard"
       },
       {
-        _id: 2,
+        _id: 4,
         evenOrOddClass: 'oddContainer',
         name: "Personal Portfolio",
         companyLogo: '',
@@ -69,7 +109,7 @@ angular.module('projectApp')
         //show: true
       },
       {
-        _id: 3,
+        _id: 5,
         evenOrOddClass: 'evenContainer',
         name: "Portfolio Web Analytics Dashboard",
         companyLogo: '',

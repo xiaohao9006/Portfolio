@@ -1,13 +1,11 @@
 <!-- Project Intro -->
 <div ng-controller="ProjectsSummaryController">
   <div id="projectAnchor" style="position:relative; top:-5rem"></div>
-  <div ng-repeat="project in projects" emit-last-repeater-element>
-    <div ng-class="project.evenOrOddClass">
-      <div class="ui stackable grid container sectionContainer">
-        <div class="one wide column">
-        </div>
-        <div class="eight wide computer seven wide tablet column">
-
+  <div class="ui stackable grid container sectionContainer">
+    <div class="one wide computer one wide tablet only column"></div>
+    <div class="fourteen wide computer fourteen wide tablet column">
+      <div class="ui stackable grid container">
+        <div ng-repeat="project in projects" emit-last-repeater-element  class="eight wide computer eight wide tablet column">
           <div class="ui special inverted blue card projectCard">
             <div class="dimmable image">
               <div class="ui dimmer disableDimmer">
@@ -25,42 +23,21 @@
               <img class="projectLogo" ng-src={{project.companyLogo}}>
             </div>
             <div class="extra content">
-          <span class="right floated">
-            <i class="calendar icon"></i>
-            {{project.date}}
-          </span>
-          <span>
-            <i class="icon" ng-class="project.roleIconClass"></i>
-            {{project.role}}
-          </span>
+      <span class="right floated">
+        <i class="calendar icon"></i>
+        {{project.date}}
+      </span>
+      <span>
+        <i class="icon" ng-class="project.roleIconClass"></i>
+        {{project.role}}
+      </span>
             </div>
           </div>
         </div>
-
-        <div class="six wide computer seven wide tablet column projectIntro">
-          <div class="ui items">
-            <div class="item">
-              <div class="content">
-                <div class="header projectIntroHeader">{{project.name}}</div>
-                <div class="description">
-                  <p>{{project.intro1}}</p>
-                  <p>{{project.intro2}}</p>
-                  <p>{{project.intro3}}</p>
-                </div>
-                <div class="extra">
-                  <div class="ui black large label" ng-repeat="tool in project.tools">{{tool}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="one wide computer tablet only column"></div>
-
       </div>
+
     </div>
-
-
+    <div class="one wide computer one wide tablet only column"></div>
   </div>
 </div>
 

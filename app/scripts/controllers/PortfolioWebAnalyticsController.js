@@ -14,7 +14,7 @@ angular.module('projectApp')
 
   .controller('PortfolioWebAnalyticsController', ['$scope', '$http' ,'workProjectIntroFactory', 'LineChartFactory', 'PieChartFactory', 'BarChartFactory','ColumnChartFactory','$state',function($scope, $http, workProjectIntroFactory, LineChartFactory, PieChartFactory,BarChartFactory,ColumnChartFactory, $state){
     var projects = workProjectIntroFactory.getProjects();
-    $scope.project = projects[3];
+    $scope.project = projects[5];
 
     var host = "api.yunhaoshen.com:3000";
     //var host = "192.168.1.4:3000";

@@ -58,9 +58,13 @@ angular.module('projectApp',['ui.router','ngAnimate', 'angulartics', 'angulartic
       })
       .state('projects.summary', {
         url: '',
-        templateUrl:"views/projectsSummary.html",
+        templateUrl:"views/projectsSummary.html"
       })
 
+      .state('projects.wscrc', {
+        url:'/wscrc',
+        templateUrl: "views/wscrc.html"
+      })
       .state('projects.execdashboard', {
         url:'/execdashboard',
         templateUrl:"views/executiveDashboardDetail.html"

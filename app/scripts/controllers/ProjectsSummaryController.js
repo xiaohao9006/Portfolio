@@ -38,7 +38,7 @@ angular.module('projectApp')
       //scrollToProject(index);
       var learnMoreProjectTrackEvent = "learn-more-" + $scope.projects[index].name + ":button#click"
       learnMoreProjectTrackEvent = learnMoreProjectTrackEvent.toLowerCase();
-      $analytics.eventTrack(learnMoreProjectTrackEvent)
+      $analytics.eventTrack(learnMoreProjectTrackEvent);
 
       $('.special.card .image').dimmer('hide');
       $('.special.card .image').dimmer({

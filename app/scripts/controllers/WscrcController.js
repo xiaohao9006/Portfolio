@@ -10,36 +10,22 @@
 
 angular.module('projectApp')
   /*.controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  })*/
+   this.awesomeThings = [
+   'HTML5 Boilerplate',
+   'AngularJS',
+   'Karma'
+   ];
+   })*/
 
-  .controller('PersonalPortfolioController', ['$scope', 'workProjectIntroFactory','$state',function($scope, workProjectIntroFactory, $state){
+  .controller('WscrcController', ['$scope', 'workProjectIntroFactory','$state',function($scope, workProjectIntroFactory, $state){
     var projects = workProjectIntroFactory.getProjects();
-    $scope.project = projects[4];
-    $('.portfolioDesignProcessContainer .step').click(function(){
-      $('.portfolioDesignProcessContainer .step').removeClass('active');
+    $scope.project = projects[0];
+    $('.step').click(function(){
+      $('.step').removeClass('active');
       $(this).addClass('active');
 
     });
-    //$('.step').tab();
-    $('.portfolioDesignProcessContainer .step').tab({
-      context: $('.portfolioDesignProcessContainer')
-    });
-
-    $('.portfolioImplementationProcessContainer .step').click(function(){
-      $('.portfolioImplementationProcessContainer .step').removeClass('active');
-      $(this).addClass('active');
-
-    });
-    //$('.step').tab();
-    $('.portfolioImplementationProcessContainer .step').tab({
-      context: $('.portfolioImplementationProcessContainer')
-    });
-
+    $('.step').tab();
 
     $scope.closeProjectDetail = function (index){
       $('.special.card .image').dimmer({
@@ -73,9 +59,9 @@ angular.module('projectApp')
       //event.stopPropagation();
     });
 
+    console.log($scope.hasFlashPlayer);
 
-
-}]);
+  }]);
 
 
 

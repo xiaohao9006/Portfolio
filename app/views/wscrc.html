@@ -1,0 +1,276 @@
+<div ng-controller="WscrcController">
+  <div id="projectAnchor" style="position:relative; top:-5rem"></div>
+  <div class="oddContainer">
+    <div class="ui stackable grid container sectionContainer">
+      <div class="one wide column">
+        <i class="ui remove big icon closeIcon" ng-click="closeProjectDetail()"></i>
+      </div>
+      <div class="eight wide column">
+
+        <div class="ui special inverted blue card projectCard">
+          <div class="dimmable image">
+            <div class="ui dimmer disableDimmer">
+              <div class="content">
+                <div class="center">
+                </div>
+              </div>
+            </div>
+            <img ng-src={{project.image}}>
+          </div>
+
+          <div class="content">
+            <div class="header">{{project.name}}</div>
+            <img class="projectLogo" ng-src={{project.companyLogo}}>
+          </div>
+          <div class="extra content">
+          <span class="right floated">
+            <i class="calendar icon"></i>
+            {{project.date}}
+          </span>
+          <span>
+            <i class="icon" ng-class="project.roleIconClass"></i>
+            {{project.role}}
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="six wide column projectIntro">
+        <div class="ui items">
+          <div class="item">
+            <div class="content">
+              <div class="header projectIntroHeader">{{project.name}}</div>
+              <div class="description">
+                <p>{{project.intro1}}</p>
+                <p>{{project.intro2}}</p>
+                <p>Go to <a ng-href={{project.projectLink}} target="_blank">WSCRC website.</a></p>
+              </div>
+              <div class="extra">
+                <div class="ui black large label" ng-repeat="tool in project.tools">{{tool}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="one wide column"></div>
+
+    </div>
+  </div>
+  <div class="projectDetailContainer">
+    <div class="ui container sectionContainer">
+      <h2 class="ui header centered large inverted horizontal divider">WHAT WAS I ASKED TO DO</h2>
+
+
+      <div class="ui stackable grid toDoDetail">
+        <div class="one wide column"></div>
+        <div class="four wide column">
+          <i class="ui laptop huge icon"></i>
+          <p>In general, the redesign of WSCRC website needs to encourage more interaction with visitors, clearly tell the story of what WSCRC does, and be more lively</p>
+        </div>
+        <div class="one wide column"></div>
+
+        <div class="four wide column">
+          <i class="ui user huge icon"></i>
+          <p>Members and Public should be able to view membership information on the website before they apply for membership online</p>
+        </div>
+        <div class="one wide column"></div>
+
+        <div class="four wide column">
+          <i class="ui browser huge icon"></i>
+          <p>The website should provide a convenient, one-stop connection/directory to all of the resources necessary to do business with China</p>
+        </div>
+        <div class="one wide column"></div>
+
+      </div>
+
+      <h2 class="ui header centered large inverted horizontal divider">WHAT DID I INHERIT?</h2>
+      <div class="ui stackable grid">
+        <div class="two wide computer tablet only column"></div>
+        <div class="twelve wide column">
+          <div class="ui grid">
+            <div class="sixteen wide column centeredContentDiv">
+              <div class="ui rounded bordered huge image">
+                <img src="/images/wscrc-legacy.png" />
+              </div>
+            </div>
+            <div class="sixteen wide column">
+              <div class="inheritIntroHeader">Washington State China Relation Council Legacy Website</div>
+              <p class="inheritIntroContent">The look and functionality of the legacy website are so limited and dated.
+                it is too difficult to learn about new membership opportunities, to deliver organization’s information and promote past and upcoming events.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="two wide computer tablet only column"></div>
+      </div>
+
+
+      <h2 class="ui header centered large inverted horizontal divider">DESIGN PROCESS</h2>
+      <div class="stepContainer">
+        <div class="ui stackable steps">
+          <a class="active step" data-tab="discovery">
+            <i class="idea icon"></i>
+            <div class="content">
+              <div class="title">DISCOVERY</div>
+            </div>
+          </a>
+          <a class="step" data-tab="define">
+            <i class="puzzle icon"></i>
+            <div class="content">
+              <div class="title">DEFINE</div>
+            </div>
+          </a>
+          <a class="step" data-tab="fast-prototyping">
+            <i class="newspaper icon"></i>
+            <div class="content">
+              <div class="title">FAST PROTOTYPING AND TESTING</div>
+
+            </div>
+          </a>
+          <a class="step" data-tab="development">
+            <i class="code icon"></i>
+            <div class="content">
+              <div class="title">DEVELOPMENT</div>
+
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Empathize Content -->
+      <div class="ui active tab" data-tab="discovery" style="z-index: -2">
+        <p class="stepIntro">Understand the customer's needs and desires.</p>
+        <div class="ui raised segment designProcessDetailContainer">
+
+          <div class="ui stackable grid container">
+            <div class="sixteen wide column processDetailHeader">Discover with Clients</div>
+            <div class="sixteen wide column">
+              <p>Before the project kicks off, we sat with Washington State China Relation Council to discuss their pain points of the current website,
+                the reasons for a complete website redesign and their whole vision for the new website.</p>
+              <p>We also gathered information about who their audiences are and what the desired actions are going to be.</p>
+              <div class="ui bulleted list">
+                <div class="item">What specific areas of your current site do you feel are successful? Why are they successful?</div>
+                <div class="item">What shortcomings exist with the current site and what three things would you change on the site today, if you could?</div>
+                <div class="item">What are the main reasons you are redesigning your site? </div>
+                <div class="item">What are your primary online business objectives with the site redesign?</div>
+                <div class="item">What is the main business problem you hope to solve with the site redesign?</div>
+                <div class="item">...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Define Content -->
+      <div class="ui tab" data-tab="define">
+        <p class="stepIntro">Provides focus and frames the problem.</p>
+        <div class="ui raised segment designProcessDetailContainer">
+          <div class="ui stackable grid container">
+
+            <div class="sixteen wide column processDetailHeader">Core Functions and Audience</div>
+
+            <div class="sixteen wide column">
+              <p>Based on the conversation, we proposed core functions around different level of the audience – non-members and
+                members. We also worked with Client to finalize the complete content sitemap.</p>
+            </div>
+            <div class="eight wide column">
+              <p>Non-Members</p>
+              <div class="ui bulleted list">
+                <div class="item">Understand the value of our organization</div>
+                <div class="item">Search for membership information</div>
+                <div class="item">Become a member online</div>
+                <div class="item">Search for events</div>
+                <div class="item">Find information about our activities</div>
+              </div>
+            </div>
+            <div class="eight wide column">
+              <p>Members</p>
+              <div class="ui bulleted list">
+                <div class="item">Understand the value of our organization</div>
+                <div class="item">Login to Members Site to rewew membership or see status</div>
+                <div class="item">Access Member Directory</div>
+                <div class="item">See information and photos about our activities</div>
+                <div class="item">Search for events</div>
+                <div class="item">See their business promoted on the website</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Ideate Content -->
+      <div class="ui tab" data-tab="fast-prototyping">
+        <p class="stepIntro">Test ideas with clients as fast as possible.</p>
+        <div class="ui raised segment designProcessDetailContainer">
+          <div class="ui stackable grid container">
+            <div class="sixteen wide column processDetailHeader">
+              <div>Fast Prototyping and Testing</div>
+            </div>
+            <div class="sixteen wide column">
+              <p>With limited project time and budget,
+                I figured the best way to carry out the design is to do fast prototyping, and test with clients constantly.</p>
+              <p>Adobe Experience Design is a great tool. I can easily export my design from Illustrator and import into Adobe XD,
+                then generate and send the prototype link to client, to have them play with it and give me feedback on a daily basis.
+                We also met every Wednesday to discuss any outstanding issues along the road.
+              </p>
+            </div>
+            <div class="eight wide column">
+              <div class="ui rounded bordered image">
+                <img src="/images/wscrc-prototype-1.png" />
+              </div>
+            </div>
+            <div class="eight wide column">
+              <div class="ui rounded bordered image">
+                <img src="/images/wscrc-prototype-2.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prototype Content -->
+      <div class="ui tab" data-tab="development">
+        <p class="stepIntro">Transform design into real live product. Deliver end to end experience.</p>
+        <div class="ui raised segment designProcessDetailContainer">
+          <div class="ui stackable grid container">
+            <div class="sixteen wide column processDetailHeader">
+              <div>Transform the Design</div>
+            </div>
+            <div class="sixteen wide column">
+              <p>With full-stack capability, I was responsible for turning my design into a function beauty website as well.
+                I chose Amazon Web Services as the staging environment so the client can view the live website as I built out component by component.</p>
+              <p>You can see the live website here at: <a ng-href={{project.projectLink}} target="_blank">https://wscrc.org</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Youtube Video -->
+
+      <h2 class="ui header centered large inverted horizontal divider">CUSTOMER TESTIMONIALS</h2>
+      <div class="ui raised segment designProcessDetailContainer">
+        <div class="ui stackable grid container">
+          <div class="sixteen wide column processDetailItem">
+            <div class="testimonial">
+              <code>“I tip my hat to our great team at iSoftStone for their excellent work.”</code>
+              <div style="text-align: right"><code>Marc Berger <span>- Senior Director, Executive Communications and China Practice</span></code></div>
+            </div>
+            <div class="testimonial">
+              <code>“The new website is working well and we appreciate your hard work on this project!”</code>
+              <div style="text-align: right"><code>Frances Chen <span>- Business Development and Intelligence Analyst, Washington State China Relation Council</span></code></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
