@@ -73,6 +73,10 @@ angular.module('projectApp',['ui.router','ngAnimate', 'angulartics', 'angulartic
         url:'/myagencyreports',
         templateUrl:"views/myAgencyReportsDetail.html"
       })
+      .state('projects.myconnectedcar', {
+        url:'/myconnectedcar',
+        templateUrl:"views/myConnectedCar.html"
+      })
       .state('projects.personalportfolio',{
         url:'/personalportfolio',
         templateUrl:"views/personalPortfolioDetail.html"

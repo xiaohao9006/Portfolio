@@ -74,18 +74,19 @@ angular.module('projectApp')
         companyLogo: '',
         image: '/images/smart-car.png',
         roleIconClass: 'user',
-        role: 'Experience Designer | Developer',
+        role: 'Experience Designer | Full-Stack Developer',
         date: '2017.03 - 2017.06',
-        intro1: "Vertafore's Executive Dashboard is a new feature initially targeted " +
-        "the executive users of agencies. It delivers easy to understand key data " +
-        "points to executive from which they can make informed decisions. By bringing " +
-        "these key metrics together into a single, easily digestible format for the first " +
-        "time, agencies are allowed to take action more quickly on their business direction.",
-        intro2: "I, as the only Experience Designer in the cross functional team, designed Executive " +
-        "Dashboard to bring the key business performance KPIs to the fingertips of the Agency Executives.",
+        intro1: "It’s true that the “Internet of Things” is the future. " +
+        "Anything can be connected and will be connected, with our cars being no exception. " +
+        "Therefore, I did a DIY project to install Mojio Motion into my Mazda3, which can collect data about my driving movement, " +
+        "speed, fuel efficiency and trip routes, and turn my Mazda3 into a connected smart car.",
+        intro2: "But Mojio Motion’s Web Client is so poorly designed, with limited functions and buggy interaction. " +
+        "But luckily, it provides standard REST API for me to pull down my own data from its platform. " +
+        "So I decided to play with my big data, to visualize it and to design and develop a useful Smart Car Web Portal, by fully leveraging my Full-Stack web skills.",
         intro3:"",
-        tools: ["Adobe Illustrator","Adobe Photoshop","FramerJS","Highcharts"],
-        detailTemplate: "projects.execdashboard"
+        tools: ["Sketch App","Angular 2","Node JS","MongoDB"],
+        projectLink: "https://mycar.yunhaoshen.com",
+        detailTemplate: "projects.myconnectedcar"
       },
       {
         _id: 4,

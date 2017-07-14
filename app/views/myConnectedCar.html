@@ -1,0 +1,295 @@
+<div ng-controller="MyConnectedCarController">
+  <div id="projectAnchor" style="position:relative; top:-5rem"></div>
+  <div class="oddContainer">
+    <div class="ui stackable grid container sectionContainer">
+      <div class="one wide column">
+        <i class="ui remove big icon closeIcon" ng-click="closeProjectDetail()"></i>
+      </div>
+      <div class="eight wide column">
+
+        <div class="ui special inverted blue card projectCard">
+          <div class="dimmable image">
+            <div class="ui dimmer disableDimmer">
+              <div class="content">
+                <div class="center">
+                </div>
+              </div>
+            </div>
+            <img ng-src={{project.image}}>
+          </div>
+
+          <div class="content">
+            <div class="header">{{project.name}}</div>
+            <img class="projectLogo" ng-src={{project.companyLogo}}>
+          </div>
+          <div class="extra content">
+          <span class="right floated">
+            <i class="calendar icon"></i>
+            {{project.date}}
+          </span>
+          <span>
+            <i class="icon" ng-class="project.roleIconClass"></i>
+            {{project.role}}
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="six wide column projectIntro">
+        <div class="ui items">
+          <div class="item">
+            <div class="content">
+              <div class="header projectIntroHeader">{{project.name}}</div>
+              <div class="description">
+                <p>{{project.intro1}}</p>
+                <p>{{project.intro2}}</p>
+                <p>Go to <a ng-href={{project.projectLink}} target="_blank">My Connected Car Portal.</a></p>
+              </div>
+              <div class="extra">
+                <div class="ui black large label" ng-repeat="tool in project.tools">{{tool}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="one wide column"></div>
+
+    </div>
+  </div>
+  <div class="projectDetailContainer">
+    <div class="ui container sectionContainer">
+      <h2 class="ui header centered large inverted horizontal divider">MOJIO MOTION"S WEB CLIENT</h2>
+      <div class="ui stackable grid">
+        <div class="two wide computer tablet only column"></div>
+        <div class="twelve wide column">
+          <div class="ui grid">
+            <div class="sixteen wide column centeredContentDiv">
+              <div class="ui rounded bordered big image">
+                <img src="/images/mojio-motion.png" />
+              </div>
+            </div>
+            <div class="sixteen wide column">
+              <div class="inheritIntroHeader">Mojio Motion's Web Client</div>
+              <p class="inheritIntroContent">Mojio Motion's Web Client is so poorly designed, and some of the functions even are not working.
+                I cannot get any valuable data insights from here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="two wide computer tablet only column"></div>
+      </div>
+
+      <div class="portfolioDesignProcessContainer">
+        <h2 class="ui header centered large inverted horizontal divider">DESIGN PROCESS</h2>
+        <div class="stepContainer">
+          <div class="ui stackable steps">
+            <a class="active step" data-tab="ideation">
+              <i class="idea icon"></i>
+              <div class="content">
+                <div class="title">IDEATION</div>
+              </div>
+            </a>
+            <a class="step" data-tab="design">
+              <i class="puzzle icon"></i>
+              <div class="content">
+                <div class="title">DESIGN AND PROTOTYPING</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Empathize Content -->
+        <div class="ui active tab" data-tab="ideation" style="z-index: -2">
+          <p class="stepIntro">List out function requirements and brainstorm design ideas.</p>
+          <div class="ui raised segment designProcessDetailContainer">
+
+            <div class="ui stackable grid container">
+              <div class="sixteen wide column processDetailHeader">Whiteboard Ideas</div>
+              <div class="sixteen wide column">
+                <img class="ui rounded bordered large image" src="/images/my-car-whiteboard.jpg" style="margin: auto"/>
+              </div>
+              <div class="sixteen wide column">
+                <p style="text-align: center">I spent days listing out desired functions of my connected car web portal.
+                  And I sketched out any design ideas that came up to my mind during the process.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Define Content -->
+        <div class="ui tab" data-tab="design">
+          <p class="stepIntro">Design the look and feel of the product.</p>
+          <div class="ui raised segment designProcessDetailContainer">
+            <div class="ui stackable grid container">
+
+              <div class="sixteen wide column processDetailHeader">"Sketch" it out</div>
+
+              <div class="sixteen wide column">
+                <p style="text-align: center">Sketch App was used to design the look and feel of the web portal, and to transform my design ideas into tangible user interface.</p>
+              </div>
+              <div class="eight wide column">
+                <img class="ui rounded bordered large image" src="/images/my-car-vehicle-status.png" style="margin: auto"/>
+              </div>
+              <div class="eight wide column">
+                <img class="ui rounded bordered large image" src="/images/my-car-trip-analysis.png" style="margin: auto"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="portfolioImplementationProcessContainer">
+        <h2 class="ui header centered large inverted horizontal divider">IMPLEMENTATION PROCESS</h2>
+        <div class="stepContainer">
+          <div class="ui stackable steps">
+            <a class="active step" data-tab="database">
+              <i class="database icon"></i>
+              <div class="content">
+                <div class="title">SET UP MONGODB</div>
+              </div>
+            </a>
+            <a class="step" data-tab="backend">
+              <i class="server icon"></i>
+              <div class="content">
+                <div class="title">BACKEND WITH NODE JS</div>
+              </div>
+            </a>
+            <a class="step" data-tab="frontend">
+              <i class="html5 icon"></i>
+              <div class="content">
+                <div class="title">FRONT END WITH ANGULAR2</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Database Content -->
+        <div class="ui active tab" data-tab="database" style="z-index: -2">
+          <p class="stepIntro">Mongodb was set up on AWS server to collect data from Mojio Motion.</p>
+          <div class="ui raised segment designProcessDetailContainer">
+
+            <div class="ui stackable grid container">
+              <div class="sixteen wide column processDetailHeader">
+                <div>MongoDB Schema</div>
+                <p class="processDetailContent">There are three models in MongoDB - Trip, Vehicle and Location, and one trip has one vehicle and multiple locations.
+                </p>
+              </div>
+              <div class="sixteen wide column processDetailItem">
+                <div class="ui rounded image" style="display: block">
+                  <img src="/images/mongodb-schema.png" style="display: block; margin: auto;"/>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <!-- Backend Content -->
+        <div class="ui tab" data-tab="backend">
+          <p class="stepIntro">Two independent Node JS servers were set up on AWS, one manages MongoDB and another handles REST API request.</p>
+          <div class="ui raised segment designProcessDetailContainer">
+            <div class="ui stackable grid container">
+              <div class="sixteen wide column processDetailHeader">
+                <div>Data Server</div>
+                <p class="processDetailContent">This server is responsible for pulling down my data from Mojio Motion platform, cleaning and making the data
+                  in the right structure, and then storing it in MongoDB.</p>
+              </div>
+              <div class="sixteen wide column processDetailItem">
+                <div class="ui rounded massive image" style="display: block; margin: auto">
+                  <img src="/images/connected-car-data-server.svg" style="display: block; margin: auto;"/>
+                </div>
+              </div>
+
+              <div class="sixteen wide column processDetailHeader">
+                <div>REST API Server</div>
+                <p class="processDetailContent">This server is responsible for handling REST data request from client side.
+                  Vehicle statistics and trip analysis data is public, but since my detail trip info is a bit more private,
+                  so I added authentication to protect the route - users have to use LinkedIn account to login first before having access to this part of data.</p>
+              </div>
+              <div class="sixteen wide column processDetailItem">
+                <div class="ui rounded massive image" style="display: block; margin: auto">
+                  <img src="/images/connected-car-master-server.svg" style="display: block; margin: auto;"/>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Frontend Content -->
+        <div class="ui tab" data-tab="frontend">
+          <p class="stepIntro">Angular2 was used to organize my web app logic and wrap it as a single page application.</p>
+          <div class="ui raised segment designProcessDetailContainer">
+            <div class="ui stackable grid container">
+              <div class="sixteen wide column processDetailHeader">
+                <div>Application Structure</div>
+                <p class="processDetailContent">The great part of Angular2 is that it can help me modularize and componentize the application. Every component has its own
+                  MVC and won't conflict with each other. This web portal contains three modules - vehicle statistics, trip analysis and my all trips. Each module is associated with one
+                  navigation route, and has one to many components. Shared services are used to handle HTTP request and serve data to the application.</p>
+              </div>
+
+              <div class="sixteen wide column centeredContentDiv">
+                <div class="ui rounded bordered massive image">
+                  <img src="/images/my-connected-car-scaffolding.png" style="margin-bottom: 0.5rem"/>
+                  <p class="inheritIntroContent">Angular2 Scaffolding Application Structure</p>
+                </div>
+              </div>
+
+              <div class="sixteen wide column processDetailHeader">
+                <div>Performance Optimization</div>
+                <p class="processDetailContent">Normally there are two factors that are going to slow down the web app, one is loading html, css and javascript to browser, and another is
+                waiting for server to send back data.</p>
+              </div>
+
+
+              <div class="sixteen wide column" style="padding-bottom: 0">
+                <div class="inheritIntroHeader" style="margin-bottom: 0">Angular2 Preloading Strategy</div>
+              </div>
+
+              <div class="sixteen wide column centeredContentDiv" style="padding-bottom: 0">
+                <div class="ui rounded bordered massive image">
+                  <img src="/images/my-connected-car-performance.png" />
+                </div>
+              </div>
+
+              <div class="sixteen wide column">
+                <p class="inheritIntroContent"> <a href="https://angular.io/guide/router" target="_blank">Angular2 preloading</a> strategy is used to optimize first issue - vehicle
+                  statistics module is the first view and is loaded at the very beginning, then almost immediately trip analysis and my all trips modules are loaded in the background. You can see three chunks of javascript are loaded in sequence (marked with redline) - inline.bundle.js contains vehicle statistics module, which is loaded
+                  at the very first, then after a while 0.chunk.js and 1.chunk.js are secretly loaded in background, which contains trip analysis module and my all trips module respectively.</p>
+              </div>
+
+              <div class="sixteen wide column" style="padding-bottom: 0">
+                <div class="inheritIntroHeader" style="margin-bottom: 0">Data Loading Animation</div>
+              </div>
+
+              <div class="sixteen wide column centeredContentDiv" style="padding-bottom: 0">
+                <div class="ui rounded bordered massive image">
+                  <img src="/images/my-connected-car-data-loading.png" />
+                </div>
+              </div>
+
+              <div class="sixteen wide column">
+                <p class="inheritIntroContent">The second issue is inevitable - to display my last 30 days travel heatmap, server needs to send back around 60-70k geo coordinates, which usually
+                takes about 2-3s. Therefore I created an interesting animation at the very beginning to indicate the data is loading.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
