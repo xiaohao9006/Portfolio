@@ -164,11 +164,17 @@ html, body {
 .sectionContainer {
   //margin-top: 4rem;
   padding: 3rem 0 5rem 0 !important;
-
+  .header-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
   h1 {
     font-size: 2*$lineHeight !important;
     color: $blue !important;
     font-weight:400 !important;
+    padding-bottom: 1rem !important;
+    border-bottom: 4px solid $white !important;
+    display: inline-block;
   }
   h2 {
     font-size:1.5*$lineHeight !important;

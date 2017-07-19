@@ -44,7 +44,7 @@
     <!-- Background Video -->
 
     <div class="ui container customJumbotronContent" >
-      <img class="ui centered medium circular image" src="images/profilePic.jpg" style="opacity:0.8; width:20rem"/>
+      <img class="ui centered medium circular image" src="images/profilePic.jpg" style="opacity:0.8; width:auto; max-height: 25vh"/>
       <p class="customJumbotronMainText">{{greeting}}, I'm Yunhao Shen</p>
       <p>I'm a "full stack" designer dedicated to design and develop the best user experiences for both end users and enterprises.</p>
 
@@ -56,8 +56,9 @@
   <div id="learnMoreScrollToAnchor" style="position:relative; top:-5rem"></div>
   <div class="oddContainer">
     <div class="ui container sectionContainer">
-      <h1 class="ui header centered large inverted">EDUCATION AND EXPERIENCE</h1>
-      <hr style="width: 35rem;"/>
+      <div class="header-container">
+        <h1 class="ui header centered large inverted">EDUCATION AND EXPERIENCE</h1>
+      </div>
       <div id="experienceTrigger" style="position:relative; top:10rem"></div>
       <div ng-include src="'svgs/timeline.svg'" id="timelineSVGContainer"></div>
 
@@ -68,8 +69,9 @@
 
   <div class="evenContainer">
     <div class="ui container sectionContainer">
-      <h1 class="ui header centered large inverted">SKILLS AND INTERESTS</h1>
-      <hr style="width: 27rem"/>
+      <div class="header-container">
+        <h1 class="ui header centered large inverted">SKILLS AND INTERESTS</h1>
+      </div>
       <div id="skillsTrigger" style="position:relative; top:-15rem"></div>
       <div class="ui stackable grid" style="margin-top:1rem">
         <div class="seven wide column leftColumnContanier">
@@ -88,8 +90,9 @@
 
   <div class="oddContainer">
     <div class="ui container sectionContainer">
-      <h1 class="ui header centered large inverted">SELF INTRO</h1>
-      <hr style="width: 14rem;"/>
+      <div class="header-container">
+        <h1 class="ui header centered large inverted">SELF INTRO</h1>
+      </div>
       <p>Well, let's see...
 
         I'm a designer, full-stack developer, storyteller, researcher, as well as a gamer working to expand the possibilities of design thinking and product experiences.

@@ -18,8 +18,8 @@ angular.module('projectApp')
    })*/
 
   .controller('MyConnectedCarController', ['$scope', 'workProjectIntroFactory','$state',function($scope, workProjectIntroFactory, $state){
-    var projects = workProjectIntroFactory.getProjects();
-    $scope.project = projects[3];
+    var projects = workProjectIntroFactory.getSideProjects();
+    $scope.project = projects[0];
     $('.portfolioDesignProcessContainer .step').click(function(){
       $('.portfolioDesignProcessContainer .step').removeClass('active');
       $(this).addClass('active');

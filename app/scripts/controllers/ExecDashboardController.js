@@ -18,7 +18,7 @@ angular.module('projectApp')
   })*/
 
   .controller('ExecDashboardController', ['$scope', 'workProjectIntroFactory','$state',function($scope, workProjectIntroFactory, $state){
-    var projects = workProjectIntroFactory.getProjects();
+    var projects = workProjectIntroFactory.getMainProjects();
     $scope.project = projects[2];
     $('.step').click(function(){
       $('.step').removeClass('active');

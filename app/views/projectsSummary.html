@@ -1,43 +1,91 @@
 <!-- Project Intro -->
 <div ng-controller="ProjectsSummaryController">
   <div id="projectAnchor" style="position:relative; top:-5rem"></div>
-  <div class="ui stackable grid container sectionContainer">
-    <div class="one wide computer one wide tablet only column"></div>
-    <div class="fourteen wide computer fourteen wide tablet column">
-      <div class="ui stackable grid container">
-        <div ng-repeat="project in projects" emit-last-repeater-element  class="eight wide computer eight wide tablet column">
-          <div class="ui special inverted blue card projectCard">
-            <div class="dimmable image">
-              <div class="ui dimmer disableDimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui large blue button" ng-click="learnMoreProject($index)">LEARN MORE</div>
+  <div class="oddContainer">
+    <div class="ui stackable grid container sectionContainer">
+      <div class="header-container sixteen wide column" style="padding-top: 0; padding-bottom: 0">
+        <h1 class="ui header centered large inverted">MAIN PROJECTS</h1>
+      </div>
+      <div class="one wide computer one wide tablet only column"></div>
+      <div class="fourteen wide computer fourteen wide tablet column">
+        <div class="ui stackable grid container">
+          <div ng-repeat="project in mainProjects" emit-last-repeater-element  class="eight wide computer eight wide tablet column">
+            <div class="ui special inverted blue card projectCard">
+              <div class="dimmable image">
+                <div class="ui dimmer disableDimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui large blue button" ng-click="learnMoreMainProject($index)">LEARN MORE</div>
+                    </div>
                   </div>
                 </div>
+                <img ng-src={{project.image}}>
               </div>
-              <img ng-src={{project.image}}>
-            </div>
 
-            <div class="content">
-              <div class="header">{{project.name}}</div>
-              <img class="projectLogo" ng-src={{project.companyLogo}}>
-            </div>
-            <div class="extra content">
+              <div class="content">
+                <div class="header">{{project.name}}</div>
+                <img class="projectLogo" ng-src={{project.companyLogo}}>
+              </div>
+              <div class="extra content">
       <span class="right floated">
         <i class="calendar icon"></i>
         {{project.date}}
       </span>
-      <span>
+                <span>
         <i class="icon" ng-class="project.roleIconClass"></i>
         {{project.role}}
       </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
+      <div class="one wide computer one wide tablet only column"></div>
     </div>
-    <div class="one wide computer one wide tablet only column"></div>
+  </div>
+  <div class="evenContainer">
+    <div class="ui stackable grid container sectionContainer">
+      <div class="header-container sixteen wide column" style="padding-top: 0; padding-bottom: 0">
+        <h1 class="ui header centered large inverted">SIDE PROJECTS</h1>
+      </div>
+      <div class="one wide computer one wide tablet only column"></div>
+      <div class="fourteen wide computer fourteen wide tablet column">
+        <div class="ui stackable grid container">
+          <div ng-repeat="project in sideProjects" emit-last-repeater-element  class="eight wide computer eight wide tablet column">
+            <div class="ui special inverted blue card projectCard">
+              <div class="dimmable image">
+                <div class="ui dimmer disableDimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui large blue button" ng-click="learnMoreSideProject($index)">LEARN MORE</div>
+                    </div>
+                  </div>
+                </div>
+                <img ng-src={{project.image}}>
+              </div>
+
+              <div class="content">
+                <div class="header">{{project.name}}</div>
+                <img class="projectLogo" ng-src={{project.companyLogo}}>
+              </div>
+              <div class="extra content">
+      <span class="right floated">
+        <i class="calendar icon"></i>
+        {{project.date}}
+      </span>
+                <span>
+        <i class="icon" ng-class="project.roleIconClass"></i>
+        {{project.role}}
+      </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="one wide computer one wide tablet only column"></div>
+    </div>
   </div>
 </div>
 

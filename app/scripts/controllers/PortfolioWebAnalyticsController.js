@@ -13,8 +13,8 @@ angular.module('projectApp')
    })*/
 
   .controller('PortfolioWebAnalyticsController', ['$scope', '$http' ,'workProjectIntroFactory', 'LineChartFactory', 'PieChartFactory', 'BarChartFactory','ColumnChartFactory','$state',function($scope, $http, workProjectIntroFactory, LineChartFactory, PieChartFactory,BarChartFactory,ColumnChartFactory, $state){
-    var projects = workProjectIntroFactory.getProjects();
-    $scope.project = projects[5];
+    var projects = workProjectIntroFactory.getSideProjects();
+    $scope.project = projects[2];
 
     var host = "api.yunhaoshen.com:3000";
     //var host = "192.168.1.4:3000";

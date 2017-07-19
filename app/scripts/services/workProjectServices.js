@@ -5,7 +5,7 @@
 
 angular.module('projectApp')
   .factory('workProjectIntroFactory',function(){
-    var projectsIntro = [
+    var mainProjectsIntro = [
       {
         _id: 0,
         evenOrOddClass: 'oddContainer',
@@ -67,8 +67,10 @@ angular.module('projectApp')
         detailTemplate: "projects.execdashboard"
         //show: true
       },
+    ];
+    var sideProjectsIntro = [
       {
-        _id: 3,
+        _id: 0,
         evenOrOddClass: 'oddContainer',
         name: "My Connected Car",
         companyLogo: '',
@@ -89,7 +91,7 @@ angular.module('projectApp')
         detailTemplate: "projects.myconnectedcar"
       },
       {
-        _id: 4,
+        _id: 1,
         evenOrOddClass: 'oddContainer',
         name: "Personal Portfolio",
         companyLogo: '',
@@ -110,7 +112,7 @@ angular.module('projectApp')
         //show: true
       },
       {
-        _id: 5,
+        _id: 2,
         evenOrOddClass: 'evenContainer',
         name: "Portfolio Web Analytics Dashboard",
         companyLogo: '',
@@ -132,11 +134,17 @@ angular.module('projectApp')
     ];
 
     var workProjectIntroFac = {};
-    workProjectIntroFac.getProjects = function (){
-      return projectsIntro;
+    workProjectIntroFac.getMainProjects = function (){
+      return mainProjectsIntro;
     };
-    workProjectIntroFac.getProject = function (index){
-      return workProjectIntroFac[index];
+    workProjectIntroFac.getSideProjects = function (){
+      return sideProjectsIntro;
+    };
+    workProjectIntroFac.getMainProject = function (index){
+      return mainProjectsIntro[index];
+    };
+    workProjectIntroFac.getSideProject = function(index) {
+      return sideProjectsIntro[index];
     };
 
     return workProjectIntroFac;

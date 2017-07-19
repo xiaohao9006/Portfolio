@@ -26,7 +26,7 @@ angular.module('projectApp')
       $scope.scrollToProject_Animation();
     });
     //console.log("!!!")
-  }])
+  }]);
 
 
 

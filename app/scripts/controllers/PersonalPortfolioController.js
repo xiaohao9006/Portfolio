@@ -18,8 +18,8 @@ angular.module('projectApp')
   })*/
 
   .controller('PersonalPortfolioController', ['$scope', 'workProjectIntroFactory','$state',function($scope, workProjectIntroFactory, $state){
-    var projects = workProjectIntroFactory.getProjects();
-    $scope.project = projects[4];
+    var projects = workProjectIntroFactory.getSideProjects();
+    $scope.project = projects[1];
     $('.portfolioDesignProcessContainer .step').click(function(){
       $('.portfolioDesignProcessContainer .step').removeClass('active');
       $(this).addClass('active');

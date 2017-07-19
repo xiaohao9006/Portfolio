@@ -19,10 +19,11 @@ angular.module('projectApp')
 
   .controller('ProjectsSummaryController', ['$scope', '$animate', '$state', 'workProjectIntroFactory', '$analytics', function($scope, $animate, $state, workProjectIntroFactory, $analytics){
     //console.log("!!!")
-    var projects = workProjectIntroFactory.getProjects();
+    var mainProjects = workProjectIntroFactory.getMainProjects();
+    var sideProjects = workProjectIntroFactory.getSideProjects();
 
-
-    $scope.projects = projects;
+    $scope.mainProjects = mainProjects;
+    $scope.sideProjects = sideProjects;
 
     $scope.$on('LastRepeaterElement', function(){
       //console.log('good to go');
@@ -33,24 +34,49 @@ angular.module('projectApp')
 
 
 
-    $scope.learnMoreProject = function (index){
+    $scope.learnMoreMainProject = function (index){
 
       //scrollToProject(index);
-      var learnMoreProjectTrackEvent = "learn-more-" + $scope.projects[index].name + ":button#click"
-      learnMoreProjectTrackEvent = learnMoreProjectTrackEvent.toLowerCase();
-      $analytics.eventTrack(learnMoreProjectTrackEvent);
+      var learnMoreMainProjectTrackEvent = "learn-more-" + $scope.mainProjects[index].name + ":button#click";
+      learnMoreMainProjectTrackEvent = learnMoreMainProjectTrackEvent.toLowerCase();
+      $analytics.eventTrack(learnMoreMainProjectTrackEvent);
 
       $('.special.card .image').dimmer('hide');
       $('.special.card .image').dimmer({
       });
 
-      if (index%2 != 0)
-      {
-        //console.log(index);
-        $('.' + $scope.projects[index].evenOrOddClass).css("background-color", "#383740");
-      }
+      // if (index%2 != 0)
+      // {
+      //   //console.log(index);
+      //   $('.' + $scope.projects[index].evenOrOddClass).css("background-color", "#383740");
+      // }
 
-      $state.go(projects[index].detailTemplate)
+      $state.go(mainProjects[index].detailTemplate)
+      //$scope.projectDetailTemplate.template = projects[index].detailTemplate;
+
+
+      //scrollToProject(index);
+
+    };
+
+    $scope.learnMoreSideProject = function (index){
+
+      //scrollToProject(index);
+      var learnMoreSideProjectTrackEvent = "learn-more-" + $scope.sideProjects[index].name + ":button#click";
+      learnMoreSideProjectTrackEvent = learnMoreSideProjectTrackEvent.toLowerCase();
+      $analytics.eventTrack(learnMoreSideProjectTrackEvent);
+
+      $('.special.card .image').dimmer('hide');
+      $('.special.card .image').dimmer({
+      });
+
+      // if (index%2 != 0)
+      // {
+      //   //console.log(index);
+      //   $('.' + $scope.projects[index].evenOrOddClass).css("background-color", "#383740");
+      // }
+
+      $state.go(sideProjects[index].detailTemplate)
       //$scope.projectDetailTemplate.template = projects[index].detailTemplate;
 
 

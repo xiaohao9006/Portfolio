@@ -18,7 +18,7 @@ angular.module('projectApp')
   })*/
 
   .controller('MyAgencyReportsController', ['$scope', 'workProjectIntroFactory','$state', function($scope,workProjectIntroFactory, $state){
-    var projects = workProjectIntroFactory.getProjects();
+    var projects = workProjectIntroFactory.getMainProjects();
     $scope.project = projects[1];
     $('.step').click(function(){
       $('.step').removeClass('active');
