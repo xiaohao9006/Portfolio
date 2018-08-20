@@ -10,6 +10,15 @@ angular.module('projectApp')
       {
         _id: 0,
         evenOrOddClass: 'oddContainer',
+        name: "Fly to Orcas Island",
+        source: 'https://www.youtube.com/embed/Axe9dtDrFt8',
+        date: '2018.05',
+        intro: "Flying over Puget Sound from Renton to Orcas Island as Pilot in Command.",
+        tools: ["Adobe After Effect","Adobe Premiere"]
+      },
+      {
+        _id: 1,
+        evenOrOddClass: 'evenContainer',
         name: "Aloha Hawaii",
         source: 'https://www.youtube.com/embed/pIIsa8IYVWU',
         date: '2016.04',
@@ -17,33 +26,14 @@ angular.module('projectApp')
         tools: ["DJI Phantom 3","Canon 5D Mark II","Adobe After Effect","Adobe Premiere"],
       },
       {
-        _id: 1,
-        evenOrOddClass: 'evenContainer',
+        _id: 2,
+        evenOrOddClass: 'oddContainer',
         name: "Alaska - The Last Frontier",
-        source: 'http://www.youtube.com/embed/8xZm70yGCm0',
+        source: 'https://www.youtube.com/embed/8xZm70yGCm0',
         date: '2015.09',
         intro: "In Sept 2015, I went on a road trip to Alaska. The video was taken by my DJI Phantom 3 and edited with Adobe After Effect and Premiere.",
         tools: ["DJI Phantom 3","Adobe After Effect","Adobe Premiere"],
-      },
-      {
-        _id: 2,
-        evenOrOddClass: 'oddContainer',
-        name: "University of Washington iSchool Capstone Project",
-        source: 'https://www.youtube.com/embed/V6sOnU6Fwtg',
-        date: '2014.06',
-        intro: "This video was created for promoting my master program capstone project - Alaska Airline Carry-On Baggage Predictive Analytics.",
-        tools: ["Adobe After Effect","Adobe Premiere"],
-      },
-      {
-        _id: 3,
-        evenOrOddClass: 'evenContainer',
-        name: "iSchool Study Abroad Promotion Video",
-        source: 'https://www.youtube.com/embed/FhRyVixfbi0',
-        date: '2013.09',
-        intro: "In September, 2013, I attended iSchool's Study Abroad - Denmark Exploration Seminar at University of Copenhagen. Based on our exciting experiences " +
-        "in Denmark, I made this Study Abroad Promotion Video for my school.",
-        tools: ["Adobe After Effect","Adobe Premiere"],
-      },
+      }
 
     ];
 
